@@ -1,0 +1,47 @@
+& when (@media-common = true) {
+  .search-autocomplete {
+    dl {
+      margin: 15px 0 0 0;
+      &:last-child {
+        margin: 15px 0;
+      }
+      dt {
+        &:not(:empty) {
+          .lib-css(background, #fff);
+          font-family: @font-for-titles;
+          font-size: 12px;
+          text-transform: uppercase;
+          border: 0;
+          padding: 0 20px;
+          margin: 0 0 15px 0;
+        }
+      }
+      dd {
+        &:not(:empty) {
+          border: 0;
+          padding: 7px 20px;
+          margin: 0;
+        }
+        &:hover,
+        &.selected {
+          .lib-css(background, #f0f0ee);
+        }
+        .amount {
+          color: inherit;
+          right: 25px;
+          top: 0px;
+        }
+      }
+      dt.title-term + dd {
+        padding: 0 20px;
+        &:hover,
+        &.selected {
+          background-color: transparent;
+        }
+      }
+      .qs-option-name {
+        color: @color-title;
+      }
+    }
+  }
+}

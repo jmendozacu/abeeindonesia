@@ -1,0 +1,50 @@
+.field-tooltip {
+    top: 8px;
+    max-height: 30px;
+    margin-top: 0;
+    .field-tooltip-content {
+        border: 1px solid @border__color;
+        &::before,
+        &::after {
+            left: -21px;
+        }
+        &::before {
+            border-right-color: @border__color;
+        }
+        &::after {
+            left: -19px;
+        }
+    }
+    .field-tooltip-action {
+        &::before {
+            overflow: visible;
+            color: @color-body;
+        }
+        &:hover {
+            &::before {
+                color: @color-title;
+            }
+        }
+    }
+}
+
+//
+//  Tablet (<997px)
+//  _____________________________________________
+@media only screen and (max-width: @screen__m) {
+    .field-tooltip .field-tooltip-content {
+        &::before,
+        &::after {
+            left: auto;
+            right: 10px;
+        }
+        &::before {
+            border-right-color: transparent;
+            border-bottom-color: @border__color;
+        }
+        &::after {
+            left: auto;
+            right: 10px;
+        }
+    }
+}

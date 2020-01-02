@@ -1,0 +1,76 @@
+<?php
+/**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Smile Elastic Suite to newer
+ * versions in the future.
+ *
+ *
+ * @category  Smile
+ * @package   Smile\ElasticsuiteCore
+ * @author    Romain Ruaud <romain.ruaud@smile.fr>
+ * @copyright 2016 Smile
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+
+/**
+ * Template for quick search mini form.
+ * Overriden to manage template injection for the rendering of autocomplete results.
+ *
+ * @var $block \Smile\ElasticsuiteCore\Block\Search\Form\Autocomplete
+ */
+?>
+
+<?php
+/**
+ * @var $helper \Magento\Search\Helper\Data
+ * @var $themeConfigPhp \Meigee\Sirena\ViewModel\ThemeConfigPhp
+ */
+$helper = $this->helper('Magento\Search\Helper\Data');
+$themeConfigPhp = $block->getThemeConfigPhp();
+/* custom_sirena: Extra Classes and helpers */
+$search_type = $themeConfigPhp->getSearchType();
+?>
+<div class="block block-search <?php echo $block->escapeHtmlAttr($search_type); ?>">
+    <div class="block block-title"><strong><?php echo $block->escapeHtml(__('Search')); ?></strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form" action="<?php echo $block->escapeUrl($helper->getResultUrl()); ?>" method="get">
+            <div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span><?php echo $block->escapeHtml(__('Search')); ?></span>
+                </label>
+                <div class="control">
+                    <input id="search"
+                           data-mage-init='{"quickSearch":{
+                                "formSelector":"#search_mini_form",
+                                "url":"<?php echo $block->escapeUrl($block->getUrl('search/ajax/suggest')); ?>",
+                                "destinationSelector":"#search_autocomplete",
+                                "templates": <?php /* @noEscape */ echo $block->getJsonSuggestRenderers();?>,
+                                "priceFormat" : <?php /* @noEscape */ echo $block->getJsonPriceFormat();?>}
+                            }'
+                           type="text"
+                           name="<?php echo $block->escapeHtmlAttr($helper->getQueryParamName()); ?>"
+                           value="<?php echo $block->escapeHtmlAttr($helper->getEscapedQueryText()); ?>"
+                           placeholder="<?php echo $block->escapeHtml(__('Search entire store here...')); ?>"
+                           class="input-text"
+                           maxlength="<?php echo $block->escapeHtmlAttr($helper->getMaxQueryLength());?>"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-expanded="true"
+                           aria-autocomplete="both"
+                           autocomplete="off"
+                           data-block="autocomplete-form"/>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <?php echo $block->getChildHtml() ?>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                        title="<?php echo $block->escapeHtml(__('Search')) ?>"
+                        class="action search">
+                    <span><?php echo $block->escapeHtml(__('Search')); ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

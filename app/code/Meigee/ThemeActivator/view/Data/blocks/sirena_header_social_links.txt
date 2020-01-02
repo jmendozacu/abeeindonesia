@@ -1,0 +1,6 @@
+<ul class="social-links">
+<li><a href="#" title="Connect Us on Facebook"><i class="meigee-icon-fa-facebook"></i></a></li>
+<li><a href="#" title="Connect Us on Twitter"><i class="meigee-icon-fa-twitter"></i></a></li>
+<li><a href="#" title="Connect Us on Instagram"><i class="meigee-icon-fa-instagram"></i></a></li>
+<li><a href="#" title="Connect Us on Youtube"><i class="meigee-icon-fa-youtube-play"></i></a></li>
+</ul>

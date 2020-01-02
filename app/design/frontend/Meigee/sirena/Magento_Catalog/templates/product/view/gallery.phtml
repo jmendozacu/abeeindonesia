@@ -1,0 +1,150 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * Product media data template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ */
+
+$images = $block->getGalleryImages()->getItems();
+$mainImage = current(array_filter($images, function ($img) use ($block) {
+    return $block->isMainImage($img);
+}));
+
+if (!empty($images) && empty($mainImage)) {
+    $mainImage = $block->getGalleryImages()->getFirstItem();
+}
+
+$helper = $block->getData('imageHelper');
+$mainImageData = $mainImage ?
+$mainImage->getData('medium_image_url') :
+$helper->getDefaultPlaceholderUrl('image');
+ 
+$moreViewsType = $block->getData('theme_config_php')->getProductPageGalleryType();
+$rtlEnabled = $block->getData('theme_config_php')->getSiteRtl();
+
+$moreViewsTypeClassname = ' more-views-horizontal-slider';
+switch ($moreViewsType) {
+    case 'list':
+        $moreViewsTypeClassname = ' no-slider';
+    break;
+    case 'horizontal_slider':
+        $moreViewsTypeClassname = ' more-views-horizontal-slider';
+    break;
+    case 'vertical_type_1':
+        $moreViewsTypeClassname = ' more-views-vertical-slider type-1';
+    break;
+    case 'vertical_type_2':
+        $moreViewsTypeClassname = ' more-views-vertical-slider type-2';
+    break;
+    case 'large':
+        $moreViewsTypeClassname = ' more-views-large';
+    break;
+}
+?>
+<div class="gallery-placeholder _block-content-loading<?php echo $block->escapeHtmlAttr($moreViewsTypeClassname); ?><?php echo count($block->getGalleryImages()) == 1 ? ' single-image' : ''; ?><?php echo (count($block->getGalleryImages()) > 4 && $moreViewsType == "list") ? ' collapsed' : ''; ?>" data-gallery-role="gallery-placeholder">
+    <img
+        alt="main product photo"
+        class="gallery-placeholder__image"
+        src="<?= /* @noEscape */ $mainImageData ?>"
+    />
+</div>
+<?php if ($moreViewsType == "list" && count($block->getGalleryImages()) > 4): ?>
+    <span class="action-collapse">
+        <span class="open"><?php echo $block->escapeHtml(__('Show more views')); ?><i class="meigee-icon-drop"></i></span>
+        <span class="close"><?php echo $block->escapeHtml(__('Show less')); ?><i class="meigee-icon-angle-up"></i></span>
+    </span>
+<?php endif; ?>
+
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "mage/gallery/gallery": {
+                "mixins":["magnifier/magnify"],
+                "magnifierOpts": <?php /* @noEscape */ echo $block->getMagnifier(); ?>,
+                "data": <?php /* @noEscape */ echo $block->getGalleryImagesJson(); ?>,
+                "options": {
+                    "nav": "<?php 
+                        if (is_bool($block->getVar("gallery/nav"))) {
+                            echo $block->getVar("gallery/nav") ? 'true' : 'false';
+                        } else {
+                        echo $block->escapeHtml($block->getVar("gallery/nav"));
+                        }
+                    ?>",
+                    <?php if ($block->getVar("gallery/loop")): ?>
+                        "loop": <?php /* @escapeNotVerified */ echo $block->getVar("gallery/loop"); ?>,
+                    <?php endif; ?>
+                    <?php if ($block->getVar("gallery/keyboard")): ?>
+                        "keyboard": <?php /* @escapeNotVerified */ echo $block->getVar("gallery/keyboard"); ?>,
+                    <?php endif; ?>
+                    <?php if ( $moreViewsType == "list" || $moreViewsType == "large" || $moreViewsType == "vertical_type_2" ) { ?>
+                        "arrows": false,
+                    <?php } else { ?>
+                        <?php if ($block->getVar("gallery/arrows")): ?>
+                            "arrows": <?php /* @escapeNotVerified */ echo $block->getVar("gallery/arrows"); ?>,
+                        <?php endif; ?>
+                    <?php } ?>
+                    <?php if ($block->getVar("gallery/allowfullscreen")): ?>
+                        "allowfullscreen": <?php /* @escapeNotVerified */ echo $block->getVar("gallery/allowfullscreen"); ?>,
+                    <?php endif; ?>
+                    <?php if ($block->getVar("gallery/caption")): ?>
+                        "showCaption": <?php /* @escapeNotVerified */ echo $block->getVar("gallery/caption"); ?>,
+                    <?php endif; ?>
+                    <?php if ($moreViewsType == 'vertical_type_1' || $moreViewsType == 'vertical_type_2'){ ?>
+                        "thumbwidth": 100,
+                        "thumbheight": 100,
+                    <?php } else { ?>
+                            "thumbwidth": "<?php echo (int)$block->escapeHtml($block->getImageAttribute('product_page_image_small', 'width')); ?>",
+                        <?php if ($block->getImageAttribute('product_page_image_small', 'height') || $block->getImageAttribute('product_page_image_small', 'width')): ?>
+                            "thumbheight": <?php echo (int)$block->escapeHtml($block->getImageAttribute('product_page_image_small', 'height')
+                                            ?: $block->getImageAttribute('product_page_image_small', 'width')); ?>,
+                        <?php endif; ?>
+                    <?php } ?>
+                    <?php if ($block->getVar("gallery/thumbmargin")): ?>
+                        "thumbmargin": <?= (int)$block->escapeHtml($block->getVar("gallery/thumbmargin")); ?>,
+                    <?php endif; ?>
+                        "width": "<?php echo (int)$block->escapeHtml($block->getImageAttribute('product_page_image_medium', 'width')); ?>",
+                    <?php if ($block->getImageAttribute('product_page_image_medium', 'height') || $block->getImageAttribute('product_page_image_medium', 'width')): ?>
+                        "height": <?php
+                            echo (int)$block->escapeHtml(
+                               $block->getImageAttribute('product_page_image_medium', 'height')
+                                    ?: $block->getImageAttribute('product_page_image_medium', 'width')
+                            );
+                    ?>,
+                    <?php endif; ?>
+                    <?php if ($block->getVar("gallery/transition/duration")): ?>
+                        "transitionduration": <?php echo (int)$block->escapeHtml($block->getVar("gallery/transition/duration")); ?>,
+                    <?php endif; ?>
+                        "transition": "<?php echo $block->escapeHtml($block->getVar("gallery/transition/effect")); ?>",
+                    <?php if ( $moreViewsType == "list" || $moreViewsType == "large") { ?>
+                        "navarrows": false,
+                    <?php } else { ?>
+                        <?php if (($block->getVar("gallery/navarrows"))): ?>
+                            "navarrows": <?php /* @escapeNotVerified */  echo $block->getVar("gallery/navarrows"); ?>,
+                        <?php endif; ?>
+                    <?php } ?>
+                        "navtype": "<?php echo $block->escapeHtml($block->getVar("gallery/navtype")); ?>",
+                    <?php if ($moreViewsType == 'horizontal_slider' || $moreViewsType == 'vertical_type_2'){ ?>
+                        "maxheight": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_medium', 'height'); ?>,
+                    <?php } elseif ($moreViewsType == 'vertical_type_1') { ?>
+                        "maxheight": <?php /* @escapeNotVerified */ echo ((int)$block->getImageAttribute('product_page_image_medium', 'height')-100); ?>,
+                    <?php } ?>
+                    <?php if ($moreViewsType == 'vertical_type_1' || $moreViewsType == 'vertical_type_2'){ ?>
+                        "navdir": "vertical"
+                    <?php } else { ?>
+                        "navdir": "<?php echo $block->escapeHtml($block->getVar("gallery/navdir")); ?>"
+                    <?php } ?>
+                },
+                "fullscreen": <?= /* @noEscape */ $block->getGalleryOptions()->getFSOptionsJson() ?>,
+                "breakpoints": <?php /* @noEscape */ echo $block->getBreakpoints(); ?>
+            },
+            "Meigee_Sirena/js/theme_product_gallery": {
+                "rtlEnabled": "<?= $block->escapeJs($block->escapeHtml($rtlEnabled)) ?>"
+			}
+        }
+    }
+</script>

@@ -1,0 +1,13 @@
+<div class="additional-contact-info">
+<p>We love hearing from you, our Sirena customers. Please contact us about anything at all. Your latest passion, unique health experience or request for a specific product. We’ll do everything we can to make your Sirena experience unforgettable every time. Reach us however you like</p>
+<hr class="indent-36 white-space">
+<h6>Phone</h6>
+<a href="tel:555-723-649-4920" rel="nofollow" class="tel">1-800-403-8838</a>
+<p>Call the Sirena Helpline for concerns, product questions, or anything else. We’re here for you 24 hours a day - 365 days a year.</p>
+<hr class="indent-36 white-space">
+<h3>Apparel Design Inquiries</h3>
+<p>Are you an independent clothing designer? Feature your products on the Sirena website! Please direct all inquiries via email to: <a href="mailto:name@email.com" rel="nofollow">info@sirena.com</a></p>
+<hr class="indent-36 white-space">
+<h3>Press Inquiries</h3>
+<p>Please direct all media inquiries via email to: <a href="mailto:name@email.com" rel="nofollow">info@sirena.com</a></p>
+</div>

@@ -1,0 +1,136 @@
+& when (@media-common = true) {
+    button,
+    a.action.primary,
+    .action.primary,
+    .actions-toolbar .primary .action,
+    .btn {
+        .lib-css(border-radius, @button__border-radius);
+        .lib-css(border, @button__border);
+        font-family: @button__font-family;
+        font-size: @button__font-size;
+        color: @button__color;
+        background-color: @button__background;
+        font-weight: @button__font-weight;
+        margin: 0;
+        text-decoration: none;
+        text-shadow: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: @button__padding;
+        text-transform: uppercase;
+        line-height: 1.5;
+        position: relative;
+        z-index: unset;
+        outline: none;
+        letter-spacing: 1.5px;
+        text-align: center;
+        .box-shadow(0 0 10px 5px rgba(0,0,0,0.06));
+        .transition(~"opacity 300ms ease-out, background-color 300ms ease-out, color 300ms ease-out, border-color 300ms ease-out");
+        &:active,
+        &:focus,
+        &:hover {
+            color: @button__hover__color;
+            background-color: @button__hover__background;
+            .lib-css(border, @button__hover__border);
+        }
+        &.disabled,
+        &[disabled] {
+            pointer-events: none;
+            opacity: @button__disabled__opacity;
+            cursor: not-allowed;
+        }
+    }
+
+    fieldset[disabled] {
+        a.action.primary,
+        .action.primary,
+        .actions-toolbar .primary .action,
+        button,
+        .btn {
+            pointer-events: none;
+            opacity: @button__disabled__opacity;
+            cursor: not-allowed;
+        }
+    }
+
+    button {
+        &:not(.primary) {
+            .box-shadow(0 0 10px 5px rgba(0,0,0,0.06));
+            &:active {
+                .box-shadow(0 0 10px 5px rgba(0,0,0,0.06));
+            }
+        }
+    }
+
+    body {
+        &:not(._keyfocus) {
+            button {
+                &:focus {
+                    .box-shadow(0 0 10px 5px rgba(0,0,0,0.06));
+                }
+            }
+        }
+    }
+
+    a.action.primary,
+    .action.primary,
+    .btn.btn-primary,
+    .actions-toolbar .primary .action {
+        color: @button-primary__color;
+        background-color: @button-primary__background;
+        .lib-css(border, @button-primary__border);
+        &:hover,
+        &:active,
+        &:focus {
+            color: @button-primary__hover__color;
+            background-color: @button-primary__hover__background;
+            .lib-css(border, @button-primary__hover__border);
+        }
+    }
+
+    .block-compare .action.primary:not(:focus),
+    .cart-summary .block .actions-toolbar > .primary .action.primary:not(:focus),
+    .cart-summary .form.giftregistry .fieldset .action.primary:not(:focus) {
+        .box-shadow(0 0 10px 5px rgba(0,0,0,0.06));
+    }
+
+    .modal-custom .action-close:focus,
+    .modal-popup .action-close:focus,
+    .modal-slide .action-close:focus,
+    .modal-custom .action-close:active,
+    .modal-popup .action-close:active,
+    .modal-slide .action-close:active {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/*
+.block-compare .action.primary,
+.cart-summary .block .actions-toolbar > .primary .action.primary,
+.cart-summary .form.giftregistry .fieldset .action.primary {
+    border-radius: 0;
+}
+.abs-revert-to-action-secondary,
+.paypal-review .block .actions-toolbar .action.primary,
+.abs-discount-block .actions-toolbar .action.primary,
+.abs-discount-block .actions-toolbar .action.cancel,
+.block-compare .action.primary,
+.cart-summary .block .actions-toolbar > .primary .action.primary,
+.cart-summary .form.giftregistry .fieldset .action.primary,
+.paypal-review-discount .actions-toolbar .action.primary,
+.paypal-review-discount .actions-toolbar .action.cancel,
+.cart-discount .actions-toolbar .action.primary,
+.cart-discount .actions-toolbar .action.cancel {
+    color: @button-primary__color;
+    background-color: @button-primary__background;
+    border-color: @button-primary__border;
+    &:hover,
+    &:active,
+    &:focus {
+        color: @button-primary__hover__color;
+        background-color: @button-primary__hover__background;
+        border-color: @button-primary__hover__border;
+    }
+}*/

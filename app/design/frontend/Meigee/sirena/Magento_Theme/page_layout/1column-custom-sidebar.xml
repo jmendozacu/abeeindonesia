@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+	<update handle="2columns-left"/>
+	<referenceContainer name="columns">
+		<container name="meigee.sidebars.wrapper" htmlTag="div" htmlClass="sidebars-wrapper sliding" after="main" />
+		<container name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main" after="sidebars.wrapper">
+			<container name="sidebar.main" as="sidebar_main" label="Sidebar Main"/>
+		</container>
+		<container name="div.sidebar.additional" htmlTag="div" htmlClass="sidebar sidebar-additional" after="div.sidebar.main">
+			<container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
+		</container>
+		<block class="Magento\Framework\View\Element\Template" name="meigee.custom.sidebar.toggler" template="Meigee_Sirena::custom_sidebar_toggler.phtml" before="main" />
+	</referenceContainer>
+	<move element="div.sidebar.main" destination="meigee.sidebars.wrapper" before="-"/>
+	<move element="div.sidebar.additional" destination="meigee.sidebars.wrapper" after="div.sidebar.main"/>
+	<move element="catalog.leftnav" destination="sidebar.main" after="-"  />
+</layout>

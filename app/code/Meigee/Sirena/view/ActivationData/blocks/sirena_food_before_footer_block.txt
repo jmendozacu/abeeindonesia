@@ -1,0 +1,15 @@
+<hr class="indent-0 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Sushi Sets" widget_type="newproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="6" visible_products_tablet="4" visible_products_mobile="2" navigation="1" navigation_position="top_right" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="true" desc_slider="false" timer_slider="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="1213" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+<hr class="indent-0 xs-indent-10 sm-indent-10 white-space">
+
+<div class="row bottom-sm middle-md middle-lg food-subscribe">
+    <div class="col-xs-12 col-sm-6 no-margin last-xs first-sm first-md first-lg">
+        <img src="{{media url=&quot;wysiwyg/sirena/food_subscribe_bg.jpg&quot;}}" alt="subscribe img" />
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="newsletter-form-wrapper">
+            {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>

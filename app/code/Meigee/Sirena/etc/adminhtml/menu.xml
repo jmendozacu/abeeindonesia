@@ -1,0 +1,11 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Meigee_Sirena::activation" title="Sirena v.2.1" module="Meigee_Sirena" sortOrder="1"
+             resource="Meigee_Sirena::system" parent="Meigee_Core::themes"
+             action="adminhtml/system_config/edit/section/sirena_general"/>
+        <add id="Meigee_Sirena::menu" title="Categories Enhanced" module="Meigee_Sirena" sortOrder="1"
+             resource="Meigee_Sirena::system" parent="Meigee_Core::extensions"
+             action="adminhtml/system_config/edit/section/meigee_categoriesenhanced_config"/>
+    </menu>
+</config>

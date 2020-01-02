@@ -1,0 +1,88 @@
+//  Skin: Griffin 1 custom styles
+& when (@media-common = true) {
+  .footer {
+    .form.subscribe input {
+      background-color: @form-element-input__background;
+      border-color: @form-element-input__background;
+      &:focus {
+        background-color: @form-element-input__focus__background;
+        border-color: @form-element-input__focus__border;
+        color: @form-element-input__focus__color;
+      }
+    }
+    .form.subscribe .action.subscribe {
+      background-color: @form-element-input__background;
+      border-color: transparent;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: rgba(0,0,0,0.1);
+        border-color: rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .swiper-container .swiper-slide .slide-container {
+    left: 17.4%;
+  }
+  .swiper-container .swiper-slide .slide-container.pos-right {
+    right: 17.4%;
+  }
+  .header-wide {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+      .page-header-inner.container {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
+  .header-boxed-content {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .full-width,
+  .page-main .full-width {
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  body.has-scrollbar .full-width,
+  body.rtl-enabled .full-width,
+  body.rtl-enabled .page-main .full-width,
+  body.rtl-enabled .page-header .full-width {
+    width: calc(~"100vw - @{scroll-bar}");
+    left: auto;
+    right: auto;
+    margin: 0 calc(~"-50vw + 50% + (@{scroll-bar} / 2)");
+  }
+  .footer-boxed-content .page-footer {
+    margin: 0;
+  }
+  .header-wide {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+      .page-header-inner.container {
+        padding-left: @layout-indent__width;
+        padding-right: @layout-indent__width;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ * @var \Meigee\Sirena\ViewModel\CustomerCheck $customerCheck
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$customerCheck = $block->getCustomerCheck();
+$accountLink = $logoutLink = true;
+$wishlistLink = $themeConfigPhp->getToplinksShowWishlist();
+$compareLink = $themeConfigPhp->getToplinksShowCompare();
+$registerLink = $themeConfigPhp->getToplinksShowRegister();
+$loginLink = $themeConfigPhp->getToplinksShowLogin();
+$isLoggedIn = $customerCheck->isCustomerLoggedIn();
+?>
+<ul class="header links">
+    <?php if ($wishlistLink) {
+        echo $this->getChildHtml("wish-list-link");
+    }
+    if ($compareLink) {
+        echo $this->getChildHtml("catalog.compare.link");
+    }
+    if ($accountLink) {
+        echo $this->getChildHtml("my-account-link");
+    }
+    if ($logoutLink) {
+        echo $this->getChildHtml("authorization-link");
+    } ?>
+</ul>

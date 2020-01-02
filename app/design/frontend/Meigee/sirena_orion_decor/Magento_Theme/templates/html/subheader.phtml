@@ -1,0 +1,12 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$contentWidth = $themeConfigPhp->getSiteWidth();
+$sticky_opacity = $themeConfigPhp->getHeaderStickyOpacity();
+?>
+<link rel="preload" href="<?php echo $block->escapeUrl($block->getViewFileUrl('fonts/PatuaOne-Regular.woff2')); ?>" as="font" type="font/woff2" crossorigin="" />
+<link rel="preload" href="<?php echo $block->escapeUrl($block->getViewFileUrl('fonts/meigee-icons.woff2')); ?>" as="font" type="font/woff2" crossorigin="" />
+<style type="text/css">.header-boxed .header-wrapper,.content-boxed .page-main,.content-boxed-content .page-main,.footer-boxed .page-footer,.container,.content-boxed .breadcrumbs>ul.items,.content-boxed .breadcrumbs,.content-boxed-content .breadcrumbs>ul.items,.page-header-inner .menu-wrapper .toggle-nav{max-width:<?php echo $block->escapeHtmlAttr($contentWidth); ?>px;width:100%;margin:0 auto;}.page-header.sticky-header {opacity:<?php echo $block->escapeHtmlAttr($sticky_opacity/100); ?>;}</style>

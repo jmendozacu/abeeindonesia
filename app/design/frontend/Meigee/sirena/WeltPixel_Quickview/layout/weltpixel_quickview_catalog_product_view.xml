@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_product_view"/>
+    <body>
+        <!--Remove Sirena theme overrides-->
+        <referenceBlock name="meigee.header" remove="true" />
+        <referenceBlock name="meigee_mobile_header" remove="true" />
+        <referenceContainer name="main" remove="true" />
+        <referenceBlock name="meigee.custom.sidebar.toggler" remove="true" />
+        <referenceBlock name="meigee.subscribe.popup" remove="true" />
+        <referenceContainer name="meigee.sidebars.wrapper" remove="true" />
+        <referenceBlock name="cookie_notices" remove="true" />
+    </body>
+</page>

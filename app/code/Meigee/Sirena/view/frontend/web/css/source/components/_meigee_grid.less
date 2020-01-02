@@ -1,0 +1,131 @@
+& when (@media-common = true) {
+	.visible-xs,
+	.visible-sm,
+	.visible-md,
+	.visible-lg {
+		display: none !important;
+	}
+	.no-padding {padding: 0 !important;}
+	.no-margin {margin: 0 !important;}
+	.no-gap {padding: 0 !important;margin: 0 !important;}
+	.transition-disabled {transition: none !important;}
+	.hidden { display: none !important;visibility: hidden !important; }
+	@media @lg-and-up {
+		.visible-lg {
+			display: block !important;
+		}
+		.hidden-lg {
+			display: none !important;
+		}
+	}
+	@media @md-only {
+		.visible-md {
+			display: block !important;
+		}
+		.hidden-md {
+			display: none !important;
+		}
+	}
+	@media @sm-only {
+		.visible-sm {
+			display: block !important;
+		}
+		.hidden-sm {
+			display: none !important;
+		}
+	}
+	@media @xs-only {
+		.visible-xs {
+			display: block !important;
+		}
+		.hidden-xs {
+			display: none !important;
+		}
+	}
+	hr[class*='indent'],
+	hr.solid,
+	hr.dotted,
+	hr.dashed {
+		padding: 0;
+		border: 0;
+		background: none;
+		height: 0;
+		clear: both;
+		display: block;
+	}
+	hr.solid {
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+	hr.dotted {
+		border-bottom: 1px dotted rgba(0,0,0,.1);
+	}
+	hr.dashed {
+		border-bottom: 1px dashed rgba(0,0,0,.1);
+	}
+	.indents(@indents);
+	.row {
+		.make-row();
+		tr& {
+			display: table-row;
+			margin: 0;
+		}
+	}
+	.full-width {
+		.make-fullwidth-row();
+	}
+	.container {
+		.make-inner-container();
+	}
+	[class*="col-xs"],
+	[class*="col-sm"],
+	[class*="col-md"],
+	[class*="col-lg"],
+	.product-item[class*="col-xs"],
+	.product-item[class*="col-sm"],
+	.product-item[class*="col-md"],
+	.product-item[class*="col-lg"]{
+		.grid-columns-defaults();
+	}
+
+	.make-grid(xs);
+	.make-additional-grid(xs);
+	.make-flex-alignment-classes(xs);
+
+	@media @sm-and-up {
+		.make-grid(sm);
+		.make-additional-grid(sm);
+	}
+	@media @sm-only {
+		.make-flex-alignment-classes(sm);
+	}
+	@media @md-only {
+		.make-flex-alignment-classes(md);
+	}
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.make-grid(md);
+	.make-additional-grid(md);
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+	body.has-scrollbar {
+		.full-width {
+			width: calc(~"100vw - @{scroll-bar}");
+			left: auto;
+			right: auto;
+			margin: 0 calc(~"-50vw + 50% + (@{scroll-bar} / 2)");
+		}
+	}
+	.make-grid(lg);
+	.make-additional-grid(lg);
+	.make-flex-alignment-classes(lg);
+}

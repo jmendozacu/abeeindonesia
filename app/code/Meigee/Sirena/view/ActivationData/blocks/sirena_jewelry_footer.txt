@@ -1,0 +1,43 @@
+<div class="footer-middle">
+    <div class="container">
+        <hr class="indent-30 white-space hidden-sm hidden-xs">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 accordion-item">
+                <h6 class="footer-block-title accordion-title visible-xs visible-sm">Usefull links</h6>
+                <div class="accordion-content">
+                    <ul class="horizontal-links">
+                        <li><a href={{store url='about-us'}}>About us</a></li>
+                        <li><a href="{{store url='customer-service'}}">Customer Service</a></li>
+                        <li><a href="{{store url='privacy-policy-cookie-restriction-mode'}}">Privacy Policy</a></li>
+                        <li><a href="{{store url='catalogsearch/advanced/'}}">Advanced Search</a></li>
+                        <li><a href="{{store url='contact'}}">Contact Us</a></li>
+                        <li><a href="{{store url='sales/guest/form/'}}">Orders and Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 accordion-item">
+                <h6 class="footer-block-title accordion-title visible-xs visible-sm">Newsletter</h6>
+                <div class="accordion-content">
+                    {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+                </div>
+            </div>
+        </div>
+        <hr class="indent-10 white-space hidden-sm hidden-xs">
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row middle-xs middle-md">
+            <hr class="col-xs-12 indent-20 white-space first-xs first-sm first-md first-lg">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 copyright-wrapper last-xs first-md first-lg">
+                <span class="copyright">&copy; 2018 Meigee Team.</span>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 first-xs first-sm">
+                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/payment_icons.png"}}" alt="Payments" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 last-sm store-switcher-wrapper">
+                {{block class="Magento\Store\Block\Switcher" name="store_switcher" template="switch/stores.phtml"}}
+            </div>
+        </div>
+    </div>
+</div>

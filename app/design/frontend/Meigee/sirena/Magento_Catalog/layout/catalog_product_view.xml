@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceBlock name="product.info.details">
+            <block name="meigee.custom.tab" class="Magento\Framework\View\Element\Template" template="Meigee_Sirena::custom_tab.phtml" group="detailed_info">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Custom Tab</argument>
+                    <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="product.info">
+            <container name="meigee.product.actions.wrapper" as="form_bottom" htmlTag="div" htmlClass="product-actions-wrapper" after="-" />
+        </referenceBlock>
+        <referenceContainer name="product.info.main">
+            <block name="meigee.product.timer" class="Magento\Framework\View\Element\Template" template="Meigee_Sirena::product_timer.phtml" after="product.info.review">
+              <arguments>
+                  <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                  <argument name="theme_product_countdown" xsi:type="object">Meigee\Sirena\ViewModel\ProductCountdown</argument>
+              </arguments>
+            </block>
+            <container name="meigee.bottom.information.block" htmlTag="div" htmlClass="bottom-information-block" after="-">
+                <container name="meigee.new.sku.wrapper" htmlTag="div" htmlClass="product-info-stock-sku" before="-" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="columns">
+            <container name="meigee.product.main.info.wrapper" htmlTag="div" htmlClass="product-info-wrapper column main" before="main" />
+        </referenceContainer>
+        <referenceContainer name="main" htmlTag="div" htmlClass="column additional" />
+
+        <referenceBlock name="product.info.media.image">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.overview">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.sku">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.description">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="catalog.product.related">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.upsell">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="meigee.custom.sidebar.toggler" destination="page.main.title" after="-"/>
+        <move element="product.info.review" destination="product.info.main" after="product.info.price"/>
+        <move element="product.info.social" destination="meigee.product.actions.wrapper" after="-"/>
+        <move element="product.info.stock.sku" destination="meigee.new.sku.wrapper" before="-"/>
+        <move element="product.price.tier" destination="product.info.main" before="meigee.bottom.information.block"/>
+        <move element="content" destination="meigee.product.main.info.wrapper" before="-" />
+        <move element="product.info.details" destination="content.aside" before="catalog.product.related" />
+
+        <move element="meigee.product.block.before.addtocart.simple" destination="product.info.form.content" before="-"/>
+        <move element="meigee.product.block.before.addtocart" destination="product.info.options.wrapper.bottom" before="product.info.addtocart"/>
+        <move element="meigee.product.block.after.addtocart" destination="product.info.main" before="product.info.overview"/>
+        <move element="meigee.product.block.after.sku" destination="meigee.bottom.information.block" after="meigee.new.sku.wrapper"/>
+        <move element="meigee.product.block.options.top" destination="product.info.options.wrapper" before="-" />
+        <move element="meigee.product.block.options.bottom" destination="product.info.options.wrapper" after="-" />
+
+    </body>
+</page>

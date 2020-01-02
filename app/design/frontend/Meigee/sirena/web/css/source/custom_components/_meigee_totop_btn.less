@@ -1,0 +1,47 @@
+& when (@media-common = true) {
+	.to-top {
+		z-index: 999;
+		display: inline-block;
+		visibility: hidden;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		width: 40px;
+		height: 80px;
+		font-size: 24px;
+		color: rgba(0,0,0,0.2);
+		text-align: center;
+		opacity: 0;
+		.transition(opacity .3s ease-out);
+		@media @xs-only {
+			border: 2px solid @border__color;
+		}
+		i {
+			display: inline-block;
+			.transform(scale(1));
+			.transition(~"transform .3s ease-out, color .3s ease-out");
+		}
+		&:hover i {
+			.transform(scale(1.25));
+			color: @color-title;
+		}
+		&:active,
+		&:focus {
+			outline: none;
+		}
+		&::after {
+			display: inline-block;
+			content: attr(data-btn-text);
+			font-size: 11px;
+			color: @color-title;
+			text-transform: uppercase;
+		}
+		&.top-is-visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		&.top-fade-out {
+			opacity: .6;
+		}
+	}
+}

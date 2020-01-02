@@ -1,0 +1,10 @@
+<div class="promo-banner food">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/address_img.png'}}" class="lazyload" alt="Category Banner" />
+    <span class="banner-title">Free delivery</span>
+    <div class="banner-content">
+        <span class="banner-subtitle">Address</span>
+        <p>Jersey City, NJ 07305, New York, USA</p>
+        <p>Call Us : <a href="tel:555-723-649-4920">(555) 723-649-4920</a></p>
+        <p>Email : <a href="mailto:bizarre@info.com">bizarre@info.com</a></p>
+    </div>
+</div>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+	<widget id="meigee_productwidget" class="Meigee\ProductWidget\Block\Product\ProductsList">
+        <label translate="true">Meigee - Product Widget</label>
+        <description></description>
+		<parameters>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="grid_custom" value="Meigee_ProductWidget::product/widget/content/grid_custom.phtml">
+                        <label translate="true">Custom grid (3 per row with big center product)</label>
+                    </option>
+                    <option name="grid_auto" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml">
+                        <label translate="true">Custom grid (product info above image)</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="products_per_row_auto_grid" xsi:type="select" visible="true">
+                <label translate="true">Number of Products per Row</label>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml" />
+                </depends>
+                <options>
+                    <option name="1" value="1">
+                        <label translate="true">1</label>
+                    </option>
+                    <option name="2" value="2">
+                        <label translate="true">2</label>
+                    </option>
+                    <option name="3" value="3">
+                        <label translate="true">3</label>
+                    </option>
+                    <option name="4" value="4" selected="true">
+                        <label translate="true">4</label>
+                    </option>
+                    <option name="5" value="5">
+                        <label translate="true">5</label>
+                    </option>
+                    <option name="6" value="6">
+                        <label translate="true">6</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="products_per_row_tablet_auto_grid" xsi:type="select" visible="true">
+                <label translate="true">Number of Products per Row on Vertical Tablet</label>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml" />
+                </depends>
+                <options>
+                    <option name="1" value="1">
+                        <label translate="true">1</label>
+                    </option>
+                    <option name="2" value="2">
+                        <label translate="true">2</label>
+                    </option>
+                    <option name="3" value="3" selected="true">
+                        <label translate="true">3</label>
+                    </option>
+                    <option name="4" value="4">
+                        <label translate="true">4</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="products_per_row_mobile_auto_grid" xsi:type="select" visible="true">
+                <label translate="true">Number of Products per Row on Mobile</label>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml" />
+                </depends>
+                <options>
+                    <option name="1" value="1" selected="true">
+                        <label translate="true">1</label>
+                    </option>
+                    <option name="2" value="2">
+                        <label translate="true">2</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="products_count" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Products to Display</label>
+                <description translate="true">Note: for Custom Grid template can be 3 or 6</description>
+            </parameter>
+            <parameter name="stock_status_grid_custom" xsi:type="select" visible="true">
+                <label translate="true">Stock status</label>
+                <description translate="true">Enable or disable stock status</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_custom.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false" selected="true">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="stock_status_grid_auto" xsi:type="select" visible="true">
+                <label translate="true">Stock status</label>
+                <description translate="true">Enable or disable stock status</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false" selected="true">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="desc_grid_custom" xsi:type="select" visible="true">
+                <label translate="true">Short description</label>
+                <description translate="true">Enable or disable short description</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_custom.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false" selected="true">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="desc_grid_auto" xsi:type="select" visible="true">
+                <label translate="true">Short description</label>
+                <description translate="true">Enable or disable short description</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false" selected="true">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="timer_grid_custom" xsi:type="select" visible="true">
+                <label translate="true">Price countdown</label>
+                <description translate="true">Enable or disable price countdown</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_custom.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true" selected="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="rating_stars_grid_custom" xsi:type="select" visible="true">
+                <label translate="true">Rating Stars</label>
+                <description translate="true">Enable or disable rating stars</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_custom.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true" selected="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="rating_stars_grid_auto" xsi:type="select" visible="true">
+                <label translate="true">Rating Stars</label>
+                <description translate="true">Enable or disable rating stars</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/grid_auto.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true" selected="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="rating_stars_footer_list" xsi:type="select" visible="true">
+                <label translate="true">Rating Stars</label>
+                <description translate="true">Enable or disable rating stars</description>
+                <depends>
+                    <parameter name="template" value="Meigee_ProductWidget::product/widget/content/footer_list.phtml" />
+                </depends>
+                <options>
+                    <option name="true" value="true" selected="true">
+                        <label translate="true">Enable</label>
+                    </option>
+                    <option name="false" value="false">
+                        <label translate="true">Disable</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+	</widget>
+</widgets>

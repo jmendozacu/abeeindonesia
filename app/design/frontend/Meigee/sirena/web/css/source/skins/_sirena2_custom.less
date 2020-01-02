@@ -1,0 +1,28 @@
+//  Skin: Main 2 custom styles
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header.header-wrapper::after {
+    display: none;
+  }
+  .cms-index-index .page-header.header-wrapper {
+    margin-bottom: 18px;
+  }
+  .header-wide {
+    .page-header.header-wrapper {
+      .page-header-inner.container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &.sticky-header {
+        .page-header-inner {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+      }
+    }
+  }
+}

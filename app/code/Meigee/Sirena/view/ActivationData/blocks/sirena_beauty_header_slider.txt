@@ -1,0 +1,57 @@
+<div class="full-width">
+    <div class="main-slider-wrapper">
+        <span class="slider-loader"></span>
+        <div class="main-slider swiper-container">
+            <div class="swiper-wrapper">
+                <a href="javascript:void(0);" class="swiper-slide">
+                    <picture>
+                        <source data-srcset="{{media url='wysiwyg/sirena/beauty_slide_4_mobile.jpg'}}" media="(max-width: 767px)">
+                        <img class="lazyload" src="#" data-src="{{media url='wysiwyg/sirena/beauty_slide_4.jpg'}}" alt="Slide Image" />
+                    </picture>
+                    <div class="slide-container align-center pos-left with-animation slide-from-right">
+                        <div class="title"><span class="badge">Limited edition</span>Exclusive Kit<br /><strong>The Fusion</strong></div>
+                        <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.</div>
+                        <div class="btn-wrapper hidden-xs"><span class="btn action primary" href="javascript:void(0);">Let's shopping</span></div>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="swiper-slide">
+                    <picture>
+                        <source data-srcset="{{media url='wysiwyg/sirena/beauty_slide_3_mobile.jpg'}}" media="(max-width: 767px)">
+                        <img class="lazyload" src="#" data-src="{{media url='wysiwyg/sirena/beauty_slide_3.jpg'}}" alt="Slide Image" />
+                    </picture>
+                    <div class="slide-container with-animation slide-from-left pos-right">
+                        <div class="title"><span class="badge">Limited edition</span>-20% Off on All<br /><strong>Sun Care</strong></div>
+                        <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.</div>
+                        <div class="btn-wrapper hidden-xs"><span class="btn action primary" href="javascript:void(0);">Let's shopping</span></div>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="swiper-slide">
+                    <picture>
+                        <source data-srcset="{{media url='wysiwyg/sirena/beauty_slide_1_mobile.jpg'}}" media="(max-width: 767px)">
+                        <img class="lazyload" src="#" data-src="{{media url='wysiwyg/sirena/beauty_slide_1.jpg'}}" alt="Slide Image" />
+                    </picture>
+                    <div class="slide-container align-center pos-center with-animation fade-with-scale">
+                        <div class="title"><span class="badge">Limited edition</span>Summer Special<br /><strong>Spa Cosmetics</strong></div>
+                        <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.</div>
+                        <div class="btn-wrapper hidden-xs"><span class="btn action primary" href="javascript:void(0);">Let's shopping</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".main-slider": {
+            "Meigee_Sirena/js/theme_carousel":{
+                "loop":false,
+                "navigation":true,
+                "pagination":true,
+                "autoplay":true
+            }
+        }
+    }
+</script>

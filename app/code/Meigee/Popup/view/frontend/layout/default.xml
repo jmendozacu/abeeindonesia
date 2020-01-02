@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="meigee.popup.subscribe"
+                   template="Meigee_Popup::popup_block.phtml" ifconfig="meigee_popup/general/status">
+                <arguments>
+                    <argument name="popup_view_model" xsi:type="object">Meigee\Popup\ViewModel\Popup</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

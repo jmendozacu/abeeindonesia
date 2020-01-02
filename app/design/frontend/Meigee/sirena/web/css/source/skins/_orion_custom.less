@@ -1,0 +1,66 @@
+//  Skin: Orion 1 custom styles
+
+& when (@media-common = true) {
+  .cms-index-index {
+    .page-footer .footer {
+      padding-top: 130px;
+    }
+  }
+  .page-footer .footer .switcher .options {
+    background-color: #fff;
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body .page-header::after {
+    display: none;
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .full-width,
+  .page-main .full-width,
+  .page-header .full-width {
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  body.has-scrollbar .full-width {
+    width: calc(~"100vw - @{scroll-bar}");
+    left: auto;
+    right: auto;
+    margin: 0 calc(~"-50vw + 50% + (@{scroll-bar} / 2)");
+  }
+  .footer-boxed-content .page-footer {
+    margin: 0;
+  }
+  .cms-index-index {
+    &.footer-boxed-content .page-footer,
+    &.footer-boxed .page-footer,
+    &.footer-wide .page-footer {
+      margin: 60px 0 0 0;
+    }
+    .page-footer .footer {
+      padding-top: 57px;
+    }
+  }
+  body.rtl-enabled {
+    .full-width,
+    .page-main .full-width,
+    .page-header .full-width {
+      margin-right: -50vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+    }
+  }
+}

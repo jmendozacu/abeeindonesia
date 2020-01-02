@@ -1,0 +1,136 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+
+/**
+ * @var \Meigee\ThemeActivator\Block\Adminhtml\System\Config\Form\SkinLocaleSetSingleTheme $block
+ */
+?>
+
+<?php
+$configDemoImported = $block->getConfig('XML_PATH_DEMO_IMPORTED', $block->getStoreId());
+?>
+
+<div class="meigee-theme-activator">
+
+        <?php
+            $themeList = $block->getThemesList(true);
+            $activatedThemesList = $block->getActivatedThemeList();
+        ?>
+        <?php if (empty($activatedThemesList)): ?>
+        <div class="message message-notification">
+            <p><?= __("You have no applied storefront themes compatible with the Activator."); ?></p>
+            <p><?= __("Please navigate to <i>Content -> Design -> Configuration</i> to apply one of the following themes:"); ?></p>
+            <ul class="not-activated-themes">
+                <?php foreach ($themeList as $theme => $items): ?>
+                <li><?= $theme;?></li>
+                <?php endforeach; ?>
+            </ul>
+            <p><?= __("Tip: <a target=\"_blank\" href=\"https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/theme-apply.html\">How to apply and configure a storefront theme</a>"); ?></p>
+        </div>
+        <?php else: ?>
+        <div class="message message-notification">
+            <h6 class="note-title">Please note:</h6>
+            <ul>
+                <li><?= __("<strong>\"Set Skin\"</strong> - is used to set a desired skin to <strong>a locale</strong> configured for a particular store view"); ?></li>
+                <li><?= __("<strong>\"Import Demo\"</strong> - is used to create all static blocks, pages, widgets, skin configuration used on the demo, and apply them to a particular <strong>store view</strong>"); ?></li>
+                <li><?= __("If you want to use different skins for different store views with the same locale you should use child themes"); ?></li>
+            </ul>
+
+        </div><br/>
+        <?php foreach ($activatedThemesList as $theme => $items): ?>
+        <?php
+            $themeName = explode('/', $theme);
+            $theme = str_replace('Meigee_', 'Meigee/', $theme);
+        ?>
+            <h2 class="theme-name"><?= ucfirst($theme); ?></h2>
+            <ul class="activated-themes" style="display: none">
+                <?php foreach ($items['stores'] as $store => $locale): ?>
+                <?php
+                $uniqId = $block->getUniqId();
+                $skins = $items['skins'];
+                $selected = array_search($locale, $skins);
+                ?>
+                <input type="hidden" name="groups[<?= $uniqId ?>][theme]" value="<?= $theme ?>">
+                <input type="hidden" name="groups[<?= $uniqId ?>][locale]" value="<?= $locale ?>">
+                <input type="hidden" name="groups[<?= $uniqId ?>][storeCode]" value="<?= $store ?>">
+
+                <li class="activated-theme">
+                    <h3><?= ucfirst($store) . ' Store View' . ' (' . $locale . ')' ?></h3>
+                    <table>
+                        <tr>
+                            <td class="skin-col">
+                                <select name="groups[<?= $uniqId; ?>][skin]" id="<?= $uniqId; ?>">
+                                    <?php foreach ($skins as $skin => $value): ?>
+                                        <option value="<?= $skin; ?>" <?= ($value == $locale) ? 'selected' : '' ?>><?= ucfirst($skin); ?> <?= ($value == $locale) ? '(activated)' : '' ?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </td>
+                            <td class="activate-col">
+                                <button type="submit" name="activate_row" value="<?= $uniqId; ?>">Set Skin</button>
+                            </td>
+                            <td class="demo-col">
+                                <?php
+                                $skinScope = $selected . '_' . $store;
+                                $isDemoSet = $block->isDemoSet($skinScope);
+                                if ($isDemoSet == true) {
+                                    $btnText = __("Import Demo", $selected);
+                                    $message = __("Demo for <strong>%1</strong> is imported", $selected);
+                                    $cssClass = 'imported';
+                                } else {
+                                    $btnText = __('Import Demo');
+                                    $message = __("Demo content isn't imported yet");
+                                    $cssClass = '';
+                                }
+                                ?>
+                                <button type="submit" name="import_static_content" value="<?= $uniqId; ?>"><?= $btnText?></button>
+                                <p class="<?= $cssClass; ?>"><?= $message;?></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div>
+                        <div class="tips-toggle">Don't see any changes on the frontend?</div>
+                        <div style="display: none;">
+                            <div><?= __('1. Please navigate to the root directory of your installed Magento using console:') ?></div>
+                            <div class="path"><?= $block->getMagentoRootDir() ?></div>
+                            <p><?= __('2. Run following commands:') ?></p>
+                            <?php
+                            $text = '<div class="code">rm -rf generated/code/Meigee/*</div>';
+                            $text .= '<div class="code">rm -rf pub/static/frontend/' . ucfirst($theme) . '/' . $locale . '/*</div>';
+                            $text .= '<div class="code">rm -rf var/view_preprocessed/pub/static/frontend/' . ucfirst($theme) . '/' . $locale . '/*</div>';
+                            echo $text;
+                            ?>
+                        </div>
+                    </div>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+
+
+        <?php endforeach; ?>
+
+        <?php endif; ?>
+</div>
+<script>
+    require([
+    "jquery"
+    ], function ($) {
+
+        $('.tips-toggle').click(function(){
+            this.next().toggle();
+        });
+
+        $('.theme-name').click(function(){
+            this.next('ul').toggle();
+            $(this).toggleClass('active')
+        });
+
+
+
+
+    });
+</script>

@@ -1,0 +1,56 @@
+<div class="category-banners type-5 row no-margin">
+    <div class="col-xs-12 col-sm-4 col-md-4 no-padding">
+        <div class="single-banner">
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/food_banner_2.jpg"}}" alt="Category Banner" />
+            <div class="banner-content">
+                <strong class="title">Monster Servings</strong>
+                <p class="text">Three items from the price of two</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 no-padding">
+        <div class="single-banner">
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/food_banner_3.jpg"}}" alt="Category Banner" />
+            <div class="banner-content">
+                <strong class="title">Sea Fish Exclusive Offers</strong>
+                <p class="text">-10% on all fish only on weekand</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 no-padding">
+        <div class="single-banner">
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/food_banner_4.jpg"}}" alt="Category Banner" />
+            <div class="banner-content">
+                <strong class="title">Italiano Week</strong>
+                <p class="text">-20% on every second pizza</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="indent-40 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Hot meals" widget_type="saleproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="3" visible_products_tablet="3" visible_products_mobile="2" navigation="1" navigation_position="top_right" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="true" desc_slider="false" timer_slider="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="1413" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+<hr class="indent-0 xs-indent-10 sm-indent-10 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        <a href="javascript:void(0);" class="banner with-text food">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/food_banner_5.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-center white-text">
+                <span class="title">Salmon Fantasy Sushi Set</span>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante nulla, pharetra vel rutrum at.</p>
+                <span class="action primary">order now</span>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        <a href="javascript:void(0);" class="banner with-text food">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/food_banner_6.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-center">
+                <span class="title">Amazing Crispy Fried Snacks</span>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante nulla, pharetra vel rutrum at.</p>
+                <span class="action primary">order now</span>
+            </div>
+        </a>
+    </div>
+</div>

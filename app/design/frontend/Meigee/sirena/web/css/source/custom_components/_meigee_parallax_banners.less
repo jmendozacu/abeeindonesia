@@ -1,0 +1,107 @@
+& when (@media-common = true) {
+	.parallax-container {
+		position: relative;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		max-height: 100vh;
+		min-height: 200px;
+		@media @sm-and-up {
+			background-position: center 0;
+		}
+		.parallax-content {
+			text-align: center;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			padding: 20px;
+			background-color: rgba(255,255,255,0.6);
+			@media @sm-and-up {
+				left: 50%;
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+			}
+			.title {
+				display: block;
+				margin-bottom: 20px;
+				font-size: 26px;
+				font-weight: 400;
+				font-family: @font-for-titles;
+				line-height: 30px;
+				color: @color-title;
+				position: relative;
+				letter-spacing: -0.8px;
+				br {
+					display: none;
+				}
+			}
+			.subtitle {
+				display: block;
+				margin-bottom: 20px;
+				font-size: 12px;
+				line-height: 18px;
+				color: @color-body;
+				letter-spacing: 0;
+			}
+			@media @sm-and-up {
+				.title {
+					line-height: 34px;
+				}
+			}
+		}
+	}
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.parallax-container {
+		background-attachment: fixed;
+		.parallax-content {
+			left: 33.1%;
+			background-color: transparent;
+			padding: 0;
+			text-align: left;
+
+			&.pos-right {
+				left: auto;
+				right: 12.7%;
+			}
+			&.align-center {
+				text-align: center;
+				.title::before {
+					left: 50%;
+					margin-left: -20px;
+				}
+			}
+			.title {
+				margin-bottom: 22px;
+				font-size: 36px;
+				line-height: 40px;
+				&::before {
+					display: block;
+					content: '';
+					width: 40px;
+					height: 1px;
+					background-color: @border__color;
+					position: absolute;
+					top: -30px;
+					left: 0;
+				}
+				br {
+					display: inline;
+				}
+			}
+			.subtitle {
+				line-height: 30px;
+				margin-bottom: 28px;
+			}
+		}
+	}
+}
+

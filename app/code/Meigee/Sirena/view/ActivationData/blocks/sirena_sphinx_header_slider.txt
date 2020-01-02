@@ -1,0 +1,57 @@
+<div class="full-width">
+<div class="main-slider-wrapper">
+    <span class="slider-loader"></span>
+    <div class="main-slider swiper-container">
+        <div class="swiper-wrapper">
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url="wysiwyg/sirena/sphinx_slide_4_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url="wysiwyg/sirena/sphinx_slide_4.jpg"}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation slide-from-right">
+                    <div class="title">Premium Quality Knitwear. <br />Only in Sirena Shop.</div>
+                    <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</div>
+                    <div class="btn btn-default hidden-xs">Shop Now</div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url="wysiwyg/sirena/sphinx_slide_5_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url="wysiwyg/sirena/sphinx_slide_5.jpg"}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container align-center pos-right with-animation fade-with-scale">
+                    <div class="title">Retrorama. Fresh New <br />Collection by <br />Mickey L. Hawkins.</div>
+                    <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</div>
+                    <div class="btn btn-default hidden-xs">Shop Now</div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url="wysiwyg/sirena/sphinx_slide_6_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url="wysiwyg/sirena/sphinx_slide_6.jpg"}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation slide-from-left">
+            <div class="title">New Sirena AW 2019 <br />Made in Baltimore, <br />Maryland</div>
+                    <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</div>
+            <div class="btn btn-default hidden-xs">Shop Now</div>
+            </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".main-slider": {
+            "Meigee_Sirena/js/theme_carousel":{
+                "loop":true,
+                "navigation":true,
+                "pagination":true,
+                "autoplay":true
+            }
+        }
+    }
+</script>

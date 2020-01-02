@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+		<!--<add id="Meigee_ThemeActivator::themeactivator" title="Theme Activator" module="Meigee_ThemeActivator" sortOrder="1" resource="Meigee_ThemeActivator::system" parent="Meigee_Core::extensions" action="adminhtml/system_config/edit/section/theme_activator" />-->
+    </menu>
+</config>

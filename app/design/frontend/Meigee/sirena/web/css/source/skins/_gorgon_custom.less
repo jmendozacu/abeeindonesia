@@ -1,0 +1,38 @@
+//  Skin: Gorgon custom styles
+& when (@media-common = true) {
+  @media @sm-and-down {
+    .cms-index-index .widget-title h2 {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header {
+    padding-bottom: 0;
+  }
+  .cms-index-index .page.messages .message {
+    margin-top: 0;
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .swiper-container .swiper-slide .slide-container.pos-right {
+    right: 7.3%;
+  }
+  .swiper-container .swiper-slide .slide-container {
+    left: 10.3%;
+  }
+  .content-boxed .page-main .full-width,
+  .content-wide .page-main .full-width {
+    width: calc(~"100% + (@{layout-indent__width})*2");
+    margin-left: -(@layout-indent__width);
+    margin-right: -(@layout-indent__width);
+  }
+}

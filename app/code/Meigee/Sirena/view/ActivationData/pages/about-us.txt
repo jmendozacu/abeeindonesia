@@ -1,0 +1,38 @@
+<div class="about-us-wrapper">
+<div class="row center-xs center-sm center-md">
+    <div class="col-xs-12 col-sm-10 col-md-7">
+        <h1>Who we are</h1>
+        <p>With more than 230 stores spanning 43 states, Sirena is a nationally recognized active wear manufacturer and retailer. We’re passionate about active lifestyles – and it goes way beyond apparel.</p>
+    </div>
+</div>
+<hr class="indent-9 white-space">
+<div class="row center-xs center-sm center-md">
+    <div class="col-xs-12">
+        <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/about_us_banner1.jpg"}}" alt="Banner Img" />
+    </div>
+</div>
+<hr class="indent-54 white-space">
+<div class="row center-xs center-sm center-md">
+    <div class="col-xs-12 col-sm-10 col-md-7">
+        <h1>Our principles</h1>
+        <p>At Sirena, wellness is a way of life. We don’t believe age, gender or past actions define you, only your ambition and desire for wholeness... today.<br />We differentiate ourselves through a combination of unique designs and styles merged with unequaled standards of quality and authenticity. Our founders have deep roots in yoga and health communities and our selections serve amateur practitioners and professional athletes alike.</p>
+    </div>
+</div>
+<hr class="indent-9 white-space">
+<div class="row center-xs center-sm center-md">
+    <div class="col-xs-12">
+        <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/about_us_banner2.jpg"}}" alt="Banner Img" />
+    </div>
+</div>
+<hr class="indent-50 white-space">
+<div class="row center-xs center-sm center-md">
+    <div class="col-xs-12 col-sm-10 col-md-7">
+        <ul class="horizontal-links type-2">
+            <li><a href="javascript:void(0);">Contact Sirena</a></li>
+            <li><a href="javascript:void(0);">Customer Service</a></li>
+            <li><a href="javascript:void(0);">Sirena Privacy Policy</a></li>
+            <li><a href="javascript:void(0);">Shop Sirena</a></li>
+        </ul>
+    </div>
+</div>
+</div>

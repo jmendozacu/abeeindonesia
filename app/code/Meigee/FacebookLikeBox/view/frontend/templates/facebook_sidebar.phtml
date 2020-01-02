@@ -1,0 +1,26 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Meigee\FacebookLikeBox\ViewModel\Facebook $facebookViewModel
+ */
+
+$facebookViewModel = $block->getFacebookViewModel();
+
+if ($facebookViewModel->isFacebookEnable()):
+    $facebookUrl = $facebookViewModel->getFacebookUrl();
+    ?>
+	<div class="block block-fblikebox">
+		<div class="block-title">
+			 <strong><span><?= __('Facebook Like Box') ?></span></strong>
+		</div>
+		<div class="block-content">
+			<div id="fb-root"></div>
+            <div class="fb-page" <?= $facebookViewModel->getFacebookData(); ?>>
+                <div class="fb-xfbml-parse-ignore">
+                    <blockquote cite="<?= $facebookUrl; ?>"><a href="<?= $facebookUrl; ?>"></a></blockquote>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script>!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script>
+<?php endif ?>

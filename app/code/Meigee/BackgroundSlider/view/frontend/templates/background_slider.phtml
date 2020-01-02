@@ -1,0 +1,26 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfig
+ * @var \Meigee\BackgroundSlider\ViewModel\Slider $meigeeBackgroundSlider
+ */
+
+$meigeeBackgroundSlider = $block->getData('meigee_background_slider');
+if (
+    $meigeeBackgroundSlider->getBackgroundSlider()
+    && $meigeeBackgroundSlider->getIsBoxedContentThemeLayout()
+    && $slides = $meigeeBackgroundSlider->getSlides()
+) {
+?>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "Meigee_BackgroundSlider/js/backgroundSlider": {
+                    "slides": "<?= $block->escapeJs($slides); ?>",
+                    "duration": "<?= $block->escapeJs($meigeeBackgroundSlider->getDuration()); ?>",
+                    "fade": "<?= $block->escapeJs($meigeeBackgroundSlider->getFade()); ?>",
+                    "containerWidth": "<?= $block->escapeJs($meigeeBackgroundSlider->getThemeSiteWidth()); ?>"
+                }
+            }
+        }
+    </script>
+<?php } ?>

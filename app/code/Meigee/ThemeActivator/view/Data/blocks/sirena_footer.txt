@@ -1,0 +1,149 @@
+<div class="footer-top">
+    <div class="container">
+    <hr class="indent-72 white-space hidden-sm hidden-xs">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">About</h6>
+            <div class="accordion-content">
+                <div class="footer-logo">
+                    <img src="{{media url="wysiwyg/logo.png"}}" alt="Logo">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">Payments</h6>
+            <div class="accordion-content">
+                <p style="margin-bottom: 29px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit<br />
+                    eiusmod tempor incididunt.</p>
+                <img src="{{media url="wysiwyg/payment_icons.png"}}" alt="Payments" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">Working Hours</h6>
+            <div class="accordion-content">
+                <p>Monday - Friday:<br />8:00 - 20:00<br />Weekend: <br />9:00 - 19:00<br /></p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item">
+            <h5 class="footer-block-title accordion-title visible-xs visible-sm">Address</h5>
+            <div class="accordion-content">
+                <p>No. 315, Jersey City, NJ 07305, New York, USA<br />
+                    <a href="tel:555-723-649-4920">Call Us : (555) 723-649-4920</a><br />
+                    <a href="mailto:name@email.com">info@sirena.com</a></p>
+            </div>
+        </div>
+    </div>
+    <hr class="indent-60 white-space hidden-sm hidden-xs">
+    </div>
+</div>
+<div class="footer-middle">
+    <div class="container">
+    <hr class="indent-88 white-space hidden-sm hidden-xs">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6 accordion-item">
+            <h5 class="footer-block-title accordion-title visible-sm visible-xs">Magazine</h5>
+            <div class="accordion-content">
+<img src="{{media url="wysiwyg/magazines.png"}}" alt="magazines" style="margin: 1px 45px 0 -5px; display: inline-block; float: left;">
+<h3 style="margin: 28px 0 13px 0;display: inline-block;line-height: inherit;">Sirena Magazine<br>№8 Edition Already<br>Available</h3>
+<p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 accordion-item">
+            <h6 class="footer-block-title accordion-title">MAY WE HELP YOU?</h6>
+            <div class="accordion-content">
+                <ul class="links">
+                    <li><a href="{{store url='contact'}}">Contact Us</a></li>
+                    <li><a href="{{store url='sales/guest/form/'}}">Orders and Returns</a></li>
+                    <li><a href="javascript:void(0);" title="">Product Care</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 accordion-item">
+            <h6 class="footer-block-title accordion-title">THE COMPANY</h6>
+            <div class="accordion-content">
+                <ul class="links">
+                    <li><a href="javascript:void(0);" title="">Privacy & Cookie Policy</a></li>
+                    <li><a href="javascript:void(0);" title="">Corporate Information</a></li>
+                    <li><a href="javascript:void(0);" title="">About Sirena</a></li>
+                    <li><a href="javascript:void(0);" title="">Sirena Equilibrium</a></li>
+                    <li><a href="javascript:void(0);" title="">Careers</a></li>
+                    <li><a href="javascript:void(0);" title="">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 accordion-item">
+            <h6 class="footer-block-title accordion-title">Categories</h6>
+            <div class="accordion-content">
+                <ul class="links">
+                    <li><a href="javascript:void(0);" title="">Dresses</a></li>
+                    <li><a href="javascript:void(0);" title="">Clothing</a></li>
+                    <li><a href="javascript:void(0);" title="">Shoes</a></li>
+                    <li><a href="javascript:void(0);" title="">Accessories</a></li>
+                    <li><a href="javascript:void(0);" title="">Sale</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<hr class="indent-52 white-space hidden-sm hidden-xs">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">Subscribe</h6>
+            <div class="row accordion-content">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <h3 style="margin-bottom: 5px;">Subscribe to our Newsletter</h3>
+                    <p>Updates, discounts, some special offers and more.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+ {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+                    <!--<form class="form subscribe" novalidate="novalidate" action="http://sirena-m2.meigeeteam.com/english/newsletter/subscriber/new/" method="post" id="newsletter-content-validate-detail-footer">
+                        <div class="field newsletter">
+                            <div class="input-wrapper">
+                                <input class="form-control" name="email" type="email" id="newsletter-content-footer" placeholder="Enter your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" data-validate="{required:true, 'validate-email':true}">
+                            </div>
+                            <button class="action subscribe btn btn-default" title="Subscribe" type="submit">Submit</button>
+                        </div>
+                    </form>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">Social Networks</h6>
+            <div class="accordion-content">
+                <ul class="social-links clearfix">
+                    <li><a class="facebook" href="#"><i class="meigee-icon-fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="meigee-icon-fa-twitter"></i></a></li>
+                    <li><a class="instagram" href="#"><i class="meigee-icon-fa-instagram"></i></a></li>
+                    <li><a class="youtube" href="#"><i class="meigee-icon-fa-youtube-play"></i></a></li>
+                    <li><a class="pinterest" href="#"><i class="meigee-icon-fa-pinterest-p"></i></a></li>
+                    <li><a class="vimeo" href="#"><i class="meigee-icon-fa-vimeo"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="indent-52 white-space hidden-sm hidden-xs">
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+    <hr class="indent-18 white-space">
+    <div class="row middle-xs middle-md">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 copyright-wrapper last-xs">
+            <span class="copyright">&copy; 2018 Meigee Team.</span>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6 first-xs first-sm">
+            <ul class="horizontal-links">
+                <li><a href={{store url='about-us'}}>About us</a></li>
+                <li><a href="{{store url='customer-service'}}">Customer Service</a></li>
+                <li><a href="{{store url='privacy-policy-cookie-restriction-mode'}}">Privacy Policy</a></li>
+                <li><a href="{{store url='catalogsearch/advanced/'}}">Advanced Search</a></li>
+                <!--<li><a href="{{store url='sales/guest/form/'}}">Orders and Returns</a></li>
+                <li><a href="{{store url='contact'}}">Contact Us</a></li>-->
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 store-switcher-wrapper">
+           {{block class="Magento\Store\Block\Switcher" name="store_switcher" template="switch/stores.phtml"}}
+        </div>
+    </div>
+<div style="height: 8px"></div>
+    </div>
+</div>

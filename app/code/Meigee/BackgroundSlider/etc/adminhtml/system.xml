@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+        <section id="background_slider" translate="label" sortOrder="52" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Background Slider</label>
+            <tab>meigee_modules</tab>
+            <resource>Meigee_BackgroundSlider::background_slider</resource>
+            <group id="slider_options" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Options</label>
+				<field id="slider_status" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enabled</label>
+					<comment>Will work only on all "boxed" layout</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="slider_homepage_only" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Show on homepage only</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+					<depends>
+						<field id="slider_status">1</field>
+					</depends>
+				</field>
+				<field id="slider_fade" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Fade</label>
+					<validate>required-entry</validate>
+					<depends>
+						<field id="slider_status">1</field>
+					</depends>
+				</field>
+				<field id="slider_duration" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Duration</label>
+					<depends>
+						<field id="slider_status">1</field>
+					</depends>
+				</field>
+				<field id="slider_slides_src" translate="label" type="Meigee\Core\Block\Adminhtml\System\FormElements\Image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Background Slider Images</label>
+					<frontend_model>Magento\Config\Block\System\Config\Form\Field</frontend_model>
+					<backend_model>Meigee\Core\Model\Config\Backend\ChoiceImgs</backend_model>
+					<upload_dir config="system/filesystem/media" scope_info="0">meigee/background_slider</upload_dir>
+					<base_url type="media" scope_info="0">meigee/background_slider/</base_url>
+					<depends>
+						<field id="slider_status">1</field>
+					</depends>
+				</field>
+            </group>
+        </section>
+    </system>
+</config>

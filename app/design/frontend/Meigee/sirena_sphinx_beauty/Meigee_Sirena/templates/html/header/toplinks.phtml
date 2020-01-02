@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ * @var \Meigee\Sirena\ViewModel\CustomerCheck $customerCheck
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$customerCheck = $block->getCustomerCheck();
+$accountLink = $logoutLink = true;
+$registerLink = $themeConfigPhp->getToplinksShowRegister();
+$loginLink = $themeConfigPhp->getToplinksShowLogin();
+$isLoggedIn = $customerCheck->isCustomerLoggedIn();
+?>
+<?php echo $this->getChildHtml("sirena.header.top.links"); ?>
+<ul class="header links">
+    <?php if ($accountLink) { ?>
+        <?php echo $this->getChildHtml("my-account-link"); ?>
+    <?php } ?>
+    <?php if ($logoutLink) { ?>
+        <?php echo $this->getChildHtml("authorization-link"); ?>
+    <?php } ?>
+</ul>

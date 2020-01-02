@@ -1,0 +1,98 @@
+//
+//  mobile (<767px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+	.page-footer {
+		.row {
+			margin-left: -(@layout__width-xs-indent);
+			margin-right: -(@layout__width-xs-indent);
+			.accordion-item {
+				padding-left: @layout__width-xs-indent;
+				padding-right: @layout__width-xs-indent;
+			}
+			&.accordion-content {
+				margin-left: -5px;
+				margin-right: -5px;
+			}
+		}
+	}
+}
+
+//
+//  Tablet (<997px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.page-footer {
+		.row {
+			margin-left: -(@layout__width-sm-indent);
+			margin-right: -(@layout__width-sm-indent);
+			.accordion-item {
+				padding-left: @layout__width-sm-indent;
+				padding-right: @layout__width-sm-indent;
+			}
+			&.accordion-content {
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+		}
+	}
+	.accordion-list {
+		.accordion-item {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			flex: 0 0 auto;
+			margin: 0;
+			border-top: 1px solid @border-color-footer;
+			.accordion-title,
+			.block-title.accordion-title{
+				text-align: left;
+				text-transform: uppercase;
+				margin: 0;
+				padding: 13px 30px 13px 0;
+				font-size: 15px;
+				line-height: 1.2;
+				color: @color-headings-footer;
+				font-family: @font-for-body;
+				font-weight: 400;
+				position: relative;
+				.icon-more {
+					display: inline-block;
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					margin: -10px 0 0 0;
+					.icon-minus {
+						display: none;
+					}
+					.icon-minus,
+					.icon-plus {
+						font-size: 18px;
+						width: auto;
+						margin: 0;
+					}
+				}
+			}
+			.accordion-content {
+				display: none;
+				padding: 10px 0 20px 0;
+				text-align: left;
+				width: 100%;
+			}
+			&.open {
+				.accordion-title {
+					.icon-more {
+						.icon-plus {
+							display: none;
+						}
+						.icon-minus {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

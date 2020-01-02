@@ -1,0 +1,7 @@
+<div class="listing-banner">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/category_listing_banner.jpg"}}" class="lazyload" alt="Listing Banner Image" />
+	<div class="banner-content">
+		<p class="text">Round neck coat with long sleeves. Featuring front flap pockets and <br/>a zip-up front.</p>
+		<a class="btn btn-default hidden-xs" href="javascript:void(0);" title="Shop Now">Shop Now</a>
+	</div>
+</div>

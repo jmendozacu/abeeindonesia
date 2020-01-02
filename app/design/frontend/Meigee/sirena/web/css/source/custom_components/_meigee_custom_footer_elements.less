@@ -1,0 +1,94 @@
+& when (@media-common = true) {
+	.footer {
+		.social-links {
+			width: 100%;
+			text-align: left;
+			margin: 4px 0 0 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				float: none;
+				margin: 0 7px 0 0;
+				a {
+					color: @color-social-links-icon-footer;
+					background-color: @bg-color-social-links-icon-footer;
+					.transition(~"background-color .3s ease-out,color .3s ease-out");
+					&:visited {
+						color: @color-social-links-icon-footer;
+					}
+					&:hover,
+					&:focus,
+					&:active {
+						color: @color-hover-social-links-icon-footer;
+						background-color: @bg-color-hover-social-links-icon-footer;
+					}
+				}
+			}
+		}
+	}
+	.horizontal-links {
+		display: block;
+		margin: 7px 0;
+		padding: 0;
+		li {
+			list-style: none;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 10px;
+		}
+		@media @sm-and-up {
+			li {
+				margin: 0 30px 0 0;
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+		&.type-2 {
+			margin: 0;
+			li {
+				a {
+					font-size: 11px;
+					text-transform: uppercase;
+					letter-spacing: 1.2px;
+					color: @theme__color__default;
+					&:hover,
+					&:focus,
+					&:active {
+						color: @theme__color__primary;
+					}
+				}
+			}
+			@media @sm-and-up {
+				li {
+					margin: 0 40px 0 0;
+					&:last-of-type {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.footer {
+		.social-links {
+			text-align: right;
+		}
+	}
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+	.footer-boxed-content .page-footer {
+		margin: 0 60px;
+	}
+}

@@ -1,0 +1,156 @@
+<hr class="indent-30 white-space">
+<div class="category-banners type-1 row">
+    <div class="single-banner col-xs-12 col-sm-4">
+        <a href="javascript:void(0);">
+            <img src="#" data-src="{{media url='wysiwyg/sirena/decor_text_banner_1.jpg'}}" alt="Category Banner" class="lazyload" />
+           <strong class="title">Fibi the Fox</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-12 col-sm-4">
+        <a href="javascript:void(0);">
+            <img src="#" data-src="{{media url='wysiwyg/sirena/decor_text_banner_2.jpg'}}" alt="Category Banner" class="lazyload" />
+            <strong class="title">Black Ring</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-12 col-sm-4">
+        <a href="javascript:void(0);">
+            <img src="#" data-src="{{media url='wysiwyg/sirena/decor_text_banner_3.jpg'}}" alt="Category Banner" class="lazyload" />
+            <strong class="title">Case-Wallet</strong>
+        </a>
+    </div>
+</div>
+<hr class="indent-50 xs-indent-30 sm-indent-30  white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        {{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Handpicked Products" widget_type="featuredcategory" featured_category="309" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="4" template="Meigee_ProductWidget::product/widget/content/grid.phtml" products_per_row="4" products_per_row_tablet="4" products_per_row_mobile="2" product_name="true" product_price="true" stock_status_grid="false" desc_grid="false" timer_grid="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_grid="true" widget_id="6778" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="icon-banners type-2 row no-margin"  style="padding: 30px 0 10px; background-color: #eee; box-shadow: none;">
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-shipping"></i>
+                    <strong class="title">Free Shipping</strong>
+                    <span class="subtitle">On Orders Over $200</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-secure"></i>
+                    <strong class="title">Secure Payments</strong>
+                    <span class="subtitle">Visa, Mastercard, Paypal</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-return"></i>
+                    <strong class="title">Free Returns</strong>
+                    <span class="subtitle">Within 30 Days</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3 col-lg-12">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-percent"></i>
+                    <strong class="title">Weekly Discounts</strong>
+                    <span class="subtitle">Up to 50% OFF</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="indent-50 xs-indent-30 sm-indent-30  white-space">
+
+<div class="row no-margin">
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_1.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_3.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_2.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_5.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_4.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_7.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_6.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_8.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_9.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_10.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_11.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_13.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_12.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_14.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_15.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-1_8 no-gap">
+         <a href="javascript:void(0);" class="banner">
+            <img src="{{media url=&quot;wysiwyg/sirena/decor_banner_16.jpg&quot;}}" alt="Banner Img">
+         </a>
+    </div>
+</div>
+
+<hr class="indent-50 xs-indent-30 sm-indent-30 white-space">
+
+<div class="full-width" style="background-color: rgb(238, 238, 238);">
+    <div class="container">
+        <div class="row center-sm center-md center-lg">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 newsletter-form-wrapper">
+                {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+            </div>
+        </div>
+    </div>
+</div>

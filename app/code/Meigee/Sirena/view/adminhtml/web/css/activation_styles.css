@@ -1,0 +1,3 @@
+#sirena_activation_skins td.label{ display: none;}
+#sirena_activation_skins table.activated-themes tr:nth-child(even) > td { background: #e3e3e3; border-bottom: 0px;}
+.accordion #sirena_activation_skins td.value { padding-right:0px; width: 100%; }

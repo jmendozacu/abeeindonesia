@@ -1,0 +1,41 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Review\Block\Product\ReviewRenderer $block */
+
+$url = $block->getReviewsUrl() . '#product-review-container';
+$urlForm = $block->getReviewsUrl() . '#product-review-container';
+
+/* Sirena Custom */
+$rating_stars = true;
+$rating_cust_link = true;
+?>
+<?php if ($block->isReviewEnabled() && $block->getReviewsCount()) : ?>
+    <?php $rating = $block->getRatingSummary(); ?>
+    <div class="product-reviews-summary short<?= !$rating ? ' no-rating' : '' ?>">
+        <?php if ($rating && $rating_stars) :?>
+            <div class="rating-summary">
+                <span class="label"><span><?= $block->escapeHtml(__('Rating')) ?>:</span></span>
+                <div class="rating-result" title="<?= $block->escapeHtmlAttr($rating) ?>%">
+                    <span style="width:<?= $block->escapeHtmlAttr($rating) ?>%"><span><?= $block->escapeHtml($rating) ?>%</span></span>
+                </div>
+            </div>
+        <?php endif;?>
+        <?php if ($rating_cust_link) :?>
+            <div class="reviews-actions">
+                <a class="action view" href="<?= $block->escapeUrl($url) ?>"><?= $block->escapeHtml($block->getReviewsCount()) ?>&nbsp;<span><?= ($block->getReviewsCount() == 1) ? $block->escapeHtml(__('Review')) : $block->escapeHtml(__('Reviews')) ?></span></a>
+            </div>
+        <?php endif;?>
+    </div>
+<?php elseif ($block->isReviewEnabled() && $block->getDisplayIfEmpty()): ?>
+    <div class="product-reviews-summary short empty">
+        <div class="reviews-actions">
+            <a class="action add" href="<?= $block->escapeUrl($urlForm) ?>">
+                <?= $block->escapeHtml(__('Be the first to review this product')) ?>
+            </a>
+        </div>
+    </div>
+<?php endif; ?>

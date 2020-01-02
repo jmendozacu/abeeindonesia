@@ -1,0 +1,13 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$product_custom_tab = $themeConfigPhp->getProductPageCustomTab();
+$product_custom_tab_block = $themeConfigPhp->getProductPageCustomTabBlock();
+
+if ($product_custom_tab && $product_custom_tab_block != ''):
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($product_custom_tab_block)->toHtml();
+endif;
+?>

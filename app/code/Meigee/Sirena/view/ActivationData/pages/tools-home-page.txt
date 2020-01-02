@@ -1,0 +1,77 @@
+<div class="full-width lazyload" data-bg="{{media url='wysiwyg/sirena/tools_banner_bg.jpg'}}">
+    <div class="container">
+        <div class="promo-banner">
+            <p>Questions? e-mail or call us and get the answer today</p>
+            <a href="javascript:void(0);" class="btn btn-default">Contact us right now</a>
+        </div>
+    </div>
+</div>
+<hr class="indent-30 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Handpicked products" widget_type="featuredcategory" featured_category="342" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="4" visible_products_tablet="4" visible_products_mobile="2" navigation="1" navigation_position="inside_container" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="false" desc_slider="false" timer_slider="true" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="6900" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+
+<div class="full-width" style="background-color: #333;">
+    <hr class="indent-60 xs-indent-20 sm-indent-30 white-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a href="javascript:void(0);" class="banner with-text tools">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/tools_banner_1.jpg'}}" class="lazyload" alt="Category Banner" />
+                    <div class="banner-content">
+                        <span class="title">Step-by-step design</span>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing<br /> elit. Suspendisse a libero.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a href="javascript:void(0);" class="banner with-text tools">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/tools_banner_2.jpg'}}" class="lazyload" alt="Category Banner" />
+                    <div class="banner-content">
+                        <span class="title">Ecologically clean materials</span>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing<br /> elit. Suspendisse a libero.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+                <a href="javascript:void(0);" class="banner with-text tools">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/tools_banner_3.jpg'}}" class="lazyload" alt="Category Banner" />
+                    <div class="banner-content">
+                        <span class="title">All kinds of tools</span>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing<br /> elit. Suspendisse a libero.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="indent-40 xs-indent-10 sm-indent-20 white-space">
+</div>
+<hr class="indent-30 white-space">
+
+{{widget type="Magefan\Blog\Block\Widget\Recent" title="From the Blog" number_of_posts="3" category_id="0" tag_id="0" author_id="0"}}
+<hr class="indent-30 white-space">
+
+<div class="full-width" style="background-color: #f5f5f5;">
+    <div class="container">
+        <div class="row middle-sm middle-md middle-lg tools-subscribe">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 no-margin">
+                <hr class="indent-0 xs-indent-20 sm-indent-20 white-space">
+                <p class="title">Subscribe to our <strong>Newsletter</strong></p>
+                <hr class="indent-0 xs-indent-0 sm-indent-20 white-space">
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-4 col-lg-5 no-margin">
+                <hr class="indent-0 xs-indent-20 sm-indent-20 white-space">
+                <div class="wrapper">
+                    <i class="icon meigee-icon-email"></i>
+                    <p>Subscribe to our newsletter and know first about all the promotions and discounts. Be always trendy.</p>
+                </div>
+                <hr class="indent-0 xs-indent-20 sm-indent-20 white-space">
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-5 col-lg-5 subscribe-block">
+                <div class="newsletter-form-wrapper">
+                    {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+                </div>
+                <hr class="indent-0 xs-indent-20 sm-indent-20 white-space">
+            </div>
+        </div>
+    </div>
+</div>

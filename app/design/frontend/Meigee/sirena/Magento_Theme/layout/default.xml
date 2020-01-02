@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="meigee.header" template="Meigee_Sirena::html/header.phtml" before="-">
+                <arguments>
+                    <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                </arguments>
+                <referenceBlock name="logo">
+                    <arguments>
+                        <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                        <argument name="logo_img_width" xsi:type="number">110</argument>
+                        <argument name="logo_img_height" xsi:type="number">20</argument>
+                    </arguments>
+                </referenceBlock>
+                <block class="Magento\Theme\Block\Html\Header" name="header.welcome" template="Meigee_Sirena::html/header/welcome.phtml" />
+                <block class="Magento\Store\Block\Switcher" name="store_language" as="store_language" template="Magento_Store::switch/languages.phtml">
+                  <arguments>
+                      <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                      <argument name="view_model" xsi:type="object">Magento\Store\ViewModel\SwitcherUrlProvider</argument>
+                  </arguments>
+                </block>
+                <block class="Magento\Directory\Block\Currency" name="currency" after="store_language" template="Magento_Directory::currency.phtml">
+                  <arguments>
+                      <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                  </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="sirena.header.social.links">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">sirena_header_social_links</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="head.additional">
+            <block class="Magento\Framework\View\Element\Template" as="subheader" template="Magento_Theme::html/subheader.phtml">
+                <arguments>
+                    <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <block name="top.links" class="Magento\Framework\View\Element\Template" template="Meigee_Sirena::html/header/toplinks.phtml">
+            <arguments>
+                <argument name="customer_check" xsi:type="object">Meigee\Sirena\ViewModel\CustomerCheck</argument>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+            <block class="Magento\Customer\Block\Form\Login" name="header_customer_form_login" template="Magento_Customer::form/login.phtml">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">_header</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Form\Register" name="header_customer_form_register" template="Magento_Customer::form/register.phtml">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">_header</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="catalog.compare.link" before="-" template="Magento_Catalog::product/compare/link.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="compareProducts" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Catalog/js/view/compare-products</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\Link" name="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="sortOrder" xsi:type="number">110</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="my-account-link">
+                <arguments>
+                    <argument name="sortOrder" xsi:type="number">60</argument>
+                </arguments>
+            </block>
+        </block>
+
+        <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="meigee.footer" template="Magento_Theme::html/footer.phtml">
+                <arguments>
+                    <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                </arguments>
+                <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer default">
+                    <container name="footer.inner" htmlTag="div" htmlClass="footer-bottom">
+                        <container name="footer.inner.container" htmlTag="div" htmlClass="container">
+                            <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml" />
+                            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" template="Magento_Store::switch/stores.phtml" after="copyright" />
+                        </container>
+                    </container>
+                </container>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="header.panel.wrapper" remove="true" />
+        <referenceContainer name="header-wrapper" remove="true" />
+        <referenceBlock name="navigation.sections" remove="true" />
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+
+        <move element="top.links" destination="meigee.header"/>
+        <move element="logo" destination="meigee.header"/>
+        <move element="minicart" destination="meigee.header" />
+        <move element="catalog.topnav" destination="meigee.header" />
+        <move element="top.search" destination="meigee.header" />
+        <move element="authorization-link-mobile" destination="meigee.header"/>
+        <move element="register-link" destination="top.links"/>
+        <move element="authorization-link" destination="top.links"/>
+
+        <move element="copyright" destination="footer.inner.container" before="store_switcher" />
+
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="meigee.modal.container" as="modal" template="Meigee_Sirena::modal.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="meigee.subscribe.popup" as="popup_block" template="Meigee_Sirena::popup_block.phtml" ifconfig="sirena_general/sirena_popup_content/status">
+                <arguments>
+                    <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="minicart.addons">
+            <block class="Magento\Cms\Block\Block" name="sirena_top_cart_banner">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">sirena_top_cart_banner</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="top.search">
+            <arguments>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

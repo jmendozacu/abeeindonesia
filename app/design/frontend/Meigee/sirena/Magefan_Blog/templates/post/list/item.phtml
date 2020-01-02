@@ -1,0 +1,114 @@
+<?php
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post list item template
+ *
+ * @var $block \Magefan\Blog\Block\Post\AbstractPost
+ */
+?>
+<?php
+    $_post = $this->getPost();
+    $_postUrl = $_post->getPostUrl();
+    $_postName = $block->escapeHtml($_post->getTitle(), null, true);
+    $imageHelper = $this->helper(\Magefan\Blog\Helper\Image::class);
+ ?>
+<li class="item-<?php echo $_post->getId() ?> item post-holder">
+    <div class="inner-wrapper">
+        <?php if ($featuredImage = $_post->getFeaturedImage()) { ?>
+            <div class="post-ftimg-hld">
+                <a href="<?php echo $_postUrl ?>" title="<?php echo $_postName ?>">
+                    <img src="<?php echo $imageHelper->init($_post->getFeaturedImg())->resize(500, 300); ?>"
+                         alt="<?php echo $_postName ?>"
+                         data-large-img="<?php echo $imageHelper->init($_post->getFeaturedImg())->resize(950, 600); ?>"
+                         class="post-featured-img"
+                    />
+                </a>
+            </div>
+        <?php } ?>
+
+        <div class="post-content">
+            <div class="post-info">
+                <div class="post-categories">
+                    <?php if ($_categoriesCount = $_post->getCategoriesCount()) { ?>
+                        <?php echo '<span class="label">' . __('Categories: ') . '</span>'; ?>
+                        <?php $n = 0; foreach($_post->getParentCategories() as $ct) { $n++; ?>
+                            <a title="<?php echo $block->escapeHtml($ct->getTitle()) ?>" href="<?php echo $ct->getCategoryUrl() ?>">
+                                <?php echo $block->escapeHtml($ct->getTitle()) ?>
+                            </a>
+                            <?php if ($n != $_categoriesCount) { echo '<span class="sep">,</span>'; } ?>
+                        <?php } ?>
+                    <?php } ?>
+                </div>
+            </div>
+
+            <div class="post-title-holder">
+                <div class="post-title">
+                    <a class="post-item-link" href="<?php echo $_postUrl ?>"> <?php echo $_postName; ?> </a>
+                </div>
+            </div>
+
+            <div class="post-info-bottom">
+                <div class="post-date">
+                    <span class="label"><?php echo __('Posted: ') ?></span>
+                    <span><?php echo $_post->getPublishDate('F d, Y') ?></span>
+                </div>
+                <div class="comments">
+                    <a title="<?php echo $block->escapeHtml($_post->getTitle()) ?>" href="<?php echo $_postUrl ?>#post-comments">
+                        <?php echo __('Comments: ') ?><?php echo $block->escapeHtml($_post->getCommentsCount()) ?>
+                    </a>
+                </div>
+                <?php if ($_author = $_post->getAuthor()) { ?>
+                    <div class="post-author">
+                        <span class="label"><?php echo __('By ') ?></span>
+                        <span><?php echo $block->escapeHtml($_author->getTitle()) ?></span>
+                    </div>
+                <?php } ?>
+            </div>
+
+            <div class="post-description">
+                <div class="post-text-hld">
+                    <?php echo $block->getShorContent($_post) ?>
+                </div>
+            </div>
+            
+            <div class="post-footer">
+                <?php if ($_tagsCount = $_post->getTagsCount()) { ?>
+                    <div class="tags">
+                        <span class="label"><?php echo __('Tags: ') ?></span>
+                        <ul class="tags">                    
+                            <?php $n = 0; foreach($_post->getRelatedTags() as $tag) { $n++; ?>
+                            <li>
+                                <a title="<?php echo $block->escapeHtml($tag->getTitle()) ?>" href="<?php echo $tag->getTagUrl() ?>">
+                                    <?php echo $block->escapeHtml($tag->getTitle()) ?>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                <?php } ?>
+                <div class="addthis_toolbox addthis_default_style"
+                    addthis:url="<?php echo $_postUrl ?>"
+                    addthis:title="<?php echo $_postName; ?>"
+                    <?php if ($firstImage = $_post->getFirstImage()) { ?>
+                    addthis:media="<?php echo $firstImage ?>"
+                    <?php } ?>>
+                    <span class="label"><?php echo __('Share') ?></span>
+                    <a class="addthis_button_facebook"></a>
+                    <a class="addthis_button_twitter"></a>
+                    <a class="addthis_button_google_plusone"></a>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-primary primary" href="<?php echo $_postUrl ?>" title="<?php echo $_postName ?>"><?php echo __('View Post') ?></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</li>

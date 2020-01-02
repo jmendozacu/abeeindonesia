@@ -1,0 +1,55 @@
+<div class="main-slider-wrapper">
+    <span class="slider-loader"></span>
+    <div class="main-slider swiper-container type-2">
+        <div class="swiper-wrapper">
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url='wysiwyg/sirena/kitchen_slide_1_mobile.jpg'}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url='wysiwyg/sirena/kitchen_slide_1.jpg'}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation pos-left slide-from-left">
+                    <div class="title"><span class="badge">-20% off</span>Black Decker<br /><strong>Food Processor</strong></div>
+                    <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.</div>
+                    <div class="btn-wrapper hidden-xs"><span class="btn action primary" href="javascript:void(0);">Let's shopping</span></div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url='wysiwyg/sirena/kitchen_slide_2_mobile.jpg'}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url='wysiwyg/sirena/kitchen_slide_2.jpg'}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation pos-left slide-from-right">
+                    <div class="title"><span class="badge">Special Offer</span>Feel the power of color<br /><strong>Choose functionality</strong></div>
+                    <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.</div>
+                    <div class="btn-wrapper hidden-xs"><span class="btn action primary" href="javascript:void(0);">Let's shopping</span></div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url='wysiwyg/sirena/kitchen_slide_3_mobile.jpg'}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url='wysiwyg/sirena/kitchen_slide_3.jpg'}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation pos-left fade-with-scale">
+                    <div class="title"><span class="badge">Limited Qty</span>What about the<br /><strong>French toast?</strong></div>
+                    <div class="subtitle hidden-xs">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit.</div>
+                    <div class="btn-wrapper hidden-xs"><span class="btn action primary" href="javascript:void(0);">Let's shopping</span></div>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".main-slider": {
+            "Meigee_Sirena/js/theme_carousel":{
+                "loop":true,
+                "navigation":true,
+                "pagination":true,
+                "autoplay":true
+            }
+        }
+    }
+</script>

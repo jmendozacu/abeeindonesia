@@ -1,0 +1,47 @@
+<div class="full-width">
+<div class="parallax-container" data-image-src="{{media url="wysiwyg/sirena/phoenix_banner_2.jpg"}}" data-height="800px" data-image-src-small="{{media url="wysiwyg/sirena/phoenix_banner_2_mobile.jpg"}}">
+    <div class="parallax-content align-center pos-right">
+        <span class="title">Retrorama. Fresh New <br>Collection by <br>Mickey L. Hawkins.</span>
+        <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br>sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim</span>
+        <span class="btn btn-default">Shop Now</span>
+    </div>
+</div>
+</div>
+
+<div class="full-width">
+<div class="parallax-container" data-image-src="{{media url="wysiwyg/sirena/phoenix_banner_3.jpg"}}" data-height="800px" data-image-src-small="{{media url="wysiwyg/sirena/phoenix_banner_3_mobile.jpg"}}">
+    <div class="parallax-content">
+        <span class="title">Premium Quality Knitwear. <br>Only in Sirena Shop.</span>
+        <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br>sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim</span>
+        <span class="btn btn-default">Shop Now</span>
+    </div>
+</div>
+</div>
+
+<div class="full-width">
+<div class="parallax-container" data-image-src="{{media url="wysiwyg/sirena/phoenix_banner_4.jpg"}}" data-height="800px" data-image-src-small="{{media url="wysiwyg/sirena/phoenix_banner_4_mobile.jpg"}}">
+    <div class="parallax-content align-center pos-right">
+        <span class="title">Retrorama. Fresh New <br>Collection by <br>Mickey L. Hawkins.</span>
+        <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br>sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim</span>
+        <span class="btn btn-default">Shop Now</span>
+    </div>
+</div>
+</div>
+
+<div class="full-width">
+<div class="parallax-container" data-image-src="{{media url="wysiwyg/sirena/phoenix_banner_5.jpg"}}" data-height="800px" data-image-src-small="{{media url="wysiwyg/sirena/phoenix_banner_5_mobile.jpg"}}">
+    <div class="parallax-content">
+        <span class="title">New Sirena AW 2019 <br>Made in Baltimore, <br>Maryland</span>
+        <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br>sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim</span>
+        <span class="btn btn-default">Shop Now</span>
+    </div>
+</div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        ".parallax-container": {
+            "Meigee_Sirena/js/theme_parallax":{}
+        }
+    }
+</script>

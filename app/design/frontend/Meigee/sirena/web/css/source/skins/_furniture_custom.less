@@ -1,0 +1,69 @@
+//  Skin: Furniture custom styles
+& when (@media-common = true) {
+  @media @sm-and-down {
+    .cms-index-index .widget-title h2 {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .header-wide .page-header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header-wide .page-header .page-header-inner.container {
+    padding-left: @layout__width-sm-indent;
+    padding-right: @layout__width-sm-indent;
+  }
+  .page-header {
+    padding-bottom: 0;
+  }
+  .page-header .socials-wrapper,
+  .page-header .logo-wrapper,
+  .page-header .buttons-wrapper,
+  .page-header .search-wrapper {
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+  body.checkout-cart-index .page-header .page-header-inner {
+    -ms-grid-columns: minmax(100px, 150px) 1fr  minmax(auto, 500px);
+    grid-template-columns: minmax(100px, 150px) 1fr  minmax(auto, 500px);
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .full-width,
+  .page-main .full-width {
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  body.has-scrollbar .full-width {
+    width: calc(~"100vw - @{scroll-bar}");
+    left: auto;
+    right: auto;
+    margin: 0 calc(~"-50vw + 50% + (@{scroll-bar} / 2)");
+  }
+  .footer-boxed-content .page-footer {
+    margin: 0;
+  }
+  .content-boxed .page-main .full-width,
+  .content-wide .page-main .full-width {
+    width: calc(~"100% + (@{layout-indent__width})*2");
+    margin-left: -(@layout-indent__width);
+    margin-right: -(@layout-indent__width);
+  }
+  .header-wide .page-header .page-header-inner.container {
+    padding-left: @layout-indent__width;
+    padding-right: @layout-indent__width;
+  }
+}

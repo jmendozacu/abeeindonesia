@@ -1,0 +1,30 @@
+<div class="meigee-instagram-widget block">
+	<span class="block-title">
+		<strong><?php echo ($this->getWidgetTitle() ? $this->getWidgetTitle() : ''); ?></strong>
+	</span>
+	<div class="meigee-instagram-block">		
+		<?php
+		  $result = $block->getImages();
+		  if(isset($result->meta)) {
+		  	$meta = $result->meta;
+			  if($meta->code != 200) {
+				  echo '<p class="instagram-error">'. $meta->error_message .'</p>';
+			  } else {
+				  $i = 0;
+				  foreach ($result->data as $post) {
+					$images = $post->images;
+					$link = $post->link;
+					$thumbnail = $images->thumbnail;
+					$big_image = $images->low_resolution;
+					if($i < $this->getInstagramItems()) {
+						echo '<a href="'.$link.'" class="insta-photo"><img src="'. $big_image->url .'" alt=""></a>';
+					}
+					$i ++;
+				  }
+			  }
+			} elseif($result && isset($result->error_message)) {
+				 echo '<p class="instagram-error">'. $result->error_message .'</p>';
+			}
+		?>
+	</div>
+</div>

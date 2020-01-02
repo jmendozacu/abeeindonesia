@@ -1,0 +1,85 @@
+& when (@media-common = true) {
+  .block.newsletter {
+    width: auto;
+    max-width: 405px;
+    margin-bottom: 0;
+    @media @sm-and-down {
+      margin-bottom: 15px;
+    }
+    .title {
+      display: block;
+      margin-bottom: 10px;
+      strong {
+        font-size: 24px;
+        font-family: @font-for-titles;
+        color: inherit;
+        display: inline-block;
+        font-weight: 400;
+        margin: 0;
+        letter-spacing: -0.4px;
+      }
+    }
+    .subtitle {
+      font-size: 12px;
+      margin: 0 0 24px 0;
+      letter-spacing: 0;
+    }
+  }
+  .form.subscribe {
+    .field.newsletter {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: stretch;
+      margin: 2px 0 0 0;
+      max-width: 405px;
+    }
+    .input-wrapper {
+      width: 100%;
+    }
+    input {
+      background-color: #fff;
+      border: 1px solid #fff;
+      color: @form-element-input__color;
+      height: 44px;
+      line-height: 42px;
+      padding: 0 20px;
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      &.mage-error {
+        border-color: #f44336;
+      }
+    }
+    .action.subscribe {
+      height: 44px;
+      border-color: #fff;
+      line-height: 42px;
+      padding: 0 20px;
+      margin-left: 0;
+      box-shadow: none;
+      background-color: #fff;
+      &:hover,
+      &:focus,
+      &:active {
+        color: @button__hover__color;
+        background-color: @button__hover__background;
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .block.newsletter {
+    width: 100%;
+    .form.subscribe {
+      display: block;
+    }
+  }
+}

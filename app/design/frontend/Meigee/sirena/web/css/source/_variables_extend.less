@@ -1,0 +1,229 @@
+//  CSS Variables
+//  used for proper navigation & sidebar fixed position on small devices
+:root {
+  --mobile-top-offset: 60px;
+}
+@mobile-top-offset: var(--mobile-top-offset);
+
+//  Theme Typography
+@font-for-titles: 'Cormorant Garamond', serif;
+@font-for-body: 'Poppins', sans-serif;
+@font-family__base: @font-for-body;
+
+@font-size-main: 14px;
+@font-size-h1: 36px;
+@font-size-h2: 30px;
+@font-size-h3: 24px;
+@font-size-h4: 20px;
+@font-size-h5: 18px;
+@font-size-h6: 12px;
+
+
+
+//  Theme Colors
+@color-body: rgba(0,0,0,0.6);
+@color-title: rgba(0,0,0,0.8);
+
+@theme__color__default: #222;
+@theme__color__primary: #ffa975;
+
+@bg-color-site: #fff;
+@bg-color-content: #fff;
+
+@border__color: rgba(0,0,0,0.1);
+
+
+
+// Text Inputs
+@form-element-input__border-radius: 0;
+@form-element-input__height: 44px;
+@form-element-input__padding: 0 20px;
+@form-element-input__font-size: 12px;
+@form-element-input__line-height: false;
+@form-element-input__font-style: false;
+
+@form-element-input__color: rgba(0,0,0,0.6);
+@form-element-input__background: rgba(0,0,0,0.04);
+@form-element-input__border-color: rgba(0,0,0,0.04);
+
+//  Focus state
+@form-element-input__focus__background: rgba(255,255,255,1);
+@form-element-input__focus__border: rgba(0,0,0,0.2);
+@form-element-input__focus__color: @form-element-input__color;
+
+//  Placeholder
+@form-element-input-placeholder__color: rgba(0,0,0,0.6);
+
+//  Disabled state
+@form-element-input__disabled__opacity: .5;
+
+
+
+// Buttons
+@button__font-family: @font-for-body;
+@button__font-size: 11px;
+@button__font-weight: 400;
+@button__padding: 13px 40px;
+@button__border-radius: 0;
+
+// Default = secondary button
+@button__color: rgba(0,0,0,0.8);
+@button__background: #fff;
+@button__border: 1px solid rgba(0,0,0,0.1);
+
+@button__hover__color: rgba(0,0,0,0.8);
+@button__hover__background: #e5e5e5;
+@button__hover__border: 1px solid #e5e5e5;
+
+@button__active__color: @button__hover__color;
+@button__active__background: @button__hover__background;
+@button__active__border: @button__hover__border;
+
+//  Primary button
+@button-primary__color: #fff;
+@button-primary__background: @theme__color__primary;
+@button-primary__border: 1px solid @theme__color__primary;
+
+@button-primary__hover__color: #fff;
+@button-primary__hover__background: @theme__color__default;
+@button-primary__hover__border: 1px solid @theme__color__default;
+
+@button-primary__active__background: @button-primary__hover__background;
+@button-primary__active__border: @button-primary__hover__border;
+@button-primary__active__color: @button-primary__hover__color;
+
+// Default Magento variables for buttons
+@button__line-height: false;
+@button__margin: false;
+@button__disabled__opacity: .5;
+
+@button__font-size__l: @button__font-size;
+@button__line-height__l: @button__line-height;
+@button__padding__l: @button__padding;
+
+@button__font-size__s: @button__font-size;
+@button__line-height__s: @button__line-height;
+@button__padding__s: @button__padding;
+
+
+
+//  Product Listing Variables
+@color-listing-price: @theme__color__primary;
+@color-listing-special-price: #f72525;
+@color-listing-old-price: rgba(0,0,0,0.4);
+@color-listing-product-title: @color-title;
+
+@color-label-new: #fff;
+@bg-color-label-new: #d55960;
+@color-label-sale: #fff;
+@bg-color-label-sale: #ffa975;
+@bg-color-product-page: #e6e6e6;
+
+@btn-product-page-tocart-color: @button-primary__color;
+@btn-product-page-tocart-bg-color: @button-primary__background;
+@btn-product-page-tocart-border: @button-primary__border;
+
+@btn-product-page-tocart__hover-color: @button-primary__hover__color;
+@btn-product-page-tocart__hover-bg-color: @button-primary__hover__background;
+@btn-product-page-tocart__hover-border: @button-primary__hover__border;
+
+
+
+// Header Color Variables
+@border-color-header: rgba(0,0,0,0.1);
+@bg-color-header: #fff;
+@bg-color-header-wellcome-text: transparent;
+
+@color-header-socials: rgba(0,0,0,0.4);
+@bg-color-header-socials: transparent;
+@color-hover-header-socials: rgba(0,0,0,0.6);
+@bg-color-hover-header-socials: rgba(0,0,0,0.06);
+
+@icon-color-header-options: rgba(0,0,0,0.8);
+@bg-color-hover-header-options: rgba(0,0,0,0.04);
+
+@color-header-search-text: @form-element-input__color;
+@icon-color-header-search: rgba(0,0,0,0.8);
+@bg-color-header-search: transparent;
+@border-color-header-search: @form-element-input__border-color;
+@color-focused-header-search-text: @form-element-input__focus__color;
+@icon-color-focused-header-search: rgba(0,0,0,0.8);
+@bg-color-focused-header-search: @form-element-input__focus__background;
+@border-color-focused-header-search: @form-element-input__focus__border;
+
+
+
+// Main Navigation Color Variables
+@bg-color-navigation-wrapper: transparent;
+
+@color-top-level-links: @color-title;
+@color-hover-top-level-links: @color-title;
+@bg-color-top-level-links: transparent;
+@bg-color-hover-top-level-links: rgba(0,0,0,0.06);
+
+@color-dropdown-top-links: @color-title;
+@color-hover-dropdown-top-links: @theme__color__primary;
+@color-dropdown-sub-links: @color-body;
+@color-hover-dropdown-sub-links: @theme__color__primary;
+
+
+
+// Footer Color Variables
+@bg-color-footer: #e7e7dd;
+@border-color-footer: @border__color;
+@color-text-footer: @color-body;
+@color-headings-footer: @color-title;
+@color-links-footer: @color-body;
+@color-hover-links-footer: @theme__color__primary;
+
+@color-social-links-icon-footer: rgba(0,0,0,0.4);
+@color-hover-social-links-icon-footer: rgba(0,0,0,0.6);
+@bg-color-social-links-icon-footer: transparent;
+@bg-color-hover-social-links-icon-footer: rgba(0,0,0,0.06);
+
+
+
+//  Layout Variables
+@layout-indent__width: 60px;
+@layout__width-sm-indent: 20px;
+@layout__width-xs-indent: 10px;
+@layout__max-width: 1370px;
+
+// Breakpoints
+@screen__xxs: 374px;
+@screen__xs: 550px;
+@screen__s: 767px;
+@screen__m: 801px; // this breakpoint switches between mobile and desktop views
+@screen__l: 1024px;
+@screen__xl: 1370px;
+
+
+
+// backward compatibility with previously declared variables
+@font-main: @font-for-titles;
+@font-second: @font-for-body;
+@color-default: @theme__color__default;
+@color-primary: @theme__color__primary;
+@font-size-button: @button__font-size;
+@font-family-button: @button__font-family;
+@font-weight-button: @button__font-weight;
+@btn-default-color: @button__color;
+@btn-default-bg-color: @button__background;
+@btn-default-border-color: rgba(0,0,0,0.1);
+@btn-default__hover-color: @button__hover__color;
+@btn-default__hover-bg-color: @button__hover__background;
+@btn-default__hover-border-color: #e5e5e5;
+@btn-primary-color: @button-primary__color;
+@btn-primary-bg-color: @button-primary__background;
+@btn-primary-border-color: @theme__color__primary;
+@btn-primary__hover-color: @button-primary__hover__color;
+@btn-primary__hover-bg-color: @button-primary__hover__background;
+@btn-primary__hover-border-color: @theme__color__default;
+@font-size-text-inputs: @form-element-input__font-size;
+@input__placeholder_color: @form-element-input-placeholder__color;
+@input__color: @form-element-input__color;
+@input__bg-color: @form-element-input__background;
+@input_border-color: @form-element-input__border-color;
+@input__bg-color-focus: @form-element-input__focus__background;
+@input__color-focus: @form-element-input__focus__color;
+@input__border-color-focus: @form-element-input__focus__border;

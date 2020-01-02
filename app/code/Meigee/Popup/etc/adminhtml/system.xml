@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+        <section id="meigee_popup" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Popup</label>
+            <tab>meigee_modules</tab>
+            <resource>Meigee_Popup::system_config</resource>
+
+			<group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Popup Content</label>
+				<field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<comment>Enable or Disable Popup Content</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="static_identifier" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Popup Content Static Block</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+				</field>
+				<field id="expires" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Popup expires end</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<comment>Set period in days after which popup will be shown again if customer has already subscribed or chosen option "Don't show this popup again". Set from 1 to infinite.</comment>
+				</field>
+				<field id="home_only" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Show only on the homepage</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+					<comment>If set yes, popup will be shown only on home page.</comment>
+				</field>
+				<field id="width" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Popup width</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<comment>Set width in pixels.</comment>
+				</field>
+				<field id="height" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Popup height</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<comment>Set height in pixels.</comment>
+				</field>
+			</group>
+        </section>
+    </system>
+</config>

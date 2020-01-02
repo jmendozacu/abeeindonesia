@@ -1,0 +1,54 @@
+<div class="footer-middle">
+    <div class="container">
+        <hr class="indent-20 xs-indent-0 sm-indent-0 white-space">
+        <div class="row middle-md middle-lg">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 accordion-item">
+                <h6 class="footer-block-title accordion-title visible-xs visible-sm">Subscribe</h6>
+                <div class="row accordion-content middle-md middle-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-6 no-margin">
+                        <h4 style="margin-bottom: 10px;">Subscribe to our Newsletter</h3>
+                        <p style="margin-bottom: 0; line-height: 1;">Updates, discounts, some special offers and more.</p>
+                        <hr class="indent-0 xs-indent-20 sm-indent-20 white-space">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 no-margin">
+                        {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 accordion-item">
+                <h6 class="footer-block-title accordion-title visible-xs visible-sm">Social Networks</h6>
+                <div class="accordion-content">
+                    <ul class="social-links">
+                        <li><a class="facebook" href="javascript:void(0);"><i class="meigee-icon-fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="javascript:void(0);"><i class="meigee-icon-fa-twitter"></i></a></li>
+                        <li><a class="instagram" href="javascript:void(0);"><i class="meigee-icon-fa-instagram"></i></a></li>
+                        <li><a class="youtube" href="javascript:void(0);"><i class="meigee-icon-fa-youtube-play"></i></a></li>
+                        <li><a class="pinterest" href="javascript:void(0);"><i class="meigee-icon-fa-pinterest-p"></i></a></li>
+                        <li><a class="vimeo" href="javascript:void(0);"><i class="meigee-icon-fa-vimeo"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+    <hr class="indent-20 white-space">
+    <div class="row middle-xs middle-md">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 copyright-wrapper last-xs first-md first-lg">
+            <span class="copyright">&copy; 2019 Meigee Team.</span>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6 first-xs first-sm">
+            <ul class="horizontal-links">
+                <li><a href={{store url='about-us'}}>About us</a></li>
+                <li><a href="{{store url='customer-service'}}">Customer Service</a></li>
+                <li><a href="{{store url='privacy-policy-cookie-restriction-mode'}}">Privacy Policy</a></li>
+                <li><a href="{{store url='catalogsearch/advanced/'}}">Advanced Search</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 last-sm store-switcher-wrapper">
+           {{block class="Magento\Store\Block\Switcher" name="store_switcher" template="switch/stores.phtml"}}
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+/* Get inique id for different instances */
+$id_postfix = uniqid();
+?>
+<div class="block newsletter">
+    <div class="title"><strong><?= $block->escapeHtml(__('Subscribe to our Newsletter')) ?></strong></div>
+    <div class="subtitle"><?= $block->escapeHtml(__('Updates, discounts, some special offers and more.')) ?></div>
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail-<?= $block->escapeHtmlAttr($id_postfix); ?>">
+            <div class="field newsletter">
+                <label class="label" for="newsletter-<?= $block->escapeHtmlAttr($id_postfix); ?>"><span><?= $block->escapeHtml(__('Subscribe to our Newsletter')) ?></span></label>
+                <div class="input-wrapper">
+                    <input name="email" type="email" id="newsletter-<?= $block->escapeHtmlAttr($id_postfix); ?>"
+                                placeholder="<?= $block->escapeHtmlAttr(__('Enter your Email')) ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+                <button class="action subscribe btn-default" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit" aria-label="Subscribe">
+                    <span><?= $block->escapeHtml(__('Submit')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

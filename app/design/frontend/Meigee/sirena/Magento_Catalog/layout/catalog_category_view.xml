@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    	<move element="category.view.container" destination="content" before="-"/>
+        <referenceBlock name="product_list_toolbar">
+            <arguments>
+                <argument name="custom_grid_switcher" xsi:type="object">Meigee\Sirena\ViewModel\CustomGridSwitcher</argument>
+            </arguments>
+            <container name="meigee.custom.toolbar.elements" as="meigee-toolbar" />
+        </referenceBlock>
+        <referenceBlock name="category.products.list">
+            <container name="meigee.custom.listing.elements.wrapper" as="meigee-listing-block" htmlTag="div" htmlClass="listing-elements-wrapper" />
+            <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="meigee.category.product.timer" as="meigee.product.timer.wrapper">
+                <block name="meigee.product.timer" class="Magento\Catalog\Block\Product\ProductList\Item\Block" as="meigee.product.timer" template="Meigee_Sirena::product_timer.phtml">
+                    <arguments>
+                        <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                        <argument name="theme_product_countdown" xsi:type="object">Meigee\Sirena\ViewModel\ProductCountdown</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceBlock>
+        <move element="page.main.title" destination="meigee.custom.toolbar.elements" before="-"/>
+        <move element="meigee.custom.sidebar.toggler" destination="meigee.custom.toolbar.elements" after="page.main.title"/>
+        <move element="meigee.custom.listing.elements" destination="meigee.custom.listing.elements.wrapper" before="-" />
+    </body>
+</page>

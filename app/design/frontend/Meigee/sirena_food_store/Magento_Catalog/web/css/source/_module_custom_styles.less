@@ -1,0 +1,58 @@
+& when (@media-common = true) {
+  .product-item-name,
+  .sidebar .product-item-name {
+    font-size: 15px;
+  }
+  .product-item {
+    .tocart, .btn-cart {
+      padding: 12px 22px 11px;
+    }
+  }
+  .product-info-main .product.attribute.overview,
+  .page-layout-1column .product-info-main .product.attribute.overview {
+    font-size: 13px;
+  }
+  .product-info-main .product.attribute.overview .block-title,
+  .page-layout-1column .product-info-main .product.attribute.overview .block-title {
+    font-size: 18px;
+  }
+  @media @sm-and-up {
+    .product-info-main .page-title-wrapper h1,
+    .page-layout-1column .product-info-main .page-title-wrapper h1,
+    .block.related .block-title,
+    .block.upsell .block-title,
+    #product-review-container .block-title,
+    .block.review-add .block-title {
+      font-size: 30px;
+    }
+  }
+  .block.widget.block-products-list .block-title strong {
+    font-weight: 300;
+
+  }
+  .block {
+    &.related {
+      .related-available {
+        .field.choice {
+          top: 1px;
+        }
+      }
+    }
+  }
+  .sidebar {
+    .block.widget.meigee-widget.widget-slider.block-products-list {
+      .block-title {
+        border-bottom: 1px solid @border__color;
+        margin-bottom: 20px;
+        strong {
+          font-size: 30px;
+          font-weight: 300;
+          margin-bottom: 10px;
+          letter-spacing: -1px;
+          display: inline-block;
+          max-width: calc(~"100% - 82px");
+        }
+      }
+    }
+  }
+}

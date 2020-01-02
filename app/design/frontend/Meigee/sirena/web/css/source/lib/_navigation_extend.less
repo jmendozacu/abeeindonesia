@@ -1,0 +1,64 @@
+& when (@media-common = true) {
+    .nav-toggle {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        padding: 0;
+        margin: 0 15px 0 0;
+        border: 0;
+        box-shadow: none;
+        background-color: transparent;
+        color: @icon-color-header-search;
+        z-index: 1;
+        &:before {
+            content: '\e90d';
+            font-family: 'meigee-icons';
+            color: inherit;
+            font-size: 25px;
+            line-height: inherit;
+            position: relative;
+            left: 0;
+            top: 1px;
+        }
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+        @media @sm-and-up {
+            top: auto;
+            position: relative;
+        }
+    }
+    .navigation .level0 .submenu {
+        text-align: left;
+    }
+}
+
+//
+//  mobile (<767px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .nav-toggle {
+        position: absolute;
+        top: 5px;
+        margin: 0;
+    }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .navigation .level0 .submenu {
+        .submenu {
+            top: -1px !important;
+        }
+    }
+}

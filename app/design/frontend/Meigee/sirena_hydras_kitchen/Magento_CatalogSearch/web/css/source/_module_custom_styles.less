@@ -1,0 +1,37 @@
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header .block-search {
+    &.type-2 {
+      width: 100%;
+      max-width: 315px;
+      input {
+        width: 100%;
+        padding: 0 52px 0 13px;
+        border-color: @border-color-header-search;
+      }
+      .minisearch.active {
+        input {
+          width: 100%;
+          padding: 0 52px 0 13px;
+        }
+      }
+    }
+  }
+}
+
+//
+//  Large Screens
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .page-header .block-search {
+    &.type-2 {
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

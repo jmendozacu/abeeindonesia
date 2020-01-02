@@ -1,0 +1,115 @@
+& when (@media-common = true) {
+  /* Header RTL Styles */
+  body.rtl-enabled {
+    .page-header .block-search.type-2 input {
+      padding-right: 20px;
+    }
+    .top-links-wrapper ul.horizontal-links li  {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+    .top-links-wrapper ul.horizontal-links li + li::before {
+      float: left;
+    }
+    .top-links-wrapper ul.horizontal-links + ul.header.links::before {
+      padding-right: 0;
+      padding-left: 9px;
+    }
+    ul.wishlist-compare-wrapper li {
+      margin-right: 15px;
+      margin-left: 0;
+    }
+    ul.wishlist-compare-wrapper li a::before {
+      margin-left: 10px;
+    }
+    ul.wishlist-compare-wrapper li a .counter {
+      left: 0;
+      right: auto;
+    }
+    .page-header .minicart-wrapper .title-cart .icon-wrapper .counter-number {
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+      right: 10px;
+      left: auto;
+    }
+    .page-header.sticky-header .minicart-wrapper .title-cart .icon-wrapper .counter-number {
+      right: 23px;
+    }
+    .block.widget.block-products-list.meigee-widget.widget-slider .block-title .swiper-navigation {
+      right: auto;
+      left: 0;
+    }
+  }
+  /* Footer RTL Styles */
+  body.rtl-enabled {
+    .page-footer .horizontal-links li + li::before {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+    .horizontal-links li:last-of-type {
+      margin-right: 15px;
+    }
+    .footer .social-links {
+      text-align: right;
+    }
+    .footer-icon-banners .single-icon {
+      padding-left: 0;
+      padding-right: 45px;
+    }
+    .footer-icon-banners .icon {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body.rtl-enabled {
+    .page-header-inner {
+      -ms-grid-columns: 1fr minmax(100px, 150px) 1fr;
+      grid-template-columns: 1fr minmax(100px, 150px) 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "header-top-links header-top header-top" "site-options logo site-search" "header-nav header-nav header-nav";
+
+      .logo-wrapper {
+        .grid-ie-col(2, 1);
+      }
+      .buttons-wrapper {
+        .grid-ie-col(1, 1);
+      }
+      .search-wrapper {
+        .grid-ie-col(3, 1);
+      }
+      .top-links-wrapper {
+        .grid-ie-col(1, 1);
+      }
+      .wellcome-text-wrapper {
+        .grid-ie-col(2, 2);
+      }
+    }
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  body.rtl-enabled {
+    .full-width,
+    .page-main .full-width,
+    .page-header .full-width {
+      margin-right: -50vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+    }
+  }
+}

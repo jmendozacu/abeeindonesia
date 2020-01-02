@@ -1,0 +1,8 @@
+<a href="javascript:void(0);" class="banner with-text food">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/food_banner_1.jpg'}}" class="lazyload" alt="Category Banner" />
+    <div class="banner-content pos-top">
+        <span class="title">Salmon Fantasy Sushi Set</span>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante nulla, pharetra vel rutrum at.</p>
+        <span class="action primary">order now</span>
+    </div>
+</a>

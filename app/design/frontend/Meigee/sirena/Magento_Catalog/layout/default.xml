@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="category.products.list">
+            <arguments>
+                <argument name="enabled_module_check" xsi:type="object">Meigee\Sirena\ViewModel\EnabledModuleCheck</argument>
+                <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                <argument name="product_labels" xsi:type="object">Meigee\Sirena\ViewModel\ProductLabels</argument>
+                <argument name="scope_config" xsi:type="object">Meigee\Sirena\ViewModel\ScopeConfig</argument>
+            </arguments>
+        </referenceBlock>
+        <container name="meigee.product.block.before.addtocart.simple" label="Meigee Product (simple) Block - Before Add to Cart" htmlTag="div" htmlClass="before-add-to-cart" />
+        <container name="meigee.product.block.before.addtocart" label="Meigee Product (with options) Block - Before Add to Cart" htmlTag="div" htmlClass="before-add-to-cart" />
+        <container name="meigee.product.block.after.addtocart" label="Meigee Product Block - After Add to Cart" htmlTag="div" htmlClass="after-add-to-cart" />
+        <container name="meigee.product.block.after.sku" label="Meigee Product Block - After SKU" htmlTag="div" htmlClass="after-sku" />
+        <container name="meigee.product.block.options.top" label="Meigee Product (with options) Block - Options Top" htmlTag="div" htmlClass="options-top-wrapper" />
+        <container name="meigee.product.block.options.bottom" label="Meigee Product (with options) Block - Options Bottom" htmlTag="div" htmlClass="options-bottom-wrapper" />
+        <container name="meigee.custom.listing.elements" label="Meigee Product Listing Block" />
+    </body>
+</page>

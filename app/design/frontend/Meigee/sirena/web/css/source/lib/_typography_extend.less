@@ -1,0 +1,113 @@
+& when (@media-common = true) {
+    html {
+        box-sizing: border-box;
+        -ms-overflow-style: scrollbar;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size-adjust: 100%;
+        height: auto;
+        min-height: 100%;
+    }
+    * {
+        box-sizing: inherit;
+        &::before {
+            box-sizing: inherit;
+        }
+        &::after {
+            box-sizing: inherit;
+        }
+    }
+    body {
+        font-family: @font-for-body;
+        font-size:  @font-size-main;
+        color: @color-body;
+        letter-spacing: 0.4px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: auto;
+        min-height: 100%;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: @font-for-titles;
+            letter-spacing: -0.2px;
+            color: @color-title;
+            margin-top: 0;
+        }
+        h6 {
+            letter-spacing: 0.4px;
+            font-size: @font-size-h6;
+        }
+        h1 {
+            font-size: @font-size-h1;
+        }
+        h2 {
+            font-size: @font-size-h2;
+        }
+        h3 {
+            font-size: @font-size-h3;
+        }
+        h4 {
+            font-size: @font-size-h4;
+        }
+        h5 {
+            font-size: @font-size-h5;
+        }
+
+        a {
+            text-decoration: none;
+            .transition(color 300ms ease-out);
+            cursor: pointer;
+            color: @theme__color__primary;
+            &:visited {
+                color: @theme__color__primary;
+                text-decoration: none;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                color: @theme__color__default;
+                text-decoration: none;
+            }
+        }
+
+        .page-footer {
+            a {
+                color: @color-links-footer;
+                &:visited {
+                    color: @color-links-footer;
+                }
+                &:hover,
+                &:focus,
+                &:active {
+                    color: @color-hover-links-footer;
+                }
+            }
+        }
+
+        pre {
+            max-width: 100%;
+            overflow: auto;
+            white-space: pre;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .page-wrapper {
+            overflow: hidden;
+            background-color: @bg-color-site;
+        }
+    }
+    .page-title,
+    .page-title h1 {
+        font-family: @font-for-titles;
+        font-weight: 400;
+        font-size: 36px;
+        color: @color-title;
+        letter-spacing: -1.1px;
+    }
+}

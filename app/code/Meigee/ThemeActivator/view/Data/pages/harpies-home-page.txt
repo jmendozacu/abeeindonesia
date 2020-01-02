@@ -1,0 +1,64 @@
+<div class="full-width">
+    {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="sirena_content_slider_harpies"}}
+</div>
+<hr class="indent-80 white-space hidden-xs">
+<hr class="indent-30 white-space visible-xs">
+
+<div class="category-banners type-3 row">
+  <div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <img src="{{media url="wysiwyg/gorgon_skin/gorgon_categorie_banner.jpg"}}" alt="Category Banner" />
+            <strong class="title">Outerwear</strong>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+  </div>
+  <div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <img src="{{media url="wysiwyg/gorgon_skin/gorgon_categorie_banner2.jpg"}}" alt="Category Banner" />
+            <strong class="title">Shoes & Boots</strong>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+  </div>
+  <div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <img src="{{media url="wysiwyg/gorgon_skin/gorgon_categorie_banner3.jpg"}}" alt="Category Banner" />
+            <strong class="title">Knitwear</strong>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+  </div>
+  <div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <img src="{{media url="wysiwyg/gorgon_skin/gorgon_categorie_banner4.jpg"}}" alt="Category Banner" />
+            <strong class="title">Bags</strong>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+  </div>
+</div>
+<hr class="indent-70 white-space hidden-xs">
+<hr class="indent-30 white-space visible-xs">
+
+<div class="full-width" style="background-color: #e7e7dd; padding: 80px 0 22px 0;">
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="banner-with-text" style="margin-bottom: 20px;">
+            <img src="{{media url="wysiwyg/orion_skin/orion_banner1.jpg"}}" alt="Category Banner" />
+            <div class="text">
+                <span class="subtitle">Sale up to 50% OFF</span>
+                <strong class="title">Women's Dresses</strong>
+                <span class="btn btn-default">Browse Category</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" widget_type="newproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="6" template="Meigee_ProductWidget::product/widget/content/grid.phtml" products_per_row="3" product_name="true" product_price="true" stock_status_grid="false" desc_grid="false" timer_grid="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_grid="false" rating_cust_link_grid="false" rating_add_review_link_grid="false" widget_id="7773" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}
+    </div>
+</div>
+</div>
+</div>
+<hr class="indent-80 white-space hidden-xs">
+<hr class="indent-30 white-space visible-xs">
+
+{{widget type="Magefan\Blog\Block\Widget\Recent" title="From the Blog" number_of_posts="3" category_id="0" tag_id="0" author_id="0"}}
+<hr class="indent-60 white-space hidden-xs">
+<hr class="indent-30 white-space visible-xs">

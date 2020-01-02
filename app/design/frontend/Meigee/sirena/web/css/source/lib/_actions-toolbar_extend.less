@@ -1,0 +1,94 @@
+& when (@media-common = true) {
+
+    .actions-toolbar {
+        .display-flex(flex);
+        .flex-wrap(wrap);
+        .align-items(center);
+        .justify-content(space-between);
+        text-align: left;
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        > .primary,
+        > .secondary {
+            display: inline-block;
+            .action {
+                &:last-child {
+                }
+            }
+            &:last-child {
+            }
+        }
+
+        > .primary {
+            margin: 0 15px 0 0;
+            .action {
+                margin: 0;
+            }
+        }
+
+        > .secondary {
+            a.action {
+                vertical-align: middle;
+                background-color: transparent;
+                border-color: transparent;
+                padding-left: 0;
+                padding-right: 0;
+                color: @theme__color__primary;
+                font-family: @button__font-family;
+                font-size: @button__font-size;
+                font-weight: @button__font-weight;
+                text-transform: uppercase;
+                line-height: 1.5;
+                letter-spacing: 1.5px;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: @theme__color__default;
+                }
+            }
+            .action.back {
+                display: none;
+            }
+        }
+    }
+}
+
+//
+//  Desktop (>992px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .actions-toolbar {
+        .justify-content(flex-start);
+        .flex-wrap(nowrap);
+        &::before,
+        &::after {
+            display: none;
+        }
+        > .primary {
+            margin: 0 15px 0 0;
+            .action {
+                margin: 0;
+            }
+        }
+        > .secondary {
+            margin: 0;
+            a.action {
+                margin: 0;
+            }
+        }
+        &.no-display {
+            display: none;
+        }
+    }
+    form {
+        .actions-toolbar {
+            .column:not(.sidebar-main) &,
+            .column:not(.sidebar-additional) & {
+            }
+        }
+    }
+}

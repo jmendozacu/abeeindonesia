@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<default>
+    <pages>
+        <page>
+            <title>Sirena - Responsive Ready Magento theme (Pegasus2)</title>
+            <is_home>true</is_home>
+            <identifier>pegasus-home-page</identifier>
+            <page_layout>1column</page_layout>
+        </page>
+        <page>
+            <title>Sirena 404 Page</title>
+            <identifier>no-route</identifier>
+            <page_layout>1column</page_layout>
+        </page>
+        <page>
+            <title>About Us</title>
+            <identifier>about-us</identifier>
+            <page_layout>1column</page_layout>
+        </page>
+        <page>
+            <title>Enable Cookies</title>
+            <identifier>enable-cookies</identifier>
+            <page_layout>1column</page_layout>
+        </page>
+    </pages>
+
+    <blocks>
+        <block>
+            <title>Sirena Header Social Links</title>
+            <identifier>sirena_header_social_links</identifier>
+        </block>
+        <block>
+            <title>Cookie restriction notice</title>
+            <identifier>cookie_restriction_notice_block</identifier>
+        </block>
+        <block>
+            <title>Sirena Sidebar Banner</title>
+            <identifier>sirena_sidebar_banner</identifier>
+        </block>
+        <block>
+            <title>Sirena Category Top Banner</title>
+            <identifier>sirena_category_top_banner</identifier>
+        </block>
+        <block>
+            <title>Sirena Product Banner</title>
+            <identifier>sirena_product_banner</identifier>
+        </block>
+        <block>
+            <title>Sirena Product Custom</title>
+            <identifier>sirena_product_custom</identifier>
+        </block>
+        <block>
+            <title>Sirena Product Free Shipping</title>
+            <identifier>sirena_product_free_shipping</identifier>
+        </block>
+        <block>
+            <title>Sirena Custom Tab</title>
+            <identifier>sirena_custom_tab</identifier>
+        </block>
+        <block>
+            <title>Sirena Product Size Guide</title>
+            <identifier>sirena_product_size_guide</identifier>
+        </block>
+        <block>
+            <title>Sirena Checkout custom header block</title>
+            <identifier>sirena_checkout_header_custom_block</identifier>
+        </block>
+        <block>
+            <title>Sirena Popup Content</title>
+            <identifier>sirena_popup_content</identifier>
+        </block>
+        <block>
+            <title>Sirena Top Cart Banner</title>
+            <identifier>sirena_top_cart_banner</identifier>
+        </block>
+        <block>
+            <title>Sirena Payments Cart Block</title>
+            <identifier>sirena_payments_cart_block</identifier>
+        </block>
+        <block>
+            <title>Sirena Listing Banner</title>
+            <identifier>sirena_listing_banner</identifier>
+        </block>
+        <block>
+            <title>Sirena Contact Map Block</title>
+            <identifier>sirena_contact_map_block</identifier>
+        </block>
+        <block>
+            <title>Sirena Contact Page Info</title>
+            <identifier>sirena_contact_page_info</identifier>
+        </block>
+        <block>
+            <title>Sirena Empty Cart Page Block</title>
+            <identifier>sirena_empty_cart_page_block</identifier>
+        </block>
+
+        <block>
+            <title>Sirena Pegasus Header Slider</title>
+            <identifier>sirena_pegasus_header_slider</identifier>
+        </block>
+        <block>
+            <title>Sirena Pegasus Content Slider</title>
+            <identifier>sirena_pegasus_content_slider</identifier>
+        </block>
+        <block>
+            <title>Sirena Footer</title>
+            <identifier>sirena_footer</identifier>
+        </block>
+    </blocks>
+
+    <widgets>
+        <widget>
+            <type>meigee_instagram</type>
+            <title>Sidebar Instagram</title>
+            <widget_parameters>
+                <widget_title>Instagram</widget_title>
+                <instagram_items>6</instagram_items>
+                <instagram_user_id>1036122730</instagram_user_id>
+                <instagram_access_token>1036122730.a36fddd.eb253ca7f00248aea9a8c664c5aac949</instagram_access_token>
+            </widget_parameters>
+            <page_groups>
+                <page_group>anchor_categories</page_group>
+                <anchor_categories>
+                    <block>sidebar.additional</block>
+                </anchor_categories>
+            </page_groups>
+            <page_groups>
+                <page_group>notanchor_categories</page_group>
+                <notanchor_categories>
+                    <block>sidebar.additional</block>
+                </notanchor_categories>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Sidebar Banner</title>
+            <widget_parameters>
+                <block_id>sirena_sidebar_banner</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>anchor_categories</page_group>
+                <anchor_categories>
+                    <block>sidebar.additional</block>
+                </anchor_categories>
+            </page_groups>
+            <page_groups>
+                <page_group>notanchor_categories</page_group>
+                <notanchor_categories>
+                    <block>sidebar.additional</block>
+                </notanchor_categories>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Product Custom</title>
+            <widget_parameters>
+                <block_id>sirena_product_custom</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>all_products</page_group>
+                <all_products>
+                    <block>meigee.product.block.after.addtocart</block>
+                </all_products>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Product Size Guide</title>
+            <widget_parameters>
+                <block_id>sirena_product_size_guide</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>configurable_products</page_group>
+                <configurable_products>
+                    <block>meigee.product.block.options.bottom</block>
+                </configurable_products>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Product (with options) Free Shipping Block</title>
+            <widget_parameters>
+                <block_id>sirena_product_free_shipping</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>all_products</page_group>
+                <all_products>
+                    <block>meigee.product.block.before.addtocart</block>
+                </all_products>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Product (simple) Free Shipping Block</title>
+            <widget_parameters>
+                <block_id>sirena_product_free_shipping</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>all_products</page_group>
+                <all_products>
+                    <block>meigee.product.block.before.addtocart.simple</block>
+                </all_products>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Product Banner</title>
+            <widget_parameters>
+                <block_id>sirena_product_banner</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>all_products</page_group>
+                <all_products>
+                    <block>meigee.product.block.after.sku</block>
+                </all_products>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Listing Banner</title>
+            <widget_parameters>
+                <block_id>sirena_listing_banner</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>anchor_categories</page_group>
+                <anchor_categories>
+                    <block>meigee.custom.listing.elements</block>
+                </anchor_categories>
+            </page_groups>
+            <page_groups>
+                <page_group>notanchor_categories</page_group>
+                <notanchor_categories>
+                    <block>meigee.custom.listing.elements</block>
+                </notanchor_categories>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Empty Cart Block</title>
+            <widget_parameters>
+                <block_id>sirena_empty_cart_page_block</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>pages</page_group>
+                <pages>
+                    <layout_handle>checkout_cart_index</layout_handle>
+                    <block>checkout.cart.empty.widget</block>
+                </pages>
+            </page_groups>
+        </widget>
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Category Top Banner</title>
+            <widget_parameters>
+                <block_id>sirena_category_top_banner</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>anchor_categories</page_group>
+                <anchor_categories>
+                    <block>content.top</block>
+                </anchor_categories>
+            </page_groups>
+            <page_groups>
+                <page_group>notanchor_categories</page_group>
+                <notanchor_categories>
+                    <block>content.top</block>
+                </notanchor_categories>
+            </page_groups>
+        </widget>
+
+        <widget>
+            <type>cms_static_block</type>
+            <title>Sirena Header Slider (Pegasus)</title>
+            <widget_parameters>
+                <block_id>sirena_pegasus_header_slider</block_id>
+            </widget_parameters>
+            <page_groups>
+                <page_group>pages</page_group>
+                <pages>
+                    <layout_handle>cms_index_index</layout_handle>
+                    <block>page.top</block>
+                </pages>
+            </page_groups>
+        </widget>
+    </widgets>
+
+    <configs>
+        <config>
+            <path>sirena_general/sirena_layout/header_layout</path>
+            <value>header-boxed-content</value>
+        </config>
+        <config>
+            <path>sirena_general/sirena_footer/custom_footer</path>
+            <value>1</value>
+        </config>
+    </configs>
+</default>

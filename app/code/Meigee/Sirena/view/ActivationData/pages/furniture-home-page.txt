@@ -1,0 +1,141 @@
+<hr class="indent-20 xs-indent-10 white-space">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8">
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="sirena_furniture_header_content_slider"}}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12 no-margin">
+                <a href="javascript:void(0);" class="banner with-text furniture">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner1.png'}}" class="lazyload" alt="Category Banner" />
+                    <div class="banner-content pos-left pos-top">
+                        <span class="title">Modern sofa<strong><br />Deep Blue.</strong></span>
+                        <p class="text">New collection.</p>
+                    </div>
+                </a>
+                <hr class="indent-20 xs-indent-10 white-space visible-xs visible-md visible-lg">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12 no-margin">
+                <a href="javascript:void(0);" class="banner with-text furniture">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner2.png'}}" class="lazyload" alt="Category Banner" />
+                    <div class="banner-content pos-left pos-top">
+                        <span class="title"><strong>Grid</strong> lAmps.</span>
+                        <p class="text">fresh arrival</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="javascript:void(0);" class="banner with-text furniture">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner_3.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left pos-top">
+                <span class="title">New extraordinary<strong><br />Beds & Sofas</strong></span>
+                <p class="text">order now</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="javascript:void(0);" class="banner with-text furniture">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner_4.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-top">
+                <span class="title">Perfect <strong>apartment</strong></span>
+                <p class="text">Exclusive guide</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+        <a href="javascript:void(0);" class="banner with-text furniture">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner_5.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left pos-top">
+                <span class="title"><strong>Zero Gravity</strong><br />New modern chairs<br />-20% sale</span>
+                <p class="text">limited</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="indent-15 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Handpicked Products" widget_type="featuredcategory" featured_category="326" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="4" visible_products_tablet="4" visible_products_mobile="2" navigation="1" navigation_position="top_right" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="false" desc_slider="false" timer_slider="true" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="9358" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+<hr class="indent-0 xs-indent-30 sm-indent-30 white-space">
+
+<div class="full-width">
+    <a href="javascript:void(0);" class="banner with-text wide furniture">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/furniture_banner_6.jpg"}}" class="lazyload" alt="Category Banner" />
+        <div class="banner-content pos-right pos-top" style="max-width:250px;">
+            <span class="badge"><small>huge</small> sale</span>
+            <strong class="title">Creative Spaces</strong>
+            <p class="subtitle">Diversify your house</p>
+            <span class="btn action primary" href="javascript:void(0);">Let's shopping</span>
+        </div>
+    </a>
+</div>
+<hr class="indent-40 xs-indent-30 sm-indent-30 white-space">
+
+<div class="subscribe-block type-4">
+    <div class="newsletter-form-wrapper">
+        {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+    </div>
+</div>
+<hr class="indent-40 xs-indent-30 sm-indent-30 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 hidden-sm visible-xs visible-md visible-lg">
+        <a href="javascript:void(0);" class="banner with-text furniture type-2">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner_7.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left">
+                <span class="title">Office.</span>
+                <span class="subtitle">Chair special<br />edition</span>
+                <p class="text">20% OFF</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8">
+        <a href="javascript:void(0);" class="banner with-text furniture type-2">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/furniture_banner_8.jpg'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left white-text">
+                <span class="title">Soft colors<br /><strong>Living room.</strong></span>
+                <span class="subtitle">Ready for awesome furniture? <br />Let's go shopping!</span>
+                <p class="text">sale up to -15%</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="indent-20 xs-indent-30 sm-indent-30 white-space">
+
+<div class="full-width" style="background-color: #f5f5f5;">
+    <div class="container">
+        <div class="icon-banners type-4 row middle-xs">
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-plane"></i>
+                    <strong class="title">Free Shipping</strong>
+                    <span class="subtitle">On Orders Over $200</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-present"></i>
+                    <strong class="title">Valuable gifts</strong>
+                    <span class="subtitle">Free gift after every 10 order</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-earphones-alt"></i>
+                    <strong class="title">All day Support</strong>
+                    <span class="subtitle">Call us for free: (555) 172-244-7888</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-tag"></i>
+                    <strong class="title">Seasonal sale</strong>
+                    <span class="subtitle">Discounts up to 50% on all</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

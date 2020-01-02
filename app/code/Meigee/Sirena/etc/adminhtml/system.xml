@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="sirena_tab" translate="label" sortOrder="100">
+			<label>Sirena</label>
+		</tab>
+		<section id="sirena_activation" translate="label" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Theme Installation</label>
+			<tab>sirena_tab</tab>
+			<resource>Meigee_Sirena::system_config</resource>
+			<group id="skins" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Theme Installation</label>
+				<attribute type="expanded">1</attribute>
+				<field id="skin_locale_set" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Configure Skin</label>
+					<backend_model>Meigee\ThemeActivator\Config\Backend\SkinLocaleSet</backend_model>
+					<frontend_model>Meigee\Sirena\Block\Adminhtml\System\Config\Form\SkinLocaleSetSingleTheme</frontend_model>
+				</field>
+			</group>
+		</section>
+		<section id="sirena_general" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>General Options</label>
+			<tab>sirena_tab</tab>
+			<resource>Meigee_Sirena::system_config</resource>
+			<group id="sirena_layout" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Layout</label>
+				<field id="header_layout" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Header layout</label>
+					<source_model>Meigee\Core\Model\Config\Source\HeaderLayout</source_model>
+				</field>
+				<field id="content_layout" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Content layout</label>
+					<source_model>Meigee\Core\Model\Config\Source\ContentLayout</source_model>
+				</field>
+				<field id="footer_layout" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Footer layout</label>
+					<source_model>Meigee\Core\Model\Config\Source\FooterLayout</source_model>
+				</field>
+				<field id="container_width" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Content width</label>
+					<comment>Specify value in pixels, do not add "px" suffix. Width can be set between 1000 - 3000px. Default paddings will be added to the content width.</comment>
+				</field>
+				<field id="rtl_enabled" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>RTL</label>
+					<source_model>Meigee\Core\Model\Config\Source\RTLsupport</source_model>
+					<comment>Check for RTL specific styling.</comment>
+				</field>
+			</group>
+			<group id="sirena_header" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Header</label>
+				<field id="header_search_type" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Header Search Type:</label>
+					<source_model>Meigee\Core\Model\Config\Source\HeaderSearchType</source_model>
+				</field>
+				<field id="header_home_transparency" translate="label comment" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Transparent Header on Home Page</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="home_menu_transparency" translate="label comment" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Transparent Header Menu on Home Page</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="sticky_header" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Sticky header</label>
+					<source_model>Meigee\Core\Model\Config\Source\StickyHeader</source_model>
+				</field>
+				<field id="sticky_header_opacity" translate="label comment" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Sticky header opacity</label>
+					<comment>Set Sticky Header Opacity in percentages (1-100)</comment>
+				</field>
+				<field id="sticky_header_tablet" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Sticky header for Tablet:</label>
+					<source_model>Meigee\Core\Model\Config\Source\StickyTablet</source_model>
+				</field>
+				<field id="sticky_header_logo" translate="label comment" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Display logo on sticky header</label>
+					<comment>At least one item should be enabled.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="sticky_header_nav" translate="label comment" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Display navigation on sticky header</label>
+					<comment>If the navigation menu has many top categories, other elements will have lack of space. At least one item should be enabled.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="sticky_header_search" translate="label comment" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Display search on sticky header</label>
+					<comment>At least one item should be enabled.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+			<group id="sirena_footer" translate="label" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Footer</label>
+				<field id="custom_footer" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Custom Footer</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="custom_footer_block" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Custom Footer Static Block</label>
+					<depends>
+						<field id="custom_footer">1</field>
+					</depends>
+				</field>
+			</group>
+			<group id="sirena_logo" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Custom Logo</label>
+				<field id="custom_logo_status" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Logo status</label>
+					<comment>Disable it to use default logo</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+                <field id="custom_logo_image" translate="label" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Upload your logo</label>
+					<depends>
+						<field id="custom_logo_status">1</field>
+					</depends>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+					<upload_dir config="system/filesystem/media" scope_info="1">logo/</upload_dir>
+					<base_url type="media" scope_info="1">logo/</base_url>
+				</field>
+                <field id="second_custom_logo_image" translate="label" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Upload your second logo</label>
+					<comment>Note: This logo is shown on all pages except home page and checkout page</comment>
+					<depends>
+						<field id="custom_logo_status">1</field>
+					</depends>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+					<upload_dir config="system/filesystem/media" scope_info="1">logo/</upload_dir>
+					<base_url type="media" scope_info="1">logo/</base_url>
+				</field>
+				<field id="checkout_logo_status" translate="label comment" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Checkout Logo</label>
+					<comment>Disable it to use default logo</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+                <field id="checkout_logo_image" translate="label" type="image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Upload your Checkout logo</label>
+					<depends>
+						<field id="checkout_logo_status">1</field>
+					</depends>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+					<upload_dir config="system/filesystem/media" scope_info="1">logo/</upload_dir>
+					<base_url type="media" scope_info="1">logo/</base_url>
+				</field>
+				<field id="custom_logo_alt" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Alternate text for logo</label>
+				</field>
+			</group>
+
+			<group id="sirena_topcart" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Top Cart Options</label>
+				<field id="icon" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button Icon</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="text" translate="label comment" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button Text</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="counter" translate="label comment" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button Counter</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="minicart_type" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Minicart Type:</label>
+					<source_model>Meigee\Core\Model\Config\Source\MinicartType</source_model>
+				</field>
+			</group>
+
+			<group id="sirena_toplinks" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Top links</label>
+				<field id="toplinks_wishlist" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>My Wishlist Link</label>
+					<depends>
+						<field id="toplinks_type">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="toplinks_compare" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Compare Link</label>
+					<depends>
+						<field id="toplinks_type">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="toplinks_register" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Register Link</label>
+					<depends>
+						<field id="toplinks_type">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="toplinks_login" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Login Link</label>
+					<depends>
+						<field id="toplinks_type">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+			<group id="sirena_product_listing" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Product Listing</label>
+				<field id="listing_custom_grid" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Custom Grid Switcher</label>
+					<comment>If you enable custom grid switcher then customers can change a number of products in a row on the category pages. If custom grid switcher is disabled then default grid/list switcher will be displayed.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="grid_columns" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Number of columns in grid view</label>
+					<depends>
+						<field id="listing_custom_grid">0</field>
+					</depends>
+					<source_model>Meigee\Core\Model\Config\Source\GridColumns</source_model>
+				</field>
+				<field id="grid_hover" translate="label comment" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Products Grid Hover</label>
+					<comment>Chose what kind of hover is used on product listing page</comment>
+					<source_model>Meigee\Core\Model\Config\Source\ProductsGridHover</source_model>
+				</field>
+				<field id="listing_grid_switcher" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Number of columns in grid view</label>
+					<depends>
+						<field id="listing_custom_grid">1</field>
+					</depends>
+					<comment>Here enter a number of products in a row for each of 3 options. Every grid option might contain from 2 to 8 products in a row. Numbers should be entered without spaces and comma separated. Example: 2,4,6</comment>
+				</field>
+				<field id="product_name" translate="label comment" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product Name</label>
+					<comment>Enable or disable Product Name</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="rating_stars" translate="label comment" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Rating Stars</label>
+					<comment>Enable or disable Rating Stars</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="product_price" translate="label comment" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product Price</label>
+					<comment>Enable or disable Product Price</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="stock_status" translate="label comment" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Stock Status</label>
+					<comment>Enable or disable Stock Status</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="cart_btn" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button "Add to cart"</label>
+					<comment>Enable or disable Button "Add to cart"</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="quickview_btn" translate="label comment" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button "Quickview"</label>
+					<comment>Enable or disable Button "Quickview"</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="compare_btn" translate="label comment" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button "Compare products"</label>
+					<comment>Enable or disable Button "Compare products"</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="wishlist_btn" translate="label comment" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Button "Wishlist"</label>
+					<comment>Enable or disable Button "Wishlist"</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="layer_accordion" translate="label comment" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Open Layered Navigation by default</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<group id="sirena_product_view" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Product Page</label>
+				<field id="product_page_style" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product Page Style</label>
+					<source_model>Meigee\Core\Model\Config\Source\ProductPageStyle</source_model>
+				</field>
+				<field id="product_description_collapse" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Collapsible short description</label>
+					<source_model>Meigee\Core\Model\Config\Source\ProductDescriptionCollapse</source_model>
+				</field>
+				<field id="product_custom_tab" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product Custom Tab</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="product_custom_tab_block" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product Custom Tab Static Block</label>
+					<depends>
+						<field id="product_custom_tab">1</field>
+					</depends>
+					<!-- <comment><![CDATA[There are following predefined static blocks which can be used:<ul style="margin-left:13px;"><li>sirena_footer</li><li>sirena_footer_2</li><li>sirena_footer_3</li><li>sirena_footer_4</li></ul><strong style="color:red">Please refer to the "Footer" section of the user guide that comes with the theme for more information</strong>]]></comment> -->
+				</field>
+				<field id="product_more_views_type" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product More Views Type:</label>
+					<source_model>Meigee\Core\Model\Config\Source\ProductMoreViewsType</source_model>
+				</field>
+				<field id="product_sidebar_position" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product sidebar position</label>
+					<source_model>Meigee\Core\Model\Config\Source\ProductSidebarPosition</source_model>
+				</field>
+			</group>
+			<group id="sirena_lang_switcher" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Language Switcher</label>
+				<field id="lang_switcher_status" translate="label" type="radio" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<source_model>Meigee\Core\Model\Config\Source\LangSwitcher</source_model>
+                    <frontend_model>Meigee\Core\Block\Adminhtml\System\Config\InputRadio\Horizontal</frontend_model>
+				</field>
+				<field id="lang_switcher_label" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Language label</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+			<group id="sirena_currency_switcher" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Currency Switcher</label>
+				<field id="currency_switcher_status" translate="label" type="radio" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<source_model>Meigee\Core\Model\Config\Source\CurrencySwitcher</source_model>
+                    <frontend_model>Meigee\Core\Block\Adminhtml\System\Config\InputRadio\Horizontal</frontend_model>
+				</field>
+				<field id="currency_switcher_label" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Currency label</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+
+			<group id="sirena_labels" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Product Labels</label>
+				<field id="label_new" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Label "New"</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="label_sale" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Label "Sale"</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="label_only_left" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Label "Only X left"</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="label_sale_percentage" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Show Sale Percentage</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="label_type" translate="label" type="radio" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<source_model>Meigee\Core\Model\Config\Source\LabelsType</source_model>
+                    <frontend_model>Meigee\Core\Block\Adminhtml\System\Config\InputRadio\Horizontal</frontend_model>
+				</field>
+			</group>
+
+			<group id="sirena_countdown" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Product Timer</label>
+				<field id="timer_status" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Price countdown:</label>
+					<comment>Activate Price Countdown Timer. Make sure that sale date is set in field "Special Price From Date" on product edit page in section Prices.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="timer_listing_status" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Timer on listing status</label>
+					<depends>
+						<field id="timer_status">1</field>
+					</depends>
+					<comment>Timer will be disaplyed on category page</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="timer_listing_display" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Timer on listing display options</label>
+					<depends>
+						<field id="timer_status">1</field>
+						<field id="timer_listing_status">1</field>
+					</depends>
+					<comment>Choose if you want to show full format or just hours, minutes and seconds on listing page</comment>
+					<source_model>Meigee\Core\Model\Config\Source\TimerListType</source_model>
+				</field>
+				<field id="timer_product_status" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Timer on product status</label>
+					<depends>
+						<field id="timer_status">1</field>
+					</depends>
+					<comment>Timer will be disaplyed on product page</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="timer_product_display" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Timer on product display options</label>
+					<depends>
+						<field id="timer_status">1</field>
+						<field id="timer_product_status">1</field>
+					</depends>
+					<comment>Choose if you want to show full format or just hours, minutes and seconds on product page</comment>
+					<source_model>Meigee\Core\Model\Config\Source\TimerListType</source_model>
+				</field>
+			</group>
+
+			<group id="sirena_lightbox" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Lightbox</label>
+				<field id="lightbox_status" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="lightbox_home" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Homepage</label>
+					<depends>
+						<field id="lightbox_status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="lightbox_listing" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Products Listing</label>
+					<depends>
+						<field id="lightbox_status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+			<group id="sirena_image_hover" translate="label" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Product Hover Effect</label>
+				<field id="image_hover_status" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<comment>To use hover effect for a product set a label for needed image as "hover".</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="image_hover_type" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Effect Type</label>
+					<comment>Choose effect for appearing hover images</comment>
+					<source_model>Meigee\Core\Model\Config\Source\ImageHoverType</source_model>
+				</field>
+			</group>
+			<group id="sirena_contactmap" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Contact Map</label>
+				<field id="contactmap_status" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Map</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="contactmap_api" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Google Maps API</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Please enter API Key. More information: https://developers.google.com/maps/documentation/javascript/get-api-key</comment>
+				</field>
+				<field id="contactmap_latitude" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Latitude</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Please enter Latitude</comment>
+				</field>
+				<field id="contactmap_longitude" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Longitude</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Please enter Longitude</comment>
+				</field>
+				<field id="contactmap_zoom" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Map Zoom</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Please specify map zoom</comment>
+				</field>
+				<field id="contactmap_type" translate="label comment" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Map Type</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Please specify map type</comment>
+					<source_model>Meigee\Core\Model\Config\Source\ContactmapType</source_model>
+				</field>
+				<field id="contactmap_marker" translate="label comment" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Marker</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Enable or Disable Marker</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="contactmap_marker_title" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Marker Title</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+						<field id="contactmap_marker">1</field>
+					</depends>
+				</field>
+				<field id="contactmap_block_status" translate="label comment" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Details block status</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+					</depends>
+					<comment>Will show block with detailed information over the Google map</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="contactmap_block_static" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Static Block for Details</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+						<field id="contactmap_block_status">1</field>
+					</depends>
+					<comment>Please specify static block name</comment>
+				</field>
+				<field id="contactmap_block_width" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Details Block Width</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+						<field id="contactmap_block_status">1</field>
+					</depends>
+					<comment>Please specify block width in pixels</comment>
+				</field>
+				<field id="contactmap_block_height" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Details Block Width</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+						<field id="contactmap_block_status">1</field>
+					</depends>
+					<comment>Please specify block height in pixels</comment>
+				</field>
+				<field id="contactmap_block_position" translate="label comment" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Details Block Position</label>
+					<depends>
+						<field id="contactmap_status">1</field>
+						<field id="contactmap_block_status">1</field>
+					</depends>
+					<comment>Please set one of four available details block position over the Gmap</comment>
+					<source_model>Meigee\Core\Model\Config\Source\ContactmapBlockPos</source_model>
+				</field>
+			</group>
+        </section>
+    </system>
+</config>

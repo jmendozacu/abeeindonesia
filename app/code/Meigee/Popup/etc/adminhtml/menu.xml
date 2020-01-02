@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Meigee_Popup::meigee_popup"
+                title="Popup"
+                module="Meigee_Popup"
+                sortOrder="1"
+                resource="Meigee_Popup::system"
+                parent="Meigee_Core::extensions"
+                action="adminhtml/system_config/edit/section/meigee_popup"
+        />
+    </menu>
+</config>

@@ -1,0 +1,102 @@
+<?php
+/**
+ * @var Magento\Review\Block\Product\View\ListView $block
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$_items = $block->getReviewsCollection()->getItems();
+$format = $block->getDateFormat() ?: \IntlDateFormatter::SHORT;
+if (count($_items)):
+    $sliderEnabled = false;
+    if ( count($_items) > 3 ) {
+        $sliderEnabled = true;
+        $sliderNavigation = 'true';
+        $sliderPagination = 'false';
+        $isRTL = $themeConfigPhp->getSiteRtl();
+        if ($isRTL && $isRTL!='') { $sliderData .= ' data-rtl="true"'; }
+    } ?>
+    <div class="block review-list" id="customer-reviews">
+        <div class="block-title">
+            <strong><?= $block->escapeHtml(__('Customer Reviews')) ?></strong>
+            <div class="review-buttons">
+                <a href="javascript:void(0);" class="js-toggle-reviews action btn hidden">
+                    <?=$block->escapeHtml(__('Read all'))?>
+                </a>
+                <a href="javascript:void(0);" id="modal-review-link" class="action primary">
+                    <?=$block->escapeHtml(__('Write a Review'))?>
+                </a>
+                <script>
+                    require(['jquery', 'Magento_Ui/js/modal/modal'], function($, modal) {
+                            var reviewModal = $('#modal-add-review');
+                            reviewModal.modal({
+                                innerScroll: true,
+                                buttons: []
+                            });
+                            $("#modal-review-link").on('click',function(){ 
+                                reviewModal.modal("openModal");
+                            });
+                        }
+                     );
+                </script>
+            </div>
+        </div>
+        <?php if ($sliderEnabled) { ?>
+        <div class="block-content swiper-container" data-items="3" data-navigation="<?=$block->escapeHtmlAttr($sliderNavigation)?>" data-pagination="<?=$block->escapeHtmlAttr($sliderPagination)?>">
+            <div class="items review-items customer-reviews-wrapper swiper-wrapper">
+        <?php } else { ?>
+        <div class="block-content">
+            <div class="items review-items customer-reviews-wrapper">
+        <?php } ?>
+                <?php foreach ($_items as $_review): ?>
+                    <div class="item review-item review-box-wrapper swiper-slide" itemscope itemtype="http://schema.org/Review">
+                        <div class="review-box-inner" itemprop="review">
+                            <div class="review-title" itemprop="name"><?php echo $block->escapeHtml($_review->getTitle()) ?></div>
+                            <?php if (count($_review->getRatingVotes())): ?>
+                                <div class="review-ratings">
+                                    <?php foreach ($_review->getRatingVotes() as $_vote): ?>
+                                        <div class="rating-summary item" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                            <span class="label rating-label"><span><?= $block->escapeHtml($_vote->getRatingCode()) ?></span></span>
+                                            <div class="rating-result" title="<?= $block->escapeHtmlAttr($_vote->getPercent()) ?>%">
+                                                <meta itemprop="worstRating" content = "1"/>
+                                                <meta itemprop="bestRating" content = "100"/>
+                                                <span style="width:<?= $block->escapeHtmlAttr($_vote->getPercent()) ?>%">
+                                                <span itemprop="ratingValue"><?= $block->escapeHtml($_vote->getPercent()) ?>%</span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                    <div class="review-details">
+                                        <p class="review-author">
+                                            <span class="review-details-label"><?= $block->escapeHtml(__('By')) ?></span>
+                                            <strong class="review-details-value" itemprop="author"><?= $block->escapeHtml($_review->getNickname()) ?></strong>
+                                        </p>
+                                        <p class="review-date">
+                                            <span class="review-details-label"><?= $block->escapeHtml(__('Posted on')) ?></span>
+                                            <time class="review-details-value" itemprop="datePublished" datetime="<?= $block->escapeHtmlAttr($block->formatDate($_review->getCreatedAt(), $format)) ?>"><?= $block->escapeHtml($block->formatDate($_review->getCreatedAt(), $format)) ?></time>
+                                        </p>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <div class="box-read-more review-content" itemprop="description"
+                                 data-collapse-open="true"
+                                 data-text-read-more="<?= $block->escapeHtml(__('Read More')) ?>"
+                                 data-text-collapse="<?= $block->escapeHtml(__('Less')) ?>"
+                                 data-max-length="150"
+                                 data-show-ellipsis="true" data-mage-init='{ "Meigee_Sirena/js/theme_read_more": {} }'>
+                                <?= nl2br($block->escapeHtml($_review->getDetail())) ?>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="toolbar review-toolbar">
+                <?php echo $block->getChildHtml('toolbar') ?>
+            </div>
+            <?php if ($sliderEnabled && $sliderNavigation == 'true') { echo '<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>'; } ?>
+            <?php if ($sliderEnabled && $sliderPagination == 'true') { echo '<div class="swiper-pagination"></div>'; } ?>
+        </div>
+    </div>
+<?php endif;?>

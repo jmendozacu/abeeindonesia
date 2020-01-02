@@ -1,0 +1,1 @@
+<a href="#" class="banner" title="Image Banner"><img src="{{media url="wysiwyg/sidebar_banner.jpg"}}" alt="banner" /></a>

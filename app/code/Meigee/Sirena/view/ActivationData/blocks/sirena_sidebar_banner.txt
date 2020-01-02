@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="banner" title="Image Banner"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/sidebar_banner.jpg"}}" alt="banner" /></a>

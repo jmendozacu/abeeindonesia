@@ -1,0 +1,11 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="Meigee_Sirena" setup_version="2.1.0">
+        <sequence>
+            <module name="Meigee_Core"/>
+            <module name="Meigee_ThemeActivator"/>
+            <module name="Magento_Theme"/>
+        </sequence>
+    </module>
+</config>
+

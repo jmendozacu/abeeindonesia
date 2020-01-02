@@ -1,0 +1,91 @@
+& when (@media-common = true) {
+  /* Header RTL Styles */
+  body.rtl-enabled {
+    .page-header.sticky-header .minicart-wrapper .title-cart .icon-wrapper .counter-number,
+    .page-header .minicart-wrapper .title-cart .icon-wrapper .counter-number {
+      left: auto;
+      right: 23px;
+    }
+    .page-header .minicart-wrapper .title-cart .icon-wrapper .counter-number {
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    ul.wishlist-compare-wrapper li a::before {
+      margin-left: 10px;
+    }
+    ul.wishlist-compare-wrapper li a .counter {
+      left: 0;
+      right: auto;
+    }
+    ul.wishlist-compare-wrapper li {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+    .page-header .minicart-wrapper .title-cart .icon-wrapper .icon {
+      padding-left: 5px;
+    }
+  }
+
+  /* Footer RTL Styles */
+  body.rtl-enabled {
+    .footer .horizontal-links {
+      text-align: left;
+    }
+    .footer .social-links li {
+      float: right;
+      margin-right: 0;
+      margin-left: 1px;
+    }
+    .footer .social-links li + li::before {
+      left: auto;
+      right: -1px;
+    }
+  }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body.rtl-enabled {
+    .page-header-inner {
+      grid-template-columns: auto minmax(40px, 50px) 1fr auto minmax(100px, 110px);
+      -ms-grid-columns: auto minmax(40px, 50px) 1fr auto minmax(100px, 110px);
+      grid-template-areas: "site-options site-search header-nav header-top logo";
+
+      .logo-wrapper {
+        .grid-ie-col(5, 1);
+      }
+      .buttons-wrapper {
+        .grid-ie-col(1, 1);
+      }
+      .search-wrapper {
+        .grid-ie-col(2, 1);
+      }
+      .wellcome-text-wrapper {
+        .grid-ie-col(4, 1);
+      }
+    }
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  body.rtl-enabled {
+    .full-width,
+    .page-main .full-width,
+    .page-header .full-width {
+      margin-right: -50vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+    }
+  }
+}

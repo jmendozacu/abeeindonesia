@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+	<referenceContainer name="columns">
+		<container name="meigee.sidebars.wrapper" htmlTag="div" htmlClass="sidebars-wrapper" after="main">
+			<block class="Magento\Framework\View\Element\Template" name="meigee.mobile.sidebar.toggler" template="Meigee_Sirena::mobile_sidebar_toggler.phtml" before="-" />
+			<container name="meigee.sidebars.inner.wrapper" htmlTag="div" htmlClass="inner-wrapper" after="meigee.mobile.sidebar.toggler" />
+		</container>
+	</referenceContainer>
+	<move element="div.sidebar.main" destination="meigee.sidebars.inner.wrapper" before="-"/>
+	<move element="div.sidebar.additional" destination="meigee.sidebars.inner.wrapper" after="div.sidebar.main"/>
+</layout>

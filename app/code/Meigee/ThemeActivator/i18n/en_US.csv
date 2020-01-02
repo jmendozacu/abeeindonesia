@@ -1,0 +1,8 @@
+"File %1 wasn't found","File %1 wasn't found"
+"Page with id: %1 was not created","Page with id: %1 was not created"
+"Following static blocks were created: %1","Following static blocks were created: %1"
+"The theme can be activated for stores only. Please choose a desired store view (%1) from the store switcher to be able to activate the theme","The theme can be activated for stores only. Please choose a desired store view (%1) from the store switcher to be able to activate the theme"
+"No themes found","No themes found"
+"Locale","Locale"
+"Import and override if exist","Import and override if exist"
+"Import and do not override if exist","Import and do not override if exist"

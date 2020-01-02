@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+        <meigee_facebook>
+            <general>
+                <status>1</status>
+                <url>https://www.facebook.com/meigeeteam</url>
+                <height>340</height>
+                <faces>1</faces>
+                <small_header>0</small_header>
+                <posts>1</posts>
+                <cover>0</cover>
+                <adaptive_width>1</adaptive_width>
+            </general>
+        </meigee_facebook>
+    </default>
+</config>

@@ -1,0 +1,16 @@
+<div class="full-width page-404-wrapper lazyload" data-bg="{{media url="wysiwyg/sirena/404-bg_1_.jpg"}}">
+    <div class="container">
+        <div class="row middle-sm center-sm middle-md center-md">
+            <div class="col-xs-12 col-sm-9 inner-wrapper">
+                <div class="msg-404">
+                    <p class="number">404</p>
+                    <p>Sorry, but the page you are looking for is not found. Please, make sure you have typed the right url.</p>
+                    <a href='{{store url=""}}' class="btn btn-primary">Home Page</a>
+                </div>
+                <div class="products-404">
+                    {{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Check New Arrivals" widget_type="newproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="4" template="Meigee_ProductWidget::product/widget/content/grid.phtml" products_per_row="4" product_name="true" product_price="true" stock_status_grid="false" desc_grid="false" timer_grid="false" add_to_cart="false" wishlist="true" compare="false" rating_stars_grid="false" rating_cust_link_grid="false" rating_add_review_link_grid="false" widget_id="5480" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

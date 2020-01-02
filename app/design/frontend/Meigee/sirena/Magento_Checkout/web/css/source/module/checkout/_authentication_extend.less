@@ -1,0 +1,31 @@
+& when (@media-common = true) {
+    .block-authentication {
+        .block-title {
+            font-family: @font-for-titles;
+            font-size: 24px;
+            color: @color-title;
+            strong {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block-authentication {
+        .actions-toolbar > .secondary {
+            float: none;
+            margin-right: 0;
+            padding: 0 0 0 15px;
+        }
+    }
+    .authentication-dropdown {
+        background-color: @bg-color-content;
+        border-color: @border__color;
+        right: 0;
+    }
+}

@@ -1,0 +1,68 @@
+//  Skin: Harpies 3 custom styles
+& when (@media-common = true) {
+  .header-wrapper.sticky-header {
+    .navbar-default {
+      .navbar-collapse.collapse {
+        li.level-top {
+          a.level-top {
+            color:  @color-top-level-links;
+            &.ui-state-focus,
+            &.ui-state-active,
+            &:hover {
+              color: @color-hover-top-level-links;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body .page-header::after {
+    display: none;
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-pagination,
+  .page-wrapper .swiper-container.type-2 .swiper-button-next,
+  .page-wrapper .swiper-container.type-2 .swiper-button-prev {
+    left: 8.5%;
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-button-next {
+    left: ~"calc(8.5% + 45px)";
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-slide .slide-container.pos-right {
+    right: 7.7%;
+  }
+  body .page-wrapper div[class*="slider-wrapper"] {
+    min-height: 540px;
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .header-boxed-content .page-header,
+  .header-wide .page-header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .page-header-inner.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .content-boxed .page-main .full-width,
+  .content-wide .page-main .full-width {
+    width: calc(~"100% + (@{layout-indent__width})*2");
+    margin-left: -(@layout-indent__width);
+    margin-right: -(@layout-indent__width);
+  }
+  .page-header-inner.container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,5 @@
+<div class="top-cart-banner">
+<a href="#">
+<img src="{{media url="wysiwyg/top_cart_banner.jpg"}}" alt="Top Cart Banner" />
+</a>
+</div>

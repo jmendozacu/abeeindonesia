@@ -1,0 +1,170 @@
+//  Skin: Hydras 3 custom styles
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body .page-header {
+    .navigation {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .block-search {
+      width: 100%;
+      max-width: 500px;
+      transform: none;
+      position: relative;
+      left: auto;
+      right: auto;
+      &.type-2 {
+        input {
+          width: 100%;
+        }
+        .minisearch.active input {
+          width: 100%;
+        }
+      }
+    }
+    &::after {
+      display: none;
+    }
+    .page-header-inner {
+      grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+      -ms-grid-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "header-top header-top header-top" "logo site-search site-options" "header-nav header-nav header-nav";
+      &.container {
+        padding-bottom: 0;
+      }
+      .logo-wrapper {
+        .justify-content(flex-start);
+        padding-left: 20px;
+      }
+      .socials-wrapper {
+        .display-flex(flex);
+        .justify-content(flex-end);
+        grid-column: 3;
+        grid-row: 3;
+        z-index: 1;
+      }
+      .menu-wrapper {
+        text-align: left;
+      }
+      .search-wrapper {
+        .justify-content(center);
+      }
+    }
+    .menu-wrapper .toggle-nav {
+      padding-right: 200px;
+    }
+    &.sticky-header {
+      .menu-wrapper .toggle-nav {
+        padding-right: 0;
+      }
+      .socials-wrapper {
+        display: none;
+      }
+    }
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-pagination {
+    bottom: 30px;
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-pagination,
+  .page-wrapper .swiper-container.type-2 .swiper-button-next,
+  .page-wrapper .swiper-container.type-2 .swiper-button-prev {
+    left: 38px;
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-button-next {
+    left: 83px;
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-slide .slide-container.pos-right {
+    right: 2.5%;
+  }
+  body .page-wrapper div[class*="slider-wrapper"] {
+    min-height: 540px;
+  }
+  body.checkout-cart-index .page-header-inner {
+    grid-template-columns: auto 1fr auto;
+    -ms-grid-columns: auto 1fr auto;
+    grid-template-areas: "logo site-search site-options";
+    .socials-wrapper {
+      display: none;
+    }
+  }
+  .header-wide {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+      .page-header-inner.container {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
+  .header-boxed-content {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  body.rtl-enabled {
+    .page-header .page-header-inner {
+      grid-template-areas: "header-top header-top header-top" "site-options site-search logo" "header-nav header-nav header-nav";
+      .logo-wrapper {
+        .grid-ie-col(3, 1);
+        padding-left: 0;
+        padding-right: 20px;
+      }
+      .buttons-wrapper {
+        .grid-ie-col(1, 1);
+      }
+      .socials-wrapper {
+        grid-column: 1;
+        .grid-ie-col(1, 1);
+      }
+      .menu-wrapper {
+        text-align: right;
+      }
+    }
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .full-width,
+  .page-main .full-width {
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  .footer-boxed-content .page-footer {
+    margin: 0;
+  }
+  body .page-header .block-search.type-2 {
+    input {
+      width: 100%;
+    }
+  }
+  .header-boxed-content {
+    .page-header {
+      .menu-wrapper .toggle-nav {
+        padding-left: @layout-indent__width;
+      }
+    }
+  }
+  body.rtl-enabled {
+    .full-width,
+    .page-main .full-width,
+    .page-header .full-width {
+      margin-right: -50vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+    }
+  }
+}

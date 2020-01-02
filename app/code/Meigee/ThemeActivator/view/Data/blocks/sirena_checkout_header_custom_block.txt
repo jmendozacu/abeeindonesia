@@ -1,0 +1,8 @@
+<div class="checkout-header-custom-block">
+	<a href="#" title="banner">
+		<img src="{{media url='wysiwyg/sirena_checkout_mastercard.png'}}" alt="Payments">
+	</a>
+	<a href="#" title="banner">
+		<img src="{{media url='wysiwyg/sirena_checkout_norton.png'}}" alt="Payments">
+	</a>
+</div>

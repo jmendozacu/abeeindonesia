@@ -1,0 +1,101 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+
+/**
+ * @var \Meigee\ThemeActivator\Block\Adminhtml\System\Config\Form\SkinLocaleSetSingleTheme $block
+ */
+?>
+
+<?php
+$configDemoImported = $block->getConfig('XML_PATH_DEMO_IMPORTED', $block->getStoreId());
+?>
+авы
+<div class="meigee-theme-activator">
+
+        <?php
+            $themeList = $block->getThemesList();
+            $activatedThemesList = $block->getActivatedThemeList();
+        ?>
+        <?php if (empty($activatedThemesList)): ?>
+        <div class="message message-notification">
+            <p>You have no applied storefront themes compatible with the Activator.</p>
+            <p>Please navigate to <i>Content -> Design -> Configuration</i> to apply one of the following themes:</p>
+            <ul class="not-activated-themes">
+                <?php foreach ($themeList as $theme => $items): ?>
+                <li><?= $theme;?></li>
+                <?php endforeach; ?>
+            </ul>
+            <p>Tip: <a target="_blank" href="https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/theme-apply.html">How to apply and configure a storefront theme</a></p>
+        </div>
+        <?php else: ?>
+        <div class="message message-notification">
+            <h6 class="note-title">Please note:</h6>
+            <ul>
+                <li><strong>"Set Skin"</strong> - is used to set a desired skin to <strong>a locale</strong> configured for a chosen store view</li>
+                <li><strong>"Import Demo"</strong> - is used to create all static blocks and pages used on the demo and apply them to a chosen <strong>store view</strong></li>
+                <li>To be able to apply different skins for different store views with the same locale consider using child themes</li>
+            </ul>
+
+        </div><br/>
+        <?php foreach ($activatedThemesList as $theme => $items): ?>
+        <?php
+            $themeName = explode('/', $theme);
+        ?>
+            <h2 class="theme-name"><?= ucfirst($themeName[1]); ?></h2>
+            <ul class="activated-themes">
+                <?php foreach ($items['stores'] as $store => $locale): ?>
+                <?php
+                $uniqId = $block->getUniqId();
+                $skins = $items['skins'];
+                $selected = array_search($locale, $skins);
+                ?>
+                <input type="hidden" name="groups[<?= $uniqId ?>][theme]" value="<?= $theme ?>">
+                <input type="hidden" name="groups[<?= $uniqId ?>][locale]" value="<?= $locale ?>">
+                <input type="hidden" name="groups[<?= $uniqId ?>][storeCode]" value="<?= $store ?>">
+
+                <li>
+                    <h3><?= ucfirst($store) . ' Store View' . ' (' . $locale . ')' ?></h3>
+                    <table>
+                        <tr>
+                            <td class="skin-col">
+                                <select name="groups[<?= $uniqId; ?>][skin]" id="<?= $uniqId; ?>">
+                                    <?php foreach ($skins as $skin => $value): ?>
+                                        <option value="<?= $skin; ?>" <?= ($value == $locale) ? 'selected' : '' ?>><?= ucfirst($skin); ?> <?= ($value == $locale) ? '(activated)' : '' ?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </td>
+                            <td class="activate-col">
+                                <button type="submit" name="activate_row" value="<?= $uniqId; ?>">Set Skin</button>
+                            </td>
+                            <td class="demo-col">
+                                <?php
+                                $skinScope = $selected . '_' . $store;
+                                $isDemoSet = $block->isDemoSet($skinScope);
+                                if ($isDemoSet == true) {
+                                    $btnText = __("Import Demo", $selected);
+                                    $message = __("Demo for <strong>%1</strong> is imported", $selected);
+                                    $cssClass = 'imported';
+                                } else {
+                                    $btnText = __('Import Demo');
+                                    $message = __("Demo content isn't imported yet");
+                                    $cssClass = '';
+                                }
+                                ?>
+                                <button type="submit" name="import_static_content" value="<?= $uniqId; ?>"><?= $btnText?></button>
+                                <p class="<?= $cssClass; ?>"><?= $message;?></p>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+
+
+        <?php endforeach; ?>
+
+        <?php endif; ?>
+</div>

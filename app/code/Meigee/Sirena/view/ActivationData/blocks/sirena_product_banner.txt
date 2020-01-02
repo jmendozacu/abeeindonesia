@@ -1,0 +1,5 @@
+<div class="block-after-sku">
+<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/hanger.png"}}" alt="" />
+<h4>Worldwide Free Delivery</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+</div>

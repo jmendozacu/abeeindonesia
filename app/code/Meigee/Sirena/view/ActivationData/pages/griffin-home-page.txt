@@ -1,0 +1,3 @@
+<div class="full-width">
+    {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="sirena_griffin_header_content_slider"}}
+</div>

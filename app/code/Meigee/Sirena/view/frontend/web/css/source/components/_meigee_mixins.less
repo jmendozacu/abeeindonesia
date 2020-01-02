@@ -1,0 +1,418 @@
+// Mobile Devices
+@screen-xs-small: @screen__xxs;
+@screen-xs-landscape: @screen__xs;
+@screen-xs-max: @screen__s;
+@xs-small: ~"only screen and (max-width: @{screen-xs-small})";
+@xs-only: ~"only screen and (max-width: @{screen-xs-max})";
+@xs-landscape-and-up: ~"only screen and (min-width: @{screen-xs-landscape})";
+
+// Tablet Devices
+@screen-sm-min: '768px';
+@screen-sm-max: (@screen__m - 1);
+@sm-and-up: ~"only screen and (min-width: @{screen-sm-min})";
+@sm-and-down: ~"only screen and (max-width: @{screen-sm-max})";
+@sm-only: ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+
+// Desktop Devices
+@screen-md-min: @screen__m;
+@screen-md-max: @screen__l;
+@screen-lg-min: @screen__xl;
+@md-and-up: ~"only screen and (min-width: @{screen-md-min})";
+@lg-and-up: ~"only screen and (min-width: @{screen-lg-min})";
+@md-only: ~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+
+//  Layout Variables
+@layout-indent__width: 60px;
+@layout__width-sm-indent: 20px;
+@layout__width-xs-indent: 10px;
+@layout__max-width: 1370px;
+
+@indents: 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 125;
+
+// CSS Variables
+:root {
+	--scroll-bar: 8px;
+}
+@scroll-bar: var(--scroll-bar);
+
+// Flexbox Less Mixins
+.display-flex(@display: flex) {
+	display: ~"-ms-@{display}box";
+}
+.display-flex(@display) when (@display = inline-flex) {
+	display: ~"-webkit-inline-box";
+	display: @display;
+}
+.display-flex(@display) when (@display = flex) {
+	display: ~"-webkit-box";
+	display: @display;
+}
+.flex-wrap(@wrap) {
+	-ms-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+.flex-wrap(@wrap) when (@wrap = nowrap) {
+	-ms-flex-wrap: none;
+}
+.flex-direction(@direction) {
+	-ms-flex-direction: @direction;
+	-webkit-box-direction: normal;
+	flex-direction: @direction;
+}
+.flex-direction(@direction) when (@direction = column) {
+	-webkit-box-orient: vertical;
+}
+.flex-direction(@direction) when (@direction = row) {
+	-webkit-box-orient: horizontal;
+}
+.justify-content(@justify) when (@justify = flex-start) {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+}
+.justify-content(@justify) when (@justify = flex-end) {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+}
+.justify-content(@justify) when (@justify = space-between) {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+}
+.justify-content(@justify) when (@justify = space-around) {
+	-ms-flex-pack: distribute;
+}
+.justify-content(@justify) when (@justify = center) {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+}
+.justify-content(@justify) {
+	justify-content: @justify
+}
+.align-items(@align-item) when (@align-item = flex-start) {
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+}
+.align-items(@align-item) when (@align-item = flex-end) {
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+}
+.align-items(@align-item) when (@align-item = center) {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+}
+.align-items(@align-item) {
+	align-items: @align-item;
+}
+.align-content(@align-content) {
+	-ms-flex-line-pack: @align-content;
+	align-content: @align-content;
+}
+.align-content(@align-content) when (@align-content = flex-start) {
+	-ms-flex-line-pack: start;
+}
+.align-content(@align-content) when (@align-content = flex-end) {
+	-ms-flex-line-pack: end;
+}
+.align-self(@align-self) {
+	-ms-flex-item-align: @align-self;
+	align-self: @align-self;
+}
+.align-self(@align-self) when (@align-self = flex-start) {
+	-ms-flex-line-pack: start;
+}
+.align-self(@align-self) when (@align-self = flex-end) {
+	-ms-flex-line-pack: end;
+}
+.flex-order(@order) {
+	-webkit-box-ordinal-group: @order;
+	-ms-flex-order: @order;
+	order: @order;
+}
+.flex(@value) {
+	-ms-flex:  @value;
+	flex:  @value;
+}
+// When using this and @value is (0 0 auto) add -webkit-box-flex: 0;
+// When using this and @value is (1 1 auto) add -webkit-box-flex: 1;
+
+// Grid Less Mixins
+.display-grid() {
+	display: -ms-grid;
+	display: grid;
+}
+.grid-ie-row(@row-start, @row-span){
+	-ms-grid-row: @row-start;
+	-ms-grid-row-span: @row-span;
+}
+.grid-ie-col(@column-start, @column-span){
+	-ms-grid-column: @column-start;
+	-ms-grid-column-span: @column-span;
+}
+.justify-self(@justify-self) {
+	-ms-grid-column-align: @justify-self;
+	justify-self: @justify-self;
+};
+
+// Other Usefull Mixins
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-ms-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+.transform(@transform){
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	-ms-transform: @transform;
+	-o-transform: @transform;
+	transform: @transform;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	box-shadow:         @string;
+}
+
+// Row
+.make-row() {
+	.display-flex(flex);
+	.flex-wrap(wrap);
+	.flex-direction(row);
+	.flex(0 1 auto);
+	position: relative;
+	margin-left:  -5px;
+	margin-right: -5px;
+	@media @sm-and-up {
+		margin-left:  -10px;
+		margin-right: -10px;
+	}
+}
+.make-wide-row(@gap) {
+	.display-flex(flex);
+	.flex-wrap(wrap);
+	.flex-direction(row);
+	.flex(0 1 auto);
+	position: relative;
+	margin-left:  -5px;
+	margin-right: -5px;
+	@media @sm-and-up {
+		margin-left:  -10px;
+		margin-right: -10px;
+	}
+	@media @lg-and-up {
+		margin-left: -(@gap);
+		margin-right: -(@gap);
+	}
+}
+.make-fullwidth-row() {
+	position: relative;
+	margin-left:  -(@layout__width-xs-indent);
+	margin-right: -(@layout__width-xs-indent);
+	width: calc(~"100% + (@{layout__width-xs-indent})*2");
+
+	@media @sm-and-up {
+		width: calc(~"100% + (@{layout__width-sm-indent})*2");
+		margin-left:  -(@layout__width-sm-indent);
+		margin-right: -(@layout__width-sm-indent);
+	}
+	@media @lg-and-up {
+		width: 100vw;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+}
+
+// Container
+.make-inner-container() {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left: @layout__width-xs-indent;
+	padding-right: @layout__width-xs-indent;
+	max-width: @layout__max-width;
+	@media @sm-and-up {
+		padding-left:  @layout__width-sm-indent;
+		padding-right: @layout__width-sm-indent;
+	}
+	@media @lg-and-up {
+		padding-left:  @layout-indent__width;
+		padding-right: @layout-indent__width;
+	}
+}
+
+// Columns
+@grid-columns: 12;
+.grid-columns-defaults() {
+	position: relative;
+	.flex(1 0 100%);
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	max-width: 100%;
+	width: 100%;
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	@media @sm-and-up {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 20px;
+	}
+}
+.grid-wide-columns-defaults(@gap) {
+	@media @lg-and-up {
+		padding-left: @gap;
+		padding-right: @gap;
+	}
+}
+.calc-grid-column(@index, @screen_size, @type) when (@type = width) and (@index > 0) {
+	.col-@{screen_size}-@{index},
+	.product-item.col-@{screen_size}-@{index} {
+		width: round(percentage((@index / @grid-columns)), 3);
+		-webkit-flex-basis: round(percentage((@index / @grid-columns)), 3);
+		-ms-flex-preferred-size: round(percentage((@index / @grid-columns)), 3);
+		max-width: round(percentage((@index / @grid-columns)), 3);
+		flex-basis: round(percentage((@index / @grid-columns)), 3);
+	}
+}
+.calc-grid-column(@index, @screen_size, @type) when (@type = offset) {
+	.col-@{screen_size}-offset-@{index},
+	.product-item.col-@{screen_size}-offset-@{index} {
+		margin-left: round(percentage((@index / @grid-columns)), 3);
+	}
+}
+
+// Basic looping in LESS
+.loop-grid-columns(@index, @screen_size, @type) when (@index >= 0) {
+	.calc-grid-column(@index, @screen_size, @type);
+	// next iteration
+	.loop-grid-columns((@index - 1), @screen_size, @type);
+}
+
+// Create grid for specific media
+.make-grid(@screen_size) {
+	.loop-grid-columns(@grid-columns, @screen_size, width);
+	.loop-grid-columns(@grid-columns, @screen_size, offset);
+}
+
+// Additional classes for 5,7,8 cols in a row
+.make-additional-grid(@screen_size) {
+	.col-@{screen_size}-1_5,
+	.product-item.col-@{screen_size}-1_5 {
+		width: round(percentage(1 / 5), 3);
+		-webkit-flex-basis: round(percentage(1 / 5), 3);
+		-ms-flex-preferred-size: round(percentage(1 / 5), 3);
+		max-width: round(percentage(1 / 5), 3);
+		flex-basis: round(percentage(1 / 5), 3);
+	}
+	.col-@{screen_size}-1_7,
+	.product-item.col-@{screen_size}-1_7 {
+		width: round(percentage(1 / 7), 3);
+		-webkit-flex-basis: round(percentage(1 / 7), 3);
+		-ms-flex-preferred-size: round(percentage(1 / 7), 3);
+		max-width: round(percentage(1 / 7), 3);
+		flex-basis: round(percentage(1 / 7), 3);
+	}
+	.col-@{screen_size}-1_8,
+	.product-item.col-@{screen_size}-1_8 {
+		width: round(percentage(1 / 8), 3);
+		-webkit-flex-basis: round(percentage(1 / 8), 3);
+		-ms-flex-preferred-size: round(percentage(1 / 8), 3);
+		max-width: round(percentage(1 / 8), 3);
+		flex-basis: round(percentage(1 / 8), 3);
+	}
+}
+
+// Flex Grid Alignment
+.make-flex-alignment-classes(@screen_size) {
+	.start-@{screen_size} {
+		.justify-content(flex-start);
+		text-align: left;
+	}
+	.center-@{screen_size} {
+		.justify-content(center);
+		text-align: center;
+	}
+	.end-@{screen_size} {
+		.justify-content(flex-end);
+		text-align: right;
+	}
+	.top-@{screen_size} {
+		.align-items(flex-start);
+	}
+	.middle-@{screen_size} {
+		.align-items(center);
+	}
+	.ie11 .middle-@{screen_size} {
+		min-height:100px;
+		&::after {
+			content:'';
+			min-height:inherit;
+			font-size:0;
+			display: block;
+		}
+	}
+	.bottom-@{screen_size} {
+		.align-items(flex-end);
+	}
+	.around-@{screen_size} {
+		.justify-content(space-around);
+	}
+	.between-@{screen_size} {
+		.justify-content(space-between);
+	}
+	.first-@{screen_size} {
+		.flex-order(-1);
+	}
+	.last-@{screen_size} {
+		.flex-order(99);
+	}
+}
+
+// Free space indents
+.indents(@indents, @i: 1) when (@i <= length(@indents)) {
+	// extract the right color from the list
+	@indent: extract(@indents, @i);
+
+	hr.white-space{
+		margin: 0;
+		&.indent-@{indent} {
+			padding: ~"0 0 @{indent}px 0";
+		}
+		&[class*="indent-"] {
+			@media @xs-only {
+				&.xs-indent-@{indent} {
+					padding: ~"0 0 @{indent}px 0";
+				}
+			}
+			@media @sm-only {
+				&.sm-indent-@{indent} {
+					padding: ~"0 0 @{indent}px 0";
+				}
+			}
+			@media @md-only {
+				&.md-indent-@{indent} {
+					padding: ~"0 0 @{indent}px 0";
+				}
+			}
+		}
+	}
+
+	.indents(@indents, @i + 1);
+}

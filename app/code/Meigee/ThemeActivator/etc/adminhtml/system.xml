@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="meigee_modules" translate="label" sortOrder="200">
+            <label>Meigee</label>
+        </tab>
+        <!--<section id="theme_activator" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">-->
+            <!--<label>Theme Installation</label>-->
+            <!--<tab>meigee_modules</tab>-->
+            <!--<resource>Meigee_ThemeActivator::config</resource>-->
+            <!--&lt;!&ndash;<group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" expanded="1">&ndash;&gt;-->
+                <!--&lt;!&ndash;<label>Theme Activation</label>&ndash;&gt;-->
+                <!--&lt;!&ndash;<field id="scope_check" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label>Scope Check</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<frontend_model>Meigee\ThemeActivator\Block\Adminhtml\System\Config\ActivationWarning</frontend_model>&ndash;&gt;-->
+                <!--&lt;!&ndash;</field>&ndash;&gt;-->
+            <!--&lt;!&ndash;</group>&ndash;&gt;-->
+            <!--&lt;!&ndash;<group id="activation" translate="label" type="text" sortOrder="20" showInDefault="0" showInWebsite="0" showInStore="1" expanded="1">&ndash;&gt;-->
+                <!--&lt;!&ndash;<label>Theme Activation</label>&ndash;&gt;-->
+                <!--&lt;!&ndash;<attribute type="expanded">1</attribute>&ndash;&gt;-->
+                <!--&lt;!&ndash;<field id="theme" translate="label" type="select" sortOrder="20" showInDefault="0" showInWebsite="0" showInStore="1">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label>Select Theme and Skin</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<source_model>Meigee\ThemeActivator\Model\Config\Source\Themes</source_model>&ndash;&gt;-->
+                <!--&lt;!&ndash;</field>&ndash;&gt;-->
+                <!--&lt;!&ndash;<field id="pages_override" translate="label" type="select" sortOrder="40" showInDefault="0" showInWebsite="0" showInStore="1">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label>Import Pages</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<source_model>Meigee\ThemeActivator\Model\Config\Source\StaticContentOptions</source_model>&ndash;&gt;-->
+                <!--&lt;!&ndash;</field>&ndash;&gt;-->
+                <!--&lt;!&ndash;<field id="blocks_override" translate="label" type="select" sortOrder="50" showInDefault="0" showInWebsite="0" showInStore="1">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label>Import Blocks</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<source_model>Meigee\ThemeActivator\Model\Config\Source\StaticContentOptions</source_model>&ndash;&gt;-->
+                <!--&lt;!&ndash;</field>&ndash;&gt;-->
+                <!--&lt;!&ndash;<field id="widget_instances_override" translate="label" type="select" sortOrder="60" showInDefault="0" showInWebsite="0" showInStore="1">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label>Import Widget Instances</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<source_model>Meigee\ThemeActivator\Model\Config\Source\StaticContentOptions</source_model>&ndash;&gt;-->
+                <!--&lt;!&ndash;</field>&ndash;&gt;-->
+            <!--&lt;!&ndash;</group>&ndash;&gt;-->
+            <!--<group id="configuration" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" expanded="1">-->
+                <!--<label>Theme Installation</label>-->
+                <!--<field id="skin_locale_set" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">-->
+                    <!--<label>Configure Skin</label>-->
+                    <!--&lt;!&ndash;<tooltip>Note: If a few the same skin/locale sets created the last one will be applied</tooltip>&ndash;&gt;-->
+                    <!--<backend_model>Meigee\ThemeActivator\Config\Backend\SkinLocaleSet</backend_model>-->
+                    <!--<frontend_model>Meigee\ThemeActivator\Block\Adminhtml\System\Config\Form\SkinLocaleSetSingleTheme</frontend_model>-->
+                <!--</field>-->
+                <!--&lt;!&ndash;<field id="skin_locale_set2" sortOrder="20" type="button" showInDefault="0" showInWebsite="0" showInStore="1">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label>Configure Skin</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<tooltip>&#45;&#45;&#45;&#45;&#45;&#45;</tooltip>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<frontend_model>Meigee\ThemeActivator\Block\Adminhtml\Form\Field\SkinLocaleSet</frontend_model>&ndash;&gt;-->
+                <!--&lt;!&ndash;</field>&ndash;&gt;-->
+            <!--</group>-->
+        <!--</section>-->
+        <!--<section id="theme_customizer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">-->
+            <!--<label>Theme Customizer</label>-->
+            <!--<tab>meigee_theme_activator_tab</tab>-->
+            <!--<resource>Meigee_ThemeActivator::config</resource>-->
+            <!---->
+        <!--</section>-->
+    </system>
+</config>

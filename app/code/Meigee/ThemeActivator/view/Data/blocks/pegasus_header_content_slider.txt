@@ -1,0 +1,47 @@
+<div class="full-width">
+<div class="slider-wrapper">
+    <span class="carousel-loader"></span>
+    <div class="banner-slider owl-carousel owl-theme" data-navigation="1" data-pagination="1" data-speed="500" data-autoplay="false" data-autoplay-timeout="5000">
+        <a href="#">
+            <picture>
+                <source srcset="{{media url="wysiwyg/gorgon_skin/gorgon_slide_3_mobile.jpg"}}" media="(max-width: 767px)">
+                <img src="{{media url="wysiwyg/pegasus_skin/pegasus_slide1.jpg"}}" alt="Slide Image" />
+            </picture>
+            <div class="slide-container with-animation slide-from-left">
+		<span class="title">New Sirena AW 2019 <br />Made in Baltimore, <br />Maryland</span>
+                <span class="subtitle hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</span>
+		<span class="btn btn-default hidden-xs">Shop Now</span>
+	    </div>
+        </a>
+        <a href="#">
+            <picture>
+                <source srcset="{{media url="wysiwyg/gorgon_skin/gorgon_slide_1_mobile.jpg"}}" media="(max-width: 767px)">
+                <img src="{{media url="wysiwyg/pegasus_skin/pegasus_slide2.jpg"}}" alt="Slide Image" />
+            </picture>
+            <div class="slide-container align-center pos-right with-animation fade-with-scale">
+                <span class="title">Retrorama. Fresh New <br />Collection by <br />Mickey L. Hawkins.</span>
+                <span class="subtitle hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</span>
+                <span class="btn btn-default hidden-xs">Shop Now</span>
+            </div>
+        </a>
+        <a href="#">
+            <picture>
+                <source srcset="{{media url="wysiwyg/gorgon_skin/gorgon_slide_2_mobile.jpg"}}" media="(max-width: 767px)">
+                <img src="{{media url="wysiwyg/pegasus_skin/pegasus_slide3.jpg"}}" alt="Slide Image" />
+            </picture>
+            <div class="slide-container with-animation slide-from-right">
+                <span class="title">Premium Quality Knitwear. <br />Only in Sirena Shop.</span>
+                <span class="subtitle hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</span>
+                <span class="btn btn-default hidden-xs">Shop Now</span>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".banner-slider": {
+            "Meigee_Sirena/js/theme_carousel":{}
+        }
+    }
+</script>

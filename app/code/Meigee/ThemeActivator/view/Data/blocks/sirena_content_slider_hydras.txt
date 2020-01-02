@@ -1,0 +1,46 @@
+<div class="slider-wrapper">
+    <span class="carousel-loader"></span>
+    <div class="content-slider owl-carousel owl-theme-2" data-navigation="1" data-pagination="1" data-speed="500" data-autoplay="false" data-autoplay-timeout="5000">
+        <a href="#">
+            <picture>
+                <source srcset="{{media url="wysiwyg/slide4_mobile.jpg"}}" media="(max-width: 767px)">
+                <img src="{{media url="wysiwyg/hydras_skin/slide7.jpg"}}" alt="Slide Image" />
+            </picture>
+            <div class="slide-container with-animation pos-right slide-from-left">
+		<span class="title">Round neck coat with long <br />sleeves. Featuring front <br />flap pockets and <br />a zip-up front.</span>
+                <span class="subtitle hidden-xs hidden-sm hidden-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</span>
+		<span class="btn btn-default hidden-xs">Shop Now</span>
+	    </div>
+        </a>
+        <a href="#">
+            <picture>
+                <source srcset="{{media url="wysiwyg/slide5_mobile.jpg"}}" media="(max-width: 767px)">
+                <img src="{{media url="wysiwyg/hydras_skin/slide8.jpg"}}" alt="Slide Image" />
+            </picture>
+            <div class="slide-container pos-right with-animation fade-with-scale">
+                <span class="title">Round neck coat with long <br />sleeves. Featuring front <br />flap pockets and <br />a zip-up front.</span>
+                <span class="subtitle hidden-xs hidden-sm hidden-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</span>
+                <span class="btn btn-default hidden-xs">Shop Now</span>
+            </div>
+        </a>
+        <a href="#">
+            <picture>
+                <source srcset="{{media url="wysiwyg/slide6_mobile.jpg"}}" media="(max-width: 767px)">
+                <img src="{{media url="wysiwyg/hydras_skin/slide9.jpg"}}" alt="Slide Image" />
+            </picture>
+            <div class="slide-container with-animation pos-right slide-from-right">
+                <span class="title">Round neck coat with long <br />sleeves. Featuring front <br />flap pockets and <br />a zip-up front.</span>
+                <span class="subtitle hidden-xs hidden-sm hidden-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</span>
+                <span class="btn btn-default hidden-xs">Shop Now</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        ".content-slider": {
+            "Meigee_Sirena/js/theme_carousel":{}
+        }
+    }
+</script>

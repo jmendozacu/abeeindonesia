@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Framework\Css\PreProcessor\Instruction\Import" type="Meigee\ThemeActivator\Css\PreProcessor\Instruction\Import"/>
+    <!-- Configuration for Magento\Framework\Css\PreProcessor\Instruction\Import base flow -->
+    <virtualType name="FileGeneratorPublicationDecoratorForBaseFlow" type="Magento\Developer\Model\Css\PreProcessor\FileGenerator\PublicationDecorator">
+        <arguments>
+            <argument name="hasRelatedPublishing" xsi:type="boolean">false</argument>
+            <argument name="assetPublisher" xsi:type="object">AssetPublisherForSymlink</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="PreProcessorInstructionImportForBaseFlow" type="Meigee\ThemeActivator\Css\PreProcessor\Instruction\Import">
+        <arguments>
+            <argument name="relatedFileGenerator" xsi:type="object">FileGeneratorPublicationDecoratorForBaseFlow</argument>
+        </arguments>
+    </virtualType>
+    <!-- End configuration for Magento\Framework\Css\PreProcessor\Instruction\Import base flow -->
+</config>

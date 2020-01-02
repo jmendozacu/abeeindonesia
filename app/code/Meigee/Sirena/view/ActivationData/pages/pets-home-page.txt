@@ -1,0 +1,78 @@
+<div class="full-width">
+    <div class="parallax-container" data-image-src="{{media url="wysiwyg/sirena/pets_paralax_1.jpg"}}" data-height="520px" data-image-src-small="{{media url="wysiwyg/sirena/pets_paralax_1_small.jpg"}}">
+        <div class="parallax-content pos-left">
+            <span class="title">Beyond by Purina</span>
+            <span class="subtitle">Superfood Blend</span>
+            <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel sapien vitae lorem volutpat cursus ut eu mauris. Suspendisse pretium ut quam ultricies venenatis. Suspendisse potenti. Vestibulum at sem aliquam, finibus neque ac, facilisis lacus. Proin ut varius mauris. Ut mollis hendrerit dui, ut condimentum orci porttitor in.</span>
+            <div class="btn-wrapper">
+                <a class="btn action primary" href="javascript:void(0);">Buy Now</a>
+                <a class="btn btn-default" href="javascript:void(0);">$19.99 only</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="full-width">
+    <div class="parallax-container" data-image-src="{{media url="wysiwyg/sirena/pets_paralax_2.jpg"}}" data-height="520px" data-image-src-small="{{media url="wysiwyg/sirena/pets_paralax_2_small.jpg"}}">
+        <div class="parallax-content pos-right white-text">
+            <span class="title">Always healthy food</span>
+            <span class="subtitle">Always perfect mood</span>
+            <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel sapien vitae lorem volutpat cursus ut eu mauris. Suspendisse pretium ut quam ultricies venenatis. Suspendisse potenti. Vestibulum at sem aliquam, finibus neque ac, facilisis lacus. Proin ut varius mauris. Ut mollis hendrerit dui, ut condimentum orci porttitor in.</span>
+            <div class="btn-wrapper">
+                <a class="btn action primary" href="javascript:void(0);">Choose your</a>
+                <a class="btn btn-default" href="javascript:void(0);">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="indent-30 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" widget_type="featuredcategory" title="Handpicked Products" featured_category="336" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="4" visible_products_tablet="4" visible_products_mobile="2" navigation="1" navigation_position="inside_container" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="false" desc_slider="false" timer_slider="true" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="6375" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+
+<div class="full-width lazyload" data-bg="{{media url="wysiwyg/sirena/pets_icons_bg.jpg"}}">
+    <div class="container">
+        <div class="icon-banners type-1 row">
+            <hr class="indent-0 xs-indent-20 white-space col-xs-12">
+            <div class="single-icon col-xs-6 col-sm-6 col-md-6">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-shipping"></i>
+                    <strong class="title">Free Shipping</strong>
+                    <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a libero in neque dictum auctor. Aenean non commodo ipsum.</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-6 col-sm-6 col-md-6">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-secure"></i>
+                    <strong class="title">Secure Payments</strong>
+                    <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a libero in neque dictum auctor. Aenean non commodo ipsum.</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-6 col-sm-6 col-md-6">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-return"></i>
+                    <strong class="title">Free Returns</strong>
+                    <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a libero in neque dictum auctor. Aenean non commodo ipsum.</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-6 col-sm-6 col-md-6">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-percent"></i>
+                    <strong class="title">Weekly Discounts</strong>
+                    <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a libero in neque dictum auctor. Aenean non commodo ipsum.</span>
+                </a>
+            </div>
+            <hr class="indent-0 xs-indent-20 white-space col-xs-12">
+        </div>
+    </div>
+</div>
+<hr class="indent-30 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Magefan\Blog\Block\Widget\Recent" title="From the Blog" number_of_posts="3" category_id="0" tag_id="0" author_id="0"}}
+
+<script type="text/x-magento-init">
+    {
+        ".parallax-container": {
+            "Meigee_Sirena/js/theme_parallax":{}
+        }
+    }
+</script>

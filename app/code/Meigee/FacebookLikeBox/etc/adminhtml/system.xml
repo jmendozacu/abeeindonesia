@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+        <section id="meigee_facebook" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Facebook Like Box</label>
+            <tab>meigee_modules</tab>
+            <resource>Meigee_FacebookLikeBox::system_config</resource>
+			<group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Facebook Like Box</label>
+				<field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Status</label>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="url" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Facebook Page URL</label>
+					<comment>The URL of the Facebook Page to like</comment>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+				</field>
+				<field id="height" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Height</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<comment>The pixel height of the plugin</comment>
+				</field>
+				<field id="faces" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Show Friends Faces</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="small_header" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Show Small Header</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="posts" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Show Posts</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="cover" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Hide Cover</label>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="adaptive_width" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Adaptive WIdth</label>
+					<comment>Show posts from the Page's timeline</comment>
+					<depends>
+						<field id="status">1</field>
+					</depends>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+        </section>
+    </system>
+</config>

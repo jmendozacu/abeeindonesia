@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$footer_status = $themeConfigPhp->getFooterCustom();
+$footer_block = $themeConfigPhp->getFooterCustomBlock();
+$footer_block = $block->getLayout()->createBlock( 'Magento\Cms\Block\Block' )->setBlockId( $footer_block )->toHtml();
+$footer_default = $this->getChildHtml('footer');
+?>
+<div class="footer-container">
+  <div class="footer accordion-list">
+      <?php echo ($footer_status ? $footer_block : $footer_default); ?>
+  </div>
+</div>
+<a href="#" class="to-top" title="<?= $block->escapeHtmlAttr(__('Back To Top')); ?>" data-btn-text="<?= $block->escapeHtmlAttr(__('To Top')); ?>" data-mage-init='{ "Meigee_Sirena/js/theme_totop_btn": {} }'><i class="meigee-icon-to-top"></i></a>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Meigee_Sirena/js/theme_mobile_footer":{}
+        }
+    }
+</script>

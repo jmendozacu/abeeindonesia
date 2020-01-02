@@ -1,0 +1,98 @@
+<div class="footer-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item no-margin">
+                <h6 class="footer-block-title accordion-title visible-sm visible-xs">Who we are</h6>
+                <div class="accordion-content">
+                    <div class="footer-logo">
+                        <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/logo_white.png"}}" alt="Logo">
+                    </div>
+                    <h6 style="margin-bottom: 9px;">Little more about us</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere consequat. </p>
+                    <a href="javascript:void(0);" class="btn btn-default">Read more</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item no-margin">
+                <h6 class="footer-block-title accordion-title">Categories</h6>
+                <div class="accordion-content">
+                    <ul class="links">
+                        <li><a href="javascript:void(0);" title="">Dresses & Apparel</a></li>
+                        <li><a href="javascript:void(0);" title="">Women's Shoes</a></li>
+                        <li><a href="javascript:void(0);" title="">Hats & Panama</a></li>
+                        <li><a href="javascript:void(0);" title="">T-Shirts</a></li>
+                        <li><a href="javascript:void(0);" title="">Tunics & Sweaters</a></li>
+                        <li><a href="javascript:void(0);" title="">Men's Hats</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item no-margin">
+                <h6 class="footer-block-title accordion-title">Information</h6>
+                <div class="accordion-content">
+                    <ul class="links">
+                        <li><a href="javascript:void(0);" title="">Your Account</a></li>
+                        <li><a href="javascript:void(0);" title="">Your Orders</a></li>
+                        <li><a href="javascript:void(0);" title="">Shipping Rates & Policies</a></li>
+                        <li><a href="javascript:void(0);" title="">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0);" title="">Shop with Points</a></li>
+                        <li><a href="javascript:void(0);" title="">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item no-margin">
+                <h6 class="footer-block-title accordion-title">Contacts</h6>
+                <div class="accordion-content">
+                    <p>No. 315, Jersey City, NJ 07305, New York, USA<br />
+                        <a href="tel:555-723-649-4920">Call Us : (555) 723-649-4920</a><br />
+                        <a href="mailto:name@email.com">info@sirena.com</a></p>
+                    <a href="javascript:void(0);" class="primary action">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-middle">
+    <div class="container">
+        <div class="row center-xs center-md">
+            <div class="col-xs-12 accordion-item no-margin">
+                <h6 class="footer-block-title accordion-title visible-sm visible-xs">Usefull Links</h6>
+                <div class="accordion-content">
+                    <ul class="horizontal-links">
+                        <li><a href={{store url='about-us'}}>About us</a></li>
+                        <li><a href="{{store url='customer-service'}}">Customer Service</a></li>
+                        <li><a href="{{store url='privacy-policy-cookie-restriction-mode'}}">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0);" title="">Site Map</a></li>
+                        <li><a href="javascript:void(0);" title="">Search Terms</a></li>
+                        <li><a href="{{store url='catalogsearch/advanced/'}}">Advanced Search</a></li>
+                        <li><a href="{{store url='contact'}}">Contact Us</a></li>
+                        <li><a href="{{store url='sales/guest/form/'}}">Orders and Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row middle-xs middle-md">
+            <hr class="col-xs-12 indent-20 white-space first-xs first-sm first-md first-lg">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 copyright-wrapper last-xs first-md first-lg">
+                <span class="copyright">&copy; 2019 Meigee Team.</span>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 first-xs first-sm">
+                <ul class="social-links">
+                    <li><a class="facebook" href="javascript:void(0);"><i class="meigee-icon-fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="javascript:void(0);"><i class="meigee-icon-fa-twitter"></i></a></li>
+                    <li><a class="instagram" href="javascript:void(0);"><i class="meigee-icon-fa-instagram"></i></a></li>
+                    <li><a class="youtube" href="javascript:void(0);"><i class="meigee-icon-fa-youtube-play"></i></a></li>
+                    <li><a class="pinterest" href="javascript:void(0);"><i class="meigee-icon-fa-pinterest-p"></i></a></li>
+                    <li><a class="vimeo" href="javascript:void(0);"><i class="meigee-icon-fa-vimeo"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 last-sm store-switcher-wrapper">
+                {{block class="Magento\Store\Block\Switcher" name="store_switcher" template="switch/stores.phtml"}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+<div class="payments-wrapper">
+<img src="{{media url="wysiwyg/payment_icons.png"}}" alt="Payments" />
+</div>

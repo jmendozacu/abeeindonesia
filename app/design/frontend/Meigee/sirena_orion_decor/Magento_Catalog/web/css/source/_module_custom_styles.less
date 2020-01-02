@@ -1,0 +1,99 @@
+& when (@media-common = true) {
+  .product-item-name,
+  .sidebar .product-item-name {
+    font-size: 15px;
+  }
+  .product-item {
+    .tocart, .btn-cart {
+      padding: 12px 22px 11px;
+    }
+  }
+  .product-info-main .product.attribute.overview,
+  .page-layout-1column .product-info-main .product.attribute.overview {
+    font-size: 13px;
+  }
+  .product-info-main .product.attribute.overview .block-title,
+  .page-layout-1column .product-info-main .product.attribute.overview .block-title {
+    font-size: 18px;
+  }
+  @media @sm-and-up {
+    .product-info-main .page-title-wrapper h1,
+    .page-layout-1column .product-info-main .page-title-wrapper h1,
+    .block.related .block-title,
+    .block.upsell .block-title,
+    #product-review-container .block-title,
+    .block.review-add .block-title {
+      font-size: 30px;
+    }
+  }
+  .block {
+    &.related,
+    &.upsell {
+      .product-item-info .wishlist-button-wrapper {
+        .grid-ie-col(3, 1);
+        .grid-ie-row(2, 1);
+        grid-column: col3;
+        grid-row: row 2;
+        top: 0;
+      }
+    }
+    &.related {
+      .related-available {
+        .field.choice {
+          top: 3px;
+        }
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body {
+    .product-item-info {
+      .product-action-wrapper {
+        .grid-ie-col(1, 2);
+        .grid-ie-row(8, 1);
+        grid-column: col1 / span 2;
+        grid-row: row 8;
+      }
+      .wishlist-button-wrapper {
+        .grid-ie-col(3, 1);
+        .grid-ie-row(8, 1);
+        grid-column: col3;
+        grid-row: row 8;
+        position: absolute;
+        top: 9px;
+        right: 0;
+      }
+    }
+    .product-hover-2 {
+      .product-item-info {
+        .wishlist-button-wrapper {
+          .grid-ie-row(2, 1);
+          grid-row: row 2;
+          top: 0;
+        }
+      }
+    }
+  }
+  body .product-item-info .wishlist-button-wrapper .action,
+  body.page-products .product-item-info .wishlist-button-wrapper .action {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    line-height: 40px;
+    .transform(scale(0.8));
+    opacity: 0;
+    .transition(all .3s ease-out);
+  }
+  body .product-item:hover .product-item-info .wishlist-button-wrapper .action,
+  body.page-products .product-item:hover .product-item-info .wishlist-button-wrapper .action {
+    .transform(scale(1));
+    opacity: 1;
+  }
+}

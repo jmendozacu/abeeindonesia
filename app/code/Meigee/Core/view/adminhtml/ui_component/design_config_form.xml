@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="other_settings">
+        <fieldset name="header">
+            <field name="header_welcome">
+                <settings>
+                    <validation>
+                        <rule name="validate-no-html-tags" xsi:type="boolean">false</rule>
+                    </validation>
+                </settings>
+            </field>
+        </fieldset>
+        <fieldset name="footer">
+            <field name="footer_copyright">
+                <settings>
+                    <validation>
+                        <rule name="validate-no-html-tags" xsi:type="boolean">false</rule>
+                    </validation>
+                </settings>
+            </field>
+        </fieldset>
+    </fieldset>
+</form>

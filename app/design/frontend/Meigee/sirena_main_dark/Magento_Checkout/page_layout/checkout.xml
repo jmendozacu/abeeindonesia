@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+	<referenceContainer name="checkout.header.wrapper">
+		<referenceContainer name="meigee.checkout.header.left">
+			<referenceBlock name="logo.checkout">
+				<arguments>
+					<argument name="logo_file" xsi:type="string">images/logo_white.png</argument>
+				</arguments>
+			</referenceBlock>
+		</referenceContainer>
+	</referenceContainer>
+</layout>

@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Meigee_FacebookLikeBox::meigee_facebook"
+                title="Facebook Like Box"
+                module="Meigee_FacebookLikeBox"
+                sortOrder="1"
+                resource="Meigee_FacebookLikeBox::system"
+                parent="Meigee_Core::extensions"
+                action="adminhtml/system_config/edit/section/meigee_facebook"
+        />
+    </menu>
+</config>

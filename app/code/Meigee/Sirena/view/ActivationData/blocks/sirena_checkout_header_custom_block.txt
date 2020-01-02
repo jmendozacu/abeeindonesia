@@ -1,0 +1,8 @@
+<div class="checkout-header-custom-block">
+	<a href="javascript:void(0);" title="banner">
+		<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/sirena_checkout_mastercard.png'}}" alt="Payments">
+	</a>
+	<a href="javascript:void(0);" title="banner">
+		<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/sirena_checkout_norton.png'}}" alt="Payments">
+	</a>
+</div>

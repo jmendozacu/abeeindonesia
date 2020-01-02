@@ -1,0 +1,20 @@
+<?php
+/* Check if on Category Product Page */
+$label = __('Show Sidebar');
+if ($this->getRequest()->getFullActionName() == 'catalog_category_view') {
+    $label = __('Filters');
+}
+?>
+<div class="sidebar-toggler">
+    <label><?php echo $block->escapeHtml($label); ?></label>
+    <button class="sidebar-button" type="button" title="<?php echo $block->escapeHtml(__('Shop By')); ?>"><i class="meigee-icon-filter"></i></button>
+    <div class="sidebar-underlay"></div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        ".sidebar-button": {
+            "Meigee_Sirena/js/theme_custom_sidebar":{}
+        }
+    }
+</script>

@@ -1,0 +1,80 @@
+<?php
+/**
+ * @var $themeConfigPhp \Meigee\Sirena\ViewModel\ThemeConfigPhp
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+
+/* custom_sirena: Extra Classes and helpers */
+$header_class = ' header-wrapper';
+if ($themeConfigPhp->getHeaderTransparency()) {
+    $header_class .= ' transparent-header';
+}
+if ($themeConfigPhp->getMenuTransparency()) {
+    $header_class .= ' transparent-menu';
+}
+if (!$themeConfigPhp->getHeaderStickyShowLogo()) {
+    $header_class .= ' sticky-no-logo';
+}
+if (!$themeConfigPhp->getHeaderStickyShowNav()) {
+    $header_class .= ' sticky-no-nav';
+}
+if (!$themeConfigPhp->getHeaderStickyShowSearch()) {
+    $header_class .= ' sticky-no-search';
+}
+?>
+
+<header class="page-header<?php echo $block->escapeHtmlAttr($header_class); ?>">
+    <div class="page-header-inner container">
+        <div class="top-links-wrapper">
+            <?php echo $this->getChildHtml('top.links'); ?>
+        </div>
+        <div class="top-options-wrapper">
+            <?php  if (strlen(trim($this->getChildHtml('currency'))) > 0) { ?>
+                <div class="options-wrapper currency-wrapper">
+                    <div class="options-block">
+                        <span class="title"><?php echo $block->escapeHtml(__('Currency')); ?></span>
+                    </div>
+                    <div class="options-dropdown">
+                        <?php echo $this->getChildHtml("currency"); ?>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php  if (strlen(trim($this->getChildHtml('store_language'))) > 0) { ?>
+                <div class="options-wrapper language-wrapper">
+                    <div class="options-block">
+                        <span class="title"><?php echo $block->escapeHtml(__('Language')); ?></span>
+                    </div>
+                    <div class="options-dropdown">
+                        <?php echo $this->getChildHtml("store_language"); ?>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+        <?php if ($this->getChildHtml("header.welcome") && $this->getChildHtml("header.welcome")!='') { ?>
+            <div class="wellcome-text-wrapper">
+                <?php echo $this->getChildHtml("header.welcome"); ?>
+            </div>
+        <?php } ?>
+        <div class="logo-wrapper">
+            <?php echo $this->getChildHtml("logo"); ?>
+        </div>
+        <div class="buttons-wrapper">
+            <div class="search-wrapper">
+                <?php echo $this->getChildHtml("topSearch"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+        </div>
+        <div class="menu-wrapper">
+            <div class="toggle-nav"><?php echo $this->getChildHtml("catalog.topnav"); ?></div>
+        </div>
+    </div>
+</header>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Meigee_Sirena/js/theme_header_helper":{}
+        }
+    }
+</script>

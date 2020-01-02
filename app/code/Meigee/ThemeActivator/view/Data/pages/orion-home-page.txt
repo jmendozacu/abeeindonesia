@@ -1,0 +1,158 @@
+<hr class="indent-12 white-space">
+
+<div class="category-banners type-2 row">
+    <div class="single-banner col-xs-6 col-sm-4 col-md-2">
+        <a href="#">
+            <img src="{{media url="wysiwyg/orion_skin/orion_cat_banner_1.png"}}" alt="Category Banner" />
+            <strong class="title">Smart Shoes</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-6 col-sm-4 col-md-2">
+        <a href="#">
+            <img src="{{media url="wysiwyg/orion_skin/orion_cat_banner_2.png"}}" alt="Category Banner" />
+            <strong class="title">Moccasins</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-6 col-sm-4 col-md-2">
+        <a href="#">
+            <img src="{{media url="wysiwyg/orion_skin/orion_cat_banner_3.png"}}" alt="Category Banner" />
+            <strong class="title">Sandals</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-6 col-sm-4 col-md-2">
+        <a href="#">
+            <img src="{{media url="wysiwyg/orion_skin/orion_cat_banner_4.png"}}" alt="Category Banner" />
+            <strong class="title">Basics</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-6 col-sm-4 col-md-2">
+        <a href="#">
+            <img src="{{media url="wysiwyg/orion_skin/orion_cat_banner_5.png"}}" alt="Category Banner" />
+            <strong class="title">Sneakers</strong>
+        </a>
+    </div>
+    <div class="single-banner col-xs-6 col-sm-4 col-md-2">
+        <a href="#">
+            <img src="{{media url="wysiwyg/orion_skin/orion_cat_banner_6.png"}}" alt="Category Banner" />
+            <strong class="title">Leather</strong>
+        </a>
+    </div>
+</div>
+<hr class="indent-40 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="banner-with-text">
+            <img src="{{media url="wysiwyg/orion_skin/orion_banner1.jpg"}}" alt="Category Banner" />
+            <div class="text">
+                <span class="subtitle">Sale up to 50% OFF</span>
+                <strong class="title">Women's Dresses</strong>
+                <span class="btn btn-default">Browse Category</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" widget_type="newproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="6" template="Meigee_ProductWidget::product/widget/content/grid.phtml" products_per_row="3" product_name="true" product_price="true" stock_status_grid="false" desc_grid="false" timer_grid="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_grid="false" rating_cust_link_grid="false" rating_add_review_link_grid="false" widget_id="7773" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}
+    </div>
+</div>
+<hr class="indent-32 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Handpicked Products" widget_type="saleproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="2" template="Meigee_ProductWidget::product/widget/content/grid.phtml" products_per_row="2" product_name="true" product_price="true" stock_status_grid="false" desc_grid="false" timer_grid="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_grid="false" rating_cust_link_grid="false" rating_add_review_link_grid="false" widget_id="3706" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="subscribe-block type-2">
+            <img src="{{media url="wysiwyg/orion_skin/orion_banner2.jpg"}}" alt="Subscribe Block Background" />
+            <div class="promo-text">
+                <span class="subtitle">Special Offer</span>
+                <strong class="title">Only This Weekend <br />25% OFF on all <br />Knitwear.</strong>
+            </div>
+            <div class="newsletter-form-wrapper">
+                 {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="indent-60 white-space">
+
+<div class="brand-banners row middle-xs middle-sm middle-md">
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAVBAMAAADWVP/xAAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAEHRSTlMAgCI8XhEad0RvM2YrCVVNDO2KnAAAAdRJREFUKM+F0bFq20AcBvDP1kW1rcaxIqk2rkvv5CbQTUGU0KGgQeBAoSh9gGKHTp08dCh0aaYMXWoIhW72G6RTOyZvkASyx2/gZMmaD+tEckSQD52Ok37S3f0POqthuAl8BMDO3mDLODwPGdjxG+B8CGDvFF/A1FB1Xfc3tgD4gMMmEmBLuczq/HCygBoDcCX6qEYQqK5j5V+mfaVNH9Dzkqh1YXlQHNuGx+5C+9FVBtEp/NkCGEB1gQb9ckp/6etH2s9OjiHaheeAneL3NXodeoiW9gcVTvl3qj0vqGP1HXAm5T51Eoi3yX0fqTlQuZJYlmwzX0+ivdccQ8SB6dmpmcTn9P1hupPv90fu7a4VQLzrmF5F2FaSgPVBUc84jn001qs9iOjG9K8u8eHO6/NK09RHrbXi0Y+mhu+P4d3zXrgBfb7iCF/pncTwYWA/U0b9C1+5xIC+ERhedq0WfR7Dj67D+amI8M30/5tJuZ9xRkl/YPqfdd7Qf+j3M76n353ceankyUiW+wG4Bfqmu/Rqym6o5Nk+6F+nzI7hfcD5Rf80908S4A9p/TlK/297wNoLeuTrsV5mn3qka51y3+gBVo9eny+23faUlM/pL/B49oYocgtp0WlxTssLFQAAAABJRU5ErkJggg==" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAUBAMAAADl6NejAAAAMFBMVEUAAADd3d3Dw8OhoaGIiIiQkJDl5eXu7u6qqqrU1NS7u7v29vaZmZnMzMyysrJ/f3+KY7DkAAAAD3RSTlMARHe77t0zIqpViBHMZpk6YH8kAAABU0lEQVQoz43RsUrDUBQG4L8tNthSm71DQFG6SEoHF4eOQpcLvkAr6OJi9QkUH8AunesgOFrE2d2pk7MO7m1IgqVWfk+OttQYJD+XAzl8hHPvwT8568QaLjmxE2CZltn7a/mZaDP0Eiw7SRaj17j1cchrHHxzG5kKJPm2WMlP36ogY6vNstbjZOiVeTTOGrpE1gRSOYb2nVmD2yboRnaNF5SIbY11JGgVW9K+Q8073HD9is9sjsTKN8MN0uKsqvaB9ZvI1o2cqf5i1g8H+cg+HfNcOgWtYl8myBvPCdGX46vddadAQ2wnxy7KzNGWKtb1or7jQ080wxbmFnErL99asj6A+Qwo/J7hJLAfGbMrbL6ptRhWl+6WIxm3qyTV4o6SqKotDhnEZ9A3VxvbRenyduluGt2lZrFjaO4HRfOBVFk1+5uspbQkgzbSpUfuIG1OK1jkCwyKF59DX8UaAAAAAElFTkSuQmCC" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAARBAMAAABndUxIAAAAMFBMVEUAAAChoaHDw8Pd3d3l5eX29vaIiIiQkJDU1NSZmZmqqqqysrLu7u67u7vMzMx/f38oVYdDAAAAD3RSTlMAu3dEMxHu3VXMqpkiiGYjii5FAAABQklEQVQoz43Sv0rDUBQG8K/5A2JLmzxBiksXIcU6uTQvIFoFwU6Kbg6RTm7J5tjBB4iL4NY+gJBBcLVdnLs61ca2Wmn9vDcEgm2hPXDPcO6Pc8+Bi2Wh7WKdyAyWFPfN7UVmF+dqNZKLjB//S3pAk6u7ZfmA+urZXiei42pmf8usWo1uJ2/eDvXS+Emybkcz3yc+jrzGoQStkcxVkoZCjk7JsSOYZagkp7AGriGBFa8URHuS3fn2zw6NhN03fzdYPIifC6ci5ViEJZgDz4A9TZhfiLLcKs0k60dyNJZhCwYIX/1MWLkQZUjG+5zQgaqxhzBmbhv9Yco2mWya56wSwrtQGLMwUt3rlCks1x/x1gNskmiSjNkLST9lenDuXWo8A9QWr6C4gyBmmsUbpAw1fjl60IaIijjHTjJEbu6vPTviEn+mxJraS+2BGgAAAABJRU5ErkJggg==" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAATBAMAAACq4hgVAAAAMFBMVEUAAAChoaHDw8P29vaIiIjd3d2QkJDl5eXu7u6ZmZmysrLMzMzU1NSqqqq7u7t/f38DwQXBAAAAD3RSTlMAu3cR7kTdMyLMmWZVqog9t/0lAAAB9UlEQVQ4y6WTsWsTYRjGn0tMkzRpvCjSocLFVF3vQNDo2A4uQq6T4GA7uV5AOjhIg0UQFwX/gCvong7SVcFVKE6O8T/QOy5nLhKfvl9yubtmCJQ8w/O93/seP3jf7z1ktDaOg9e28v0Osio+np4LkpcZB+Yf5YaOrDRvei5IVq4sA7DSMwVYSSX9Np96XiWNDcfroOryp7oV3LBJmH/d8CuMa8rzN7llgc0tzTvhOvCW4TFwwlEXOSfaEUCb3MYXMugIYFdOAQTkYFLxcZ/kB9DxtUBqVlGSI6ySfAhTEgIY3en5JV4ttHUBOP69vgCirjmGEX37zK75/03PB8NbGj8+YEMLNl/Q3vWem16Jj6quAPZwycuxC3OoeUU2cJcSYo0whqiy0dZRDsE9aCHQ1g985HnU30aNr2jjQAC69F6jaKB5FdpSUUPMCeA9wE02VCyueWqupwPlro4CnxAox4BV1uv1dc2rngPoiwFPM4AcLezb0xZWEsAQlbiFFDDXwrsYkBliq58AIluG+Ntv9fwUUA6OZYin48PJEAtuDMg+Y5gA0mdMAXPPGM4AVWe2SEEzAVx3ZGfyn2SRUgBeUpK4PV2kcCdd5U68qN0aAcwuyg/nfsCJt5SVLMzrxy+sRFhCvfF34x+WkBrZEZbRjWcbuJDOAHgMM8X2DbdwAAAAAElFTkSuQmCC" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAbBAMAAAD/id51AAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAEHRSTlMAgCI8XjMRCURNdxpmK1VvZYJhsQAAAb9JREFUOMvdz71rE2EcwPHv5d6aWLXXS9QqlTujKFjh4tFe2kEMdZbLpos8thTqdgiCbikFdTzN0NmphSpEUIRO7VqoGFwcG/8Cuzv4nOTixYTQud/pefnw8HsY2kKR/zq9dxce3mveCchmgjpgqUtrWMLcb5HJgtygdaVNrh5vHt+OTx/fajbG66qgXP3yYM63/LnErlTfovvx6v0QjOpsxtZDvYTxrqyVuu/qm1Qc2peCfAl2PPNN1549ZxShI6htFFJbsHFjFDtZm++h3bXuYd6GekytYThdO/YhGVGZhCKq3ZvX+BqNyzP3FzUn+7e2tBOJ1SZT66+3UJLdRL99tpZapWeBYXY1cIfbwoDVt+nZQp/VppNd1n5s/LNaKWv1C7AWplaVttKgnlp1CirSmlaU4P3I/A21ENiLPuvy3W29shsp5zl1EfOoZXZ24ZG1KIAXBzMb3LC2HNhZPFywXupHB2eK1zqXnavWTz5tzbenBGlPr6cr8yYDLYmIk5AAQzz39Nv6vBjlymK51ZTWC66MqagjpDRx/M0DvO9+foaVUTbX9Ja9v3bpVq5MwKjWQ9/7oUr75JU6azbo6w/mKWAvzwsnaAAAAABJRU5ErkJggg==" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAPBAMAAACIDPXGAAAAMFBMVEUAAADd3d3Dw8OhoaGQkJCysrKZmZnl5eX29vbMzMyqqqru7u6IiIi7u7vU1NR/f3//IKnOAAAAD3RSTlMARHe73ZnMMxFmqiLuiFV1Ak8YAAABt0lEQVQoz3XSP2/TQBjH8a+dxG2SEicN/zZbaRkihJypYkDEZUJiaJqJjQALTLXUF9DwCpqFESmMDNDwCpoNJBarr4B3EMdJSChBD49jr5x0N9x9ht/d73hXuwMYupRrtRHw9S7/GY7IG7icgSly3YcXU7gi53KYnI0h1wFbZgHOr7ayiST0QEI4iWEPKyTCAZT1dFaL33GmFQnwJFCKF4Fcw012WkYvo/WnCeWtUmRA+8hNqLPEmK/B7p+Oi8OMPvi4oY2MitfZ0D+Yi6MRVnX3oelm9EtjQ7tKDQm2xPGVbl/4lOL2gILbPM5VM/qsntDtb+m1ijN7pVTkJ/mpF2J2jpv5EU7jPpTHttLufpg8yHMKf62p0kcxXK4mLYxWa3eHlFaGVqD0FUlWsH6XYqWlBUz8swgi/7ROGuCGW3A1wPuM2vGtmdLiHLyXyc5hK/8ho7mq2VF63k+pplgrLUtAWySGz6HVzKj9+sBXWhik1HvSkJEpnIRId28B+25pmdHbtdpKaWWY0gslA6WevyV9c66oakYZvQePlfIjKQi0q7ZrrjlbFtcYAuf9So/0u3yCq00F/wDaNqVJXHJzzQAAAABJRU5ErkJggg==" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAXBAMAAAB9tZW+AAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAEHRSTlMAgDM8XncaIk0RVUQrb2YJeMB4kQAAAXVJREFUOMvVkjFPwlAQx09FECHq2WI0KAE+QUkHZ7UuOnVBBhOfJg5uaGJIjIk4sDngRpwIn8BBdz4CxMTVNPoBmqi7//cs9FE1Li7+hsu9e79ee7lSlCP6ngsZbhzH2abZDilePa40ZRFsCboTRGkD9VafH3yiEgMxwcqN93EwgiJbxHtEMVyNuzjuom46zgYF8iE/n1+yhc6bLDtzzldygTsna1yl0hykgewZ6O4ukeoHmOsyS7o76M69ETnNbcT9rCYbMkuxhUNpWZcRBeJ0LpQb3EUWyxCYzKpZHpUcGMhDeZXLyMZMdWsq2fhRtgorb7ps2LYVyKkvn2FN8QvTTPAZkQHriNdZTSaP5YB5HAr6gKA/T5T0FnT5HXKSy0QJ92ko27Yt6JjXa/d8q8txl+VGr7Cs7lAGvc+1LpIuY3tyGIC3nrYHP0UGNy2Xza562pSxUcXmKkjO0ENQlHjNJ0VztJ6o0f/moBgifpOLGvk/6fwB1zJN1CbzXmMAAAAASUVORK5CYII=" alt="Brand Banner" />
+        </a>
+    </div>
+    <div class="single-brand col-xs-6 col-sm-3 col-md-1_5">
+        <a href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAVBAMAAADBdm84AAAAMFBMVEUAAACqqqrg4ODJycn39/fo6OiUlJTw8PCbm5vR0dGjo6PCwsKysrK6urrY2NiMjIyTWpZYAAAAD3RSTlMAu0R3ETPuIt1mzIiqmVW3G4R5AAAB5ElEQVQoz43Sv2sTYRzH8XeTO65HrblTC/EHJE3FLEKigVLq0CNDERdPJxFBA9qORv0DahFEEG2nrlUo6qJkKuoSq+IkJODgmMPBtZ7B2kSb+P2isaVNIZ/hOD7f1z083PMgOX8UrONZduSWu70xxj4tvyVS64Lz4fbmzBJGbZ5MF0wHl8D2kTzzoK/VDY94/3DUgdNJwG4A1rrgm/qtmQajaPpYaTuRFazFVwejorj/G5JKkFk51PSxH4y9N+ND8YbpjrumrBy9v3zAThTcc3OPD8OMo3iilHnKsWlGfaNAbDbfmnxjPCkSslqM1Ik5InTljGJ5yp6jG9YG1PzYVSgnWSwJnvD53RWbawNhLpcIdJZISifYhHATz1xRvFoSTLuvnkqlijqrBNKJw8xtwf0/FJeDv1h/jc502Q+e4OjsyU0sG9X5PQRbzYFfHWyHJ4bQPc+zBRtzPkRbiu1GZF0KX2cXv6RRfB3FjwQHSC5cg0U57ttMVqlVGS6eFfwRXUhw8lLInp9m9nJ10JNm9N34Phh+eeoORKfin61EAcqh+4oba85C++Fdx5w64g02X9C5omCk9BnRd71eK2576X+b90V57JbnsLdOb4l8B/b3iPXczWl6zMLB1OuAXjOSS+7o/gAefo4VN2qjsAAAAABJRU5ErkJggg==" alt="Brand Banner" />
+        </a>
+    </div>
+</div>
+<hr class="indent-40 white-space">
+
+{{widget type="Magefan\Blog\Block\Widget\Recent" title="From the Blog" number_of_posts="3" category_id="0" tag_id="0" author_id="0"}}
+<hr class="indent-18 white-space">
+
+{{widget type="Meigee\Instagram\Block\Widget\Instagram" widget_title="Instagram" instagram_items="6" instagram_user_id="1036122730" instagram_access_token="1036122730.a36fddd.eb253ca7f00248aea9a8c664c5aac949"}}
+<hr class="indent-50 white-space">
+
+<div class="icon-banners type-2 row middle-xs" style="padding: 30px 0 27px; margin-bottom: -120px; background-color: #fff">
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="#">
+            <i class="icon meigee-icon-shipping"></i>
+            <strong class="title">Free Shipping</strong>
+            <span class="subtitle">On Orders Over $200</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="#">
+            <i class="icon meigee-icon-secure"></i>
+            <strong class="title">Secure Payments</strong>
+            <span class="subtitle">Visa, Mastercard, Paypal</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="#">
+            <i class="icon meigee-icon-return"></i>
+            <strong class="title">Free Returns</strong>
+            <span class="subtitle">Within 30 Days</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="#">
+            <i class="icon meigee-icon-percent"></i>
+            <strong class="title">Weekly Discounts</strong>
+            <span class="subtitle">Up to 50% OFF</span>
+        </a>
+    </div>
+</div>

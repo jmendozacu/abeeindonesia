@@ -1,0 +1,83 @@
+& when (@media-common = true) {
+  .breadcrumbs {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    min-height: 79px;
+    background-color: @bg-color-site;
+
+    .items {
+      background-color: @bg-color-content;
+      font-size: inherit;
+      padding: 20px @layout__width-sm-indent 20px @layout__width-sm-indent;
+      a,
+      strong {
+        font-size: 11px;
+        color: rgba(0,0,0,0.4);
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        &:visited {
+          color: rgba(0,0,0,0.4);
+        }
+      }
+      strong {
+        color: rgba(0,0,0,0.6);
+      }
+      a:hover {
+        color: @theme__color__primary;
+        text-decoration: none;
+      }
+      .item:not(:last-child) {
+        &:after {
+          content: '';
+          background-color: rgba(0,0,0,0.2);
+          width: 10px;
+          height: 1px;
+          margin: 0 10px;
+          display: inline-block;
+          position: relative;
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
+//
+//  Desktop (>992px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .breadcrumbs {
+    padding: 0;
+    max-width: 100%;
+  }
+  .page-main {
+    padding-top: 40px;
+  }
+  .catalog-product-view.product-with-bg .page-main {
+    padding-top: 0;
+  }
+  .breadcrumbs + .page-main {
+    padding-top: 0;
+  }
+  .cms-index-index .page-main {
+    padding-top: 0;
+  }
+}
+
+//
+//  Desktop (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .breadcrumbs {
+    .items {
+      padding: 22px @layout-indent__width 40px @layout-indent__width;
+    }
+  }
+  .page-main {
+    padding-top: 60px;
+  }
+}

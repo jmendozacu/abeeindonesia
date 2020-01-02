@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+        <meigee_popup>
+            <general>
+                <status>1</status>
+                <static_identifier>sirena_popup_content</static_identifier>
+                <expires>30</expires>
+                <home_only>1</home_only>
+                <width>404</width>
+                <height>580</height>
+            </general>
+        </meigee_popup>
+    </default>
+</config>

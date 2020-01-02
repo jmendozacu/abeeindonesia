@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+
+        <theme_activator>
+            <configuration>
+                <skin_locale_set>{"Meigee_sirena___default":"en_US"}</skin_locale_set>
+            </configuration>
+        </theme_activator>
+
+        <meigee_activator>
+            <theme>
+                <Meigee_sirena>
+                    <default/>
+                    <sirena2/>
+                    <sirena3/>
+                    <phoenix/>
+                    <phoenix2/>
+                    <phoenix3/>
+                    <griffin/>
+                    <griffin2/>
+                    <griffin3/>
+                    <hydras/>
+                    <hydras2/>
+                    <hydras3/>
+                    <orion/>
+                    <orion2/>
+                    <orion3/>
+                    <gorgon/>
+                    <gorgon2/>
+                    <gorgon3/>
+                    <sphinx/>
+                    <sphinx2/>
+                    <sphinx3/>
+                    <triton/>
+                    <triton2/>
+                    <triton3/>
+                    <harpies/>
+                    <harpies2/>
+                    <harpies3/>
+                    <pegasus/>
+                    <pegasus2/>
+                    <pegasus3/>
+                    <beauty/>
+                    <decor/>
+                    <furniture/>
+                    <kitchen/>
+                    <pets/>
+                    <tools/>
+                    <jewelry/>
+                    <autoparts/>
+                    <food/>
+                    <dark/>
+                </Meigee_sirena>
+            </theme>
+        </meigee_activator>
+
+        <sirena_general>
+            <sirena_layout>
+                <header_layout>header-wide</header_layout>
+                <content_layout>content-boxed-content</content_layout>
+                <footer_layout>footer-boxed-content</footer_layout>
+                <container_width>1370</container_width>
+                <rtl_enabled></rtl_enabled>
+            </sirena_layout>
+
+            <sirena_header>
+                <header_search_type>type-1</header_search_type>
+                <header_home_transparency>0</header_home_transparency>
+                <home_menu_transparency>0</home_menu_transparency>
+                <sticky_header>sticky-header</sticky_header>
+                <sticky_header_opacity>100</sticky_header_opacity>
+                <sticky_header_tablet>sticky-tablet</sticky_header_tablet>
+                <sticky_header_logo>1</sticky_header_logo>
+                <sticky_header_nav>1</sticky_header_nav>
+                <sticky_header_search>1</sticky_header_search>
+            </sirena_header>
+
+            <sirena_footer>
+                <custom_footer>0</custom_footer>
+                <custom_footer_block>sirena_footer</custom_footer_block>
+            </sirena_footer>
+
+            <sirena_logo>
+                <checkout_logo_status>0</checkout_logo_status>
+                <checkout_logo_image></checkout_logo_image>
+                <custom_logo_status>0</custom_logo_status>
+                <custom_logo_image></custom_logo_image>
+                <second_custom_logo_image></second_custom_logo_image>
+                <custom_logo_alt></custom_logo_alt>
+            </sirena_logo>
+
+            <sirena_topcart>
+                <icon>1</icon>
+                <text>1</text>
+                <counter>1</counter>
+                <minicart_type>default</minicart_type>
+            </sirena_topcart>
+
+            <sirena_toplinks>
+                <toplinks_compare>1</toplinks_compare>
+                <toplinks_wishlist>1</toplinks_wishlist>
+                <toplinks_register>1</toplinks_register>
+                <toplinks_login>1</toplinks_login>
+            </sirena_toplinks>
+
+            <sirena_product_listing>
+                <listing_custom_grid>1</listing_custom_grid>
+                <grid_columns>columns-3</grid_columns>
+                <grid_hover>1</grid_hover>
+                <listing_grid_switcher>3,4,5</listing_grid_switcher>
+                <product_name>1</product_name>
+                <rating_stars>1</rating_stars>
+                <product_price>1</product_price>
+                <cart_btn>1</cart_btn>
+                <compare_btn>1</compare_btn>
+                <quickview_btn>1</quickview_btn>
+                <wishlist_btn>1</wishlist_btn>
+                <stock_status>0</stock_status>
+                <layer_accordion>1</layer_accordion>
+            </sirena_product_listing>
+
+            <sirena_product_view>
+                <product_page_style></product_page_style>
+                <product_description_collapse>1</product_description_collapse>
+                <product_custom_tab>1</product_custom_tab>
+                <product_custom_tab_block>sirena_custom_product_tab</product_custom_tab_block>
+                <product_more_views_type>horizontal_slider</product_more_views_type>
+                <product_sidebar_position></product_sidebar_position>
+            </sirena_product_view>
+
+            <sirena_lang_switcher>
+                <lang_switcher_status>language_select</lang_switcher_status>
+                <lang_switcher_label>1</lang_switcher_label>
+            </sirena_lang_switcher>
+
+            <sirena_currency_switcher>
+                <currency_switcher_status>currency_list</currency_switcher_status>
+                <currency_switcher_label>1</currency_switcher_label>
+            </sirena_currency_switcher>
+
+            <sirena_labels>
+                <label_new>1</label_new>
+                <label_sale>1</label_sale>
+                <label_only_left>1</label_only_left>
+                <label_sale_percentage>1</label_sale_percentage>
+                <label_type>label-type-2</label_type>
+            </sirena_labels>
+
+            <sirena_countdown>
+                <timer_status>1</timer_status>
+                <timer_listing_status>1</timer_listing_status>
+                <timer_listing_display>1</timer_listing_display>
+                <timer_product_status>1</timer_product_status>
+                <timer_product_display>1</timer_product_display>
+            </sirena_countdown>
+
+            <sirena_lightbox>
+                <lightbox_status>1</lightbox_status>
+                <lightbox_home>1</lightbox_home>
+                <lightbox_listing>1</lightbox_listing>
+                <lightbox_product>1</lightbox_product>
+            </sirena_lightbox>
+
+            <sirena_image_hover>
+                <image_hover_status>0</image_hover_status>
+                <image_hover_type>0</image_hover_type>
+            </sirena_image_hover>
+
+            <sirena_contactmap>
+                <contactmap_status>1</contactmap_status>
+                <contactmap_latitude>40.69370</contactmap_latitude>
+                <contactmap_longitude>-73.94738</contactmap_longitude>
+                <contactmap_zoom>15</contactmap_zoom>
+                <contactmap_type>ROADMAP</contactmap_type>
+                <contactmap_marker>1</contactmap_marker>
+                <contactmap_marker_title>Brooklyn, NY, United States</contactmap_marker_title>
+                <contactmap_block_status>1</contactmap_block_status>
+                <contactmap_block_static>sirena_contact_map_block</contactmap_block_static>
+                <contactmap_block_about>sirena_contact_map_about_block</contactmap_block_about>
+                <contactmap_block_width>260</contactmap_block_width>
+                <contactmap_block_height>170</contactmap_block_height>
+                <contactmap_block_position>left-center</contactmap_block_position>
+            </sirena_contactmap>
+        </sirena_general>
+    </default>
+</config>

@@ -1,0 +1,45 @@
+& when (@media-common = true) {
+	.field.qty {
+		display: inline-block;
+		margin: 0 18px 0 0;
+		float: left;
+		.label {
+			display: none;
+		}
+		.control {
+			display: block;
+			position: relative;
+			&::after {
+				display: table;
+				content: '';
+				clear: both;
+			}
+			div.quantity-decrease,
+			div.quantity-increase {
+				width: 28px;
+				height: 44px;
+				text-align: center;
+				cursor: pointer;
+				font-size: 14px;
+				float: left;
+				line-height: 46px;
+				.transition(background-color .3s ease-out);
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.1);
+				}
+			}
+			input.qty {
+				width: 44px;
+				height: 44px;
+				padding: 0 3px;
+				float: left;
+			}
+		}
+		.mage-error[generated] {
+			position: absolute;
+			bottom: -22px;
+			width: 250px;
+			margin: 0;
+		}
+	}
+}

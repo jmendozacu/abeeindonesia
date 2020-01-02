@@ -1,0 +1,64 @@
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Magento\Catalog\Block\Product\ProductList\Toolbar
+ * @var $themeConfigPhp \Meigee\Sirena\ViewModel\ThemeConfigPhp
+ * @var $cookieManager \Meigee\Sirena\ViewModel\CustomGridSwitcher
+ */
+use Magento\Catalog\Model\Product\ProductList\Toolbar;
+?>
+<?php if ($block->isEnabledViewSwitcher()):
+    $customGridSwitcher = $block->getCustomGridSwitcher();
+    $modesClass = '';
+    if ($customGridSwitcher->isCustomSwitcherEnabled()) $modesClass = ' custom-grid-enabled';
+    ?>
+    <div class="modes<?= $block->escapeHtmlAttr($modesClass); ?>">
+        <?php if ($customGridSwitcher->isCustomSwitcherEnabled()):
+            /* Sirena Custom Grid Switcher */
+            $listingCustomGridCookie = $customGridSwitcher->getCustomGridCookie(); ?>
+            <span data-grid-switcher="columns-2" class="grid-columns-2 mobile item<?= ('columns-2' == $listingCustomGridCookie || $listingCustomGridCookie != 'columns-1') ? ' current' : ''; ?>"><i class="meigee-icon-grid-2"></i></span>
+            <span data-grid-switcher="columns-1" class="grid-columns-1 mobile item<?= ('columns-1' == $listingCustomGridCookie) ? ' current' : ''; ?>"><i class="meigee-icon-grid-1"></i></span>
+            <?php if($customGridSwitcher->getListingColumnsGrids()):
+                $i = 1;
+                foreach ($customGridSwitcher->getListingColumnsGrids() as $_key => $listingColumnsGrid): ?>
+                    <?php if($i <= 3):
+                        $gridClass = 'columns-' . $listingColumnsGrid;
+                        $currentClass = '';
+                        $isCurrent = count($customGridSwitcher->getListingColumnsGrids()) == 1 || $listingCustomGridCookie == $gridClass;
+                        if ($isCurrent) $currentClass = ' current';
+                        ?>
+                        <span data-grid-switcher="<?= $block->escapeHtmlAttr($gridClass); ?>" class="<?= 'grid-'.$block->escapeHtmlAttr($gridClass); ?> item<?= $currentClass; ?>">
+                            <i class="meigee-icon-grid-<?= $block->escapeHtmlAttr($listingColumnsGrid); ?>"></i>
+                        </span>
+                    <?php endif; ?>
+                    <?php $i++;
+                endforeach;
+            endif; ?>
+        <?php else:
+            $_modes = $block->getModes();
+            if ($_modes && count($_modes) > 1): ?>
+                <strong class="modes-label" id="modes-label"><?= $block->escapeHtml(__('View as')); ?></strong>
+                <?php foreach ($block->getModes() as $_code => $_label): ?>
+                    <?php if ($block->isModeActive($_code)): ?>
+                        <strong title="<?= $block->escapeHtmlAttr($_label); ?>"
+                                class="modes-mode active mode-<?= $block->escapeHtmlAttr(strtolower($_code)); ?>"
+                                data-value="<?= $block->escapeHtmlAttr(strtolower($_code)); ?>">
+                            <span><?= $block->escapeHtml($_label); ?></span>
+                        </strong>
+                    <?php else: ?>
+                        <a class="modes-mode mode-<?= $block->escapeHtmlAttr(strtolower($_code)); ?>"
+                           title="<?= $block->escapeHtml($_label); ?>"
+                           href="#"
+                           data-role="mode-switcher"
+                           data-value="<?= $block->escapeHtmlAttr(strtolower($_code)); ?>"
+                           id="mode-<?= $block->escapeHtmlAttr(strtolower($_code)); ?>"
+                           aria-labelledby="modes-label mode-<?= $block->escapeHtmlAttr(strtolower($_code)); ?>">
+                            <span><?= $block->escapeHtml($_label); ?></span>
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>

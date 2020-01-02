@@ -1,0 +1,17 @@
+& when (@media-common = true) {
+    .opc-wrapper {
+        .shipping-address-item {
+            &.not-selected-item {
+                width: 100%;
+                padding: 20px 0 0 0;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+    .table-checkout-shipping-method {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+//  Skin: Pets custom styles
+& when (@media-common = true) {
+  .header-wrapper.sticky-header {
+    .navbar-default {
+      .navbar-collapse.collapse {
+        li.level-top {
+          a.level-top {
+            color:  @color-top-level-links;
+            &.ui-state-focus,
+            &.ui-state-active,
+            &:hover {
+              color: @color-hover-top-level-links;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header::after {
+    display: none;
+  }
+  body.content-boxed {
+    padding: 20px;
+    background-color: @bg-color-site;
+    &.checkout-index-index {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  .page-header-inner.container {
+    border-radius: 10px 10px 0 0;
+  }
+  .page-header.sticky-header .page-header-inner.container {
+    border-radius: 0;
+  }
+}
+
+//
+//  Large Screens
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  body.content-boxed {
+    padding: 40px 0;
+  }
+  .footer-boxed-content .page-footer {
+    margin: 0;
+  }
+  .header-boxed-content .page-header,
+  .header-wide .page-header,
+  .header-boxed .page-header {
+    padding: 0;
+    margin: 0;
+    .page-header-inner.container {
+      padding-left: @layout-indent__width;
+      padding-right: @layout-indent__width;
+    }
+  }
+  .content-boxed .page-main .full-width,
+  .content-wide .page-main .full-width {
+    width: calc(~"100% + (@{layout-indent__width})*2");
+    margin-left: -(@layout-indent__width);
+    margin-right: -(@layout-indent__width);
+  }
+}

@@ -1,0 +1,5 @@
+<div class="block-after-sku">
+<img src="{{media url="wysiwyg/hanger.png"}}" alt="" />
+<h4>Worldwide Free Delivery</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+</div>

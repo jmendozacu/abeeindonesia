@@ -1,0 +1,105 @@
+/* Quick fix for Magento Accordion in the configuration */
+.accordion .section-config>.config.admin__collapsible-block {
+    display: block;
+}
+
+.accordion .section-config>.admin__collapsible-block>a:before, .accordion>dt a:before, .accordion .admin__collapsible-block>a:before{
+    content:'\e615';
+}
+.accordion .section-config.active>.admin__collapsible-block>a:before, .accordion>dt a:before, .accordion .admin__collapsible-block>a:before {
+    content: '\e616';
+}
+
+#theme_activator_configuration td.label{ display: none;}
+#theme_activator_configuration table.activated-themes tr:nth-child(even) > td { background: #e3e3e3; border-bottom: 0px;}
+.accordion #theme_activator_configuration td.value { padding-right:0px; width: 100%; }
+
+
+.meigee-theme-activator h2.theme-name {
+    color: #303030;
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: .025em;
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 0;
+    padding: 1.9rem 2.8rem 1.9rem 1.9rem;
+    cursor: pointer;
+}
+.meigee-theme-activator h2.theme-name:hover {
+    background: rgba(0, 0, 0, .03);
+}
+.meigee-theme-activator h2.theme-name:after{
+    font-family: 'Admin Icons';
+    font-style: normal;
+    line-height: 1;
+    speak: none;
+    content: '\e628';
+    font-size: 1.3rem;
+    font-weight: 700;
+    position: absolute;
+    right: 1.8rem;
+    top: 2rem;
+}
+.meigee-theme-activator h2.theme-name.active { margin-bottom: 20px;}
+.meigee-theme-activator h2.theme-name.active:after{
+    content: '\e62b';
+}
+.meigee-theme-activator ul.activated-themes li h3 {
+    background: rgba(33, 150, 243, .16);
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    margin: -20px -20px 0 -20px;
+    padding: 10px 10px 10px 20px;
+}
+.meigee-theme-activator h6.note-title {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.meigee-theme-activator ul { list-style-position: inside}
+.meigee-theme-activator ul.activated-themes {
+    list-style: none;
+}
+.meigee-theme-activator ul.activated-themes li {
+    background: #f1f1f1;
+    padding: 20px;
+}
+.meigee-theme-activator ul.activated-themes li .tips-toggle {
+    font-size: 12px; text-decoration: underline; margin-top: 7px; margin-bottom: 14px; cursor: pointer
+}
+.meigee-theme-activator ul.activated-themes li .path {font-style: italic; color: #257eda; padding-top: 7px; padding-bottom: 7px;}
+.meigee-theme-activator ul.activated-themes li .code{
+    color: #257eda; border:1px solid #ddd; background: #fff; padding: 2px; padding-left: 7px; margin-bottom: 5px;
+}
+.meigee-theme-activator ul.activated-themes li:nth-child(odd) {
+    background: #e3e3e3;
+}
+
+.meigee-theme-activator ul.activated-themes li td.skin-col{ width: 33%}
+.meigee-theme-activator ul.activated-themes li td.activate-col{ width: 85px;}
+.meigee-theme-activator ul.activated-themes li td.activate-col button {
+    background: #514943;
+    color: #fff;
+    width: 55px
+}
+.meigee-theme-activator ul.activated-themes li td.activate-col button:hover{background: #35302c;}
+.meigee-theme-activator ul.activated-themes li td.demo-col{}
+.meigee-theme-activator ul.activated-themes li td.demo-col p {
+    display: inline-block;
+    margin-left: 10px;
+}
+.meigee-theme-activator ul.activated-themes li td.demo-col p:before{
+    font-family: 'Admin Icons';
+    content: '\e632';
+    font-size: 10px;
+    color: #ed5100;
+    padding-right: 7px;
+}
+.meigee-theme-activator ul.activated-themes li td.demo-col p.imported:before{
+    content: '\e62d';
+    color: #79a22e;
+}
+

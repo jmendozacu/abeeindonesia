@@ -1,0 +1,114 @@
+<hr class="indent-40 xs-indent-20 sm-indent-20  white-space">
+
+<div class="category-banners type-4 row">
+<div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <span class="img-wrapper">
+                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/cat_banner_4.png"}}" alt="Category Banner" />
+            </span>
+            <a href="javascript:void(0);" class="title">Accessories</a>
+            <ul class="subcategories">
+                <li><a href="javascript:void(0);">Bags</a></li>
+                <li><a href="javascript:void(0);">Eyewear</a></li>
+                <li><a href="javascript:void(0);">Hats</a></li>
+            </ul>
+    </div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <span class="img-wrapper">
+                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/cat_banner_3.png"}}" alt="Category Banner" />
+            </span>
+            <a href="javascript:void(0);" class="title">Skirts</a>
+            <ul class="subcategories">
+                <li><a href="javascript:void(0);">Mini</a></li>
+                <li><a href="javascript:void(0);">Midi</a></li>
+                <li><a href="javascript:void(0);">Maxi</a></li>
+            </ul>
+    </div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <span class="img-wrapper">
+                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/cat_banner_2.png"}}" alt="Category Banner" />
+            </span>
+            <a href="javascript:void(0);" class="title">Shoes</a>
+            <ul class="subcategories">
+                <li><a href="javascript:void(0);">Leather</a></li>
+                <li><a href="javascript:void(0);">Sandals</a></li>
+                <li><a href="javascript:void(0);">Sneakers</a></li>
+            </ul>
+    </div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-3">
+    <div class="single-banner">
+            <span class="img-wrapper">
+                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/cat_banner_1.png"}}" alt="Category Banner" />
+            </span>
+            <a href="javascript:void(0);" class="title">Coats</a>
+            <ul class="subcategories">
+                <li><a href="javascript:void(0);">Raincoats</a></li>
+                <li><a href="javascript:void(0);">Waistcoats</a></li>
+                <li><a href="javascript:void(0);">Coats</a></li>
+            </ul>
+    </div>
+</div>
+</div>
+<hr class="indent-45 xs-indent-30 sm-indent-30 white-space">
+
+<div class="full-width">
+<div class="widget-title"><h2>Handpicked Products</h2></div>
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" widget_type="newproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" product_name="true" product_price="true" stock_status_slider="false" desc_slider="false" timer_slider="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="false" visible_products="6" visible_products_tablet="4" visible_products_mobile="1" pagination="true" widget_id="7880" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}
+</div>
+<hr class="indent-0 xs-indent-30 sm-indent-30 white-space">
+
+<div class="icon-banners type-1 row middle-xs">
+    <div class="single-icon col-xs-6 col-sm-3 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-shipping"></i>
+            <strong class="title">Free Shipping</strong>
+            <span class="subtitle">On Orders Over $200</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-6 col-sm-3 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-secure"></i>
+            <strong class="title">Secure Payments</strong>
+            <span class="subtitle">Visa, Mastercard, Paypal</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-6 col-sm-3 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-return"></i>
+            <strong class="title">Free Returns</strong>
+            <span class="subtitle">Within 30 Days</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-6 col-sm-3 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-percent"></i>
+            <strong class="title">Weekly Discounts</strong>
+            <span class="subtitle">Up to 50% OFF</span>
+        </a>
+    </div>
+</div>
+<hr class="indent-70 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="sirena_pegasus_content_slider"}}
+<hr class="indent-80 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Magefan\Blog\Block\Widget\Recent" title="From the Blog" number_of_posts="3" category_id="0" tag_id="0" author_id="0"}}
+<hr class="indent-40 white-space">
+
+<div class="subscribe-block row middle-xs lazyload" style="min-height: 220px;" data-bg="{{media url="wysiwyg/sirena/home_subscribe_bg.jpg"}}">
+    <div class="col-xs-12 col-sm-6 col-md-6 newsletter-form-wrapper">
+        {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 promo-wrapper">
+        <div class="promo-text">
+            <span class="subtitle">Special Offer</span>
+            <strong class="title">Only This Weekend 25% OFF on all Knitwear.</strong>
+        </div>
+    </div>
+</div>
+<hr class="indent-60 xs-indent-30 sm-indent-30 white-space">

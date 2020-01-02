@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+     <preference for="Meigee\CategoriesEnhanced\Block\Html\MeigeeTopmenu" type="Meigee\Sirena\Block\Html\MeigeeTopmenu" />
+     <preference for="Meigee\ProductWidget\Block\Product\ProductsList" type="Meigee\Sirena\Block\ProductWidget\Product\ProductsListExtended" />
+</config>

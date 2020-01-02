@@ -1,0 +1,64 @@
+<?php
+/**
+ * @var \Meigee\Sirena\ViewModel\ThemeConfigPhp $themeConfigPhp
+ * @var \Meigee\Sirena\ViewModel\CustomerCheck $customerCheck
+ */
+
+$themeConfigPhp = $block->getThemeConfigPhp();
+$customerCheck = $block->getCustomerCheck();
+$accountLink = $logoutLink = true;
+$registerLink = $themeConfigPhp->getToplinksShowRegister();
+$loginLink = $themeConfigPhp->getToplinksShowLogin();
+$isLoggedIn = $customerCheck->isCustomerLoggedIn();
+$noLoginRegisterClass = '';
+if (!$loginLink && !$registerLink) {
+    $noLoginRegisterClass = ' no-login-register';
+}?>
+<div class="dropdown-item account<?= $block->escapeHtmlAttr($noLoginRegisterClass) ?>"><span class="label"><?= $block->escapeHtml(__('My Account')) ?></span>
+
+<?php if (!$isLoggedIn) {
+    if ($loginLink || $registerLink) { ?>
+        <div class="auth-form-wrapper">
+            <?php if ($loginLink && $registerLink) {
+                $loginClass = 'login';
+                $registerClass = 'register hidden';
+                $loginSwitcherClass = ' login hidden';
+                $registerSwitcherClass = ' register active';
+            } elseif ($loginLink && !$registerLink) {
+                $loginClass = 'login';
+                $registerClass = 'register hidden';
+                $loginSwitcherClass = ' login hidden';
+                $registerSwitcherClass = ' register hidden';
+            } elseif (!$loginLink && $registerLink) {
+                $loginClass = 'login hidden';
+                $registerClass = 'register';
+                $loginSwitcherClass = ' login hidden';
+                $registerSwitcherClass = ' register hidden';
+            }
+            ?>
+            <div class="title">
+                <?php echo '<strong class="'.$block->escapeHtmlAttr($loginClass).'">'.$block->escapeHtml(__('Log In')).'</strong>';
+                echo '<strong class="'.$block->escapeHtmlAttr($registerClass).'">'.$block->escapeHtml(__('Sign Up')).'</strong>';
+                echo '<span class="form-switcher'.$block->escapeHtmlAttr($loginSwitcherClass).'">'.$block->escapeHtml(__('Log In')).'</span>';
+                echo '<span class="form-switcher'.$block->escapeHtmlAttr($registerSwitcherClass).'">'.$block->escapeHtml(__('Sign Up')).'</span>'; ?>
+            </div>
+            <?php if ($loginLink) {
+                echo $this->getChildHtml("header_customer_form_login");
+            } ?>
+            <?php if ($registerLink) {
+                echo $this->getChildHtml("header_customer_form_register");
+            } ?>
+        </div>
+    <?php }
+} ?>
+<?php if ($isLoggedIn) { ?>
+    <ul class="header links">
+        <?php if ($accountLink){ ?>
+            <?php echo $this->getChildHtml("my-account-link"); ?>
+        <?php } ?>
+        <?php if ($logoutLink){ ?>
+            <?php echo $this->getChildHtml("authorization-link"); ?>
+        <?php } ?>
+    </ul>
+<?php } ?>
+</div>

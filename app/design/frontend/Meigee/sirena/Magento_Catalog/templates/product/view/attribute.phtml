@@ -1,0 +1,53 @@
+<?php
+/**
+ * Product view template
+ *
+ // phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Description
+ */
+?>
+<?php
+$_helper = $this->helper(\Magento\Catalog\Helper\Output::class);
+$themeConfigPhp = $block->getThemeConfigPhp();
+$descriptionColapse = $themeConfigPhp->getProductPageCollapsedDescription();
+$_product = $block->getProduct();
+
+if (!$_product instanceof \Magento\Catalog\Model\Product) {
+    return;
+}
+
+$_call = $block->getAtCall();
+$_code = $block->getAtCode();
+$_className = $block->getCssClass();
+$_attributeLabel = $block->getAtLabel();
+$_attributeType = $block->getAtType();
+$_attributeAddAttribute = $block->getAddAttribute();
+
+if ($_attributeLabel && $_attributeLabel == 'default') {
+    $_attributeLabel = $_product->getResource()->getAttribute($_code)->getStoreLabel();
+}
+if ($_attributeType && $_attributeType == 'text') {
+    $_attributeValue = ($_helper->productAttribute($_product, $_product->$_call(), $_code)) ? $_product->getAttributeText($_code) : '';
+} else {
+    $_attributeValue = $_helper->productAttribute($_product, $_product->$_call(), $_code);
+}
+?>
+
+<?php if ($_attributeValue): ?>
+<div class="product attribute <?php echo $block->escapeHtmlAttr($_className); ?>">
+	  <?php if ($_className == 'overview'): ?><span class="block-title"><?php echo $block->escapeHtml(__('Description:')); ?></span><?php endif; ?>
+    <?php if ($_attributeLabel != 'none'): ?><strong class="type"><?php echo $block->escapeHtml($_attributeLabel); ?></strong><?php endif; ?>
+    <div class="value<?php if ($_code==='short_description' && $descriptionColapse==='1') { echo ' box-read-more'; }?>"
+        <?= /* @noEscape */ $_attributeAddAttribute ?>
+        <?php if ($_code==='short_description' && $descriptionColapse==='1') { ?>
+             data-collapse-open="true"
+             data-text-read-more="<?= $block->escapeHtml(__('Read More')) ?>"
+             data-text-collapse="<?= $block->escapeHtml(__('Less'))?>"
+             data-max-length="150"
+             data-show-ellipsis="true" data-mage-init='{ "Meigee_Sirena/js/theme_read_more": {} }'
+        <?php } ?>>
+        <?= /* @noEscape */ $_attributeValue ?>
+    </div>
+</div>
+<?php endif; ?>

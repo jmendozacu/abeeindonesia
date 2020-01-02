@@ -1,0 +1,70 @@
+<hr class="indent-30 white-space">
+
+<div>
+   <a href="javascript:void(0);" class="banner beauty with-text wide">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/beauty_banner1.png"}}" class="lazyload" alt="Category Banner" />
+        <div class="banner-content pos-left">
+            <strong class="title">Free Shipping on All Orders Over $100<span class="badge">Special offer</span></strong>
+            <p class="text">Subscribe on our Newsletter and get a discount on your next order</p>
+        </div>
+   </a>
+</div>
+<hr class="indent-50 xs-indent-30 sm-indent-30 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Handpicked products" widget_type="newproducts" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="4" visible_products_tablet="3" visible_products_mobile="2" navigation="1" navigation_position="top_right" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="true" desc_slider="false" timer_slider="false" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="6929" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+<hr class="indent-0 xs-indent-30 sm-indent-30 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="subscribe-block type-3">
+            <div class="newsletter-form-wrapper">
+                 {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+            </div>
+        </div>
+    </div>
+    <div class="single-banner col-xs-12 col-sm-6 col-md-6">
+       <a href="javascript:void(0);" class="banner beauty with-text type-2">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/beauty_banner2.png"}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-right pos-bottom">
+                <strong class="title"><span class="badge">Sale</span>Luxury</strong>
+                <p class="text">Beauty</p>
+            </div>
+       </a>
+    </div>
+</div>
+<hr class="indent-65 xs-indent-30 sm-indent-30 white-space">
+
+<div class="full-width" style="background-color: #f5f5f5;">
+    <div class="container">
+        <div class="icon-banners type-4 row middle-xs">
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-plane"></i>
+                    <strong class="title">Free Shipping</strong>
+                    <span class="subtitle">On Orders Over $200</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-present"></i>
+                    <strong class="title">Valuable gifts</strong>
+                    <span class="subtitle">Free gift after every 10 order</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-earphones-alt"></i>
+                    <strong class="title">All day Support</strong>
+                    <span class="subtitle">Call us for free: (555) 172-244-7888</span>
+                </a>
+            </div>
+            <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+                <a href="javascript:void(0);">
+                    <i class="icon meigee-icon-tag"></i>
+                    <strong class="title">Seasonal sale</strong>
+                    <span class="subtitle">Discounts up to 50% on all</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

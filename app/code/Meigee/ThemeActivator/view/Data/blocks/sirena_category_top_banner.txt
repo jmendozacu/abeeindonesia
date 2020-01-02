@@ -1,0 +1,4 @@
+<a href="#" class="category-top-banner banner">
+<img src="{{media url="wysiwyg/category_top_banner.jpg"}}" alt="banner" />
+<div class="banner-msg"><span>Special Offer</span><p>Only This Weekend 25% OFF on all Knitwear.</p></div>
+</a>

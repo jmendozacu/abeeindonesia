@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for='Magento\Customer\Block\Form\Register' type='Meigee\Sirena\Block\Frontend\Customer\Form\Register'/>
+    <preference for='Magento\Customer\Block\Form\Login' type='Meigee\Sirena\Block\Frontend\Customer\Form\Login'/>
+    <preference for='WeltPixel\Quickview\Plugin\BlockProductList'
+                type='Meigee\Sirena\Plugin\Quickview\BlockProductList'/>
+    <type name="Magento\Framework\View\Result\Page">
+        <plugin name="meigeeSirenaResultPage" type="Meigee\Sirena\Plugin\Result\Page"/>
+    </type>
+    <type name="Magento\Theme\Block\Html\Header\Logo">
+        <plugin name="MeigeeSirenaHtmlHeaderLogo" type="Meigee\Sirena\Plugin\Html\Header\Logo"/>
+    </type>
+</config>

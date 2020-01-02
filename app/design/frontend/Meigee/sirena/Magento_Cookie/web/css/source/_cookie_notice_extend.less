@@ -1,0 +1,51 @@
+& when (@media-common = true) {
+  #notice-cookie-block {
+    background-color: #fff;
+    border: none;
+    z-index: 23;
+    .box-shadow(0px 0px 10px 0px rgba(0,0,0,0.2));
+    max-width: 665px;
+    right: auto;
+    padding: 15px;
+    @media @sm-and-up {
+      padding: 40px;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin: 0 0 15px 0;
+      @media @sm-and-up {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-family: @font-for-body;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.4;
+      @media @sm-and-up {
+        line-height: 30px;
+      }
+      a {
+        color: @theme__color__primary;
+        &:visited {
+          color: @theme__color__primary;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          color: @theme__color__default;
+        }
+      }
+    }
+    .actions {
+      margin-top: 20px;
+    }
+    @media @xs-only {
+      p + p {
+        margin-top: 8px;
+      }
+    }
+  }
+}

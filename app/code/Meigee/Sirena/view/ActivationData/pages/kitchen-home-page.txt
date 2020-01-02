@@ -1,0 +1,153 @@
+<hr class="indent-20 xs-indent-10 white-space">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3">
+        <ul class="cat-links-list">
+            <li><i class="meigee-icon-earphones"></i><a href="javascript:void(0);">Audio & Music Instruments</a></li>
+            <li><i class="meigee-icon-screen-desktop"></i><a href="javascript:void(0);">Computers & Networking</a></li>
+            <li><i class="meigee-icon-camera"></i><a href="javascript:void(0);">TV, Video & Photo</a></li>
+            <li><i class="meigee-icon-umbrella"></i><a href="javascript:void(0);">Everyday Things</a></li>
+            <li><i class="meigee-icon-diamond"></i><a href="javascript:void(0);">Jewelry</a></li>
+            <li><i class="meigee-icon-home"></i><a href="javascript:void(0);">Home, Office & Garden</a></li>
+            <li><i class="meigee-icon-globe-alt"></i><a href="javascript:void(0);">All for study</a></li>
+            <li><i class="meigee-icon-bulb"></i><a href="javascript:void(0);">Lamps & Flashlights</a></li>
+            <li><i class="meigee-icon-briefcase"></i><a href="javascript:void(0);">Bags & Backpacks</a></li>
+            <li><i class="meigee-icon-wrench"></i><a href="javascript:void(0);">Tools</a></li>
+            <li><i class="meigee-icon-present"></i><a href="javascript:void(0);">Holiday Supplies & Gifts</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 first-xs first-sm last-md last-lg">
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="sirena_kitchen_content_slider"}}
+    </div>
+</div>
+
+<div class="icon-banners type-4 row middle-xs">
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-plane"></i>
+            <strong class="title">Free Shipping</strong>
+            <span class="subtitle">On Orders Over $200</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-present"></i>
+            <strong class="title">Valuable gifts</strong>
+            <span class="subtitle">Free gift after every 10 order</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-earphones-alt"></i>
+            <strong class="title">All day Support</strong>
+            <span class="subtitle">Call us for free: (555) 172-244-7888</span>
+        </a>
+    </div>
+    <div class="single-icon col-xs-12 col-sm-6 col-md-3">
+        <a href="javascript:void(0);">
+            <i class="icon meigee-icon-tag"></i>
+            <strong class="title">Seasonal sale</strong>
+            <span class="subtitle">Discounts up to 50% on all</span>
+        </a>
+    </div>
+</div>
+<hr class="indent-20 xs-indent-10 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_1.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left pos-bottom">
+                <span class="title">Hand<br /><strong>Vacuum cleaner</strong></span>
+                <p class="text">top brand</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_2.png'}}" class="lazyload" alt="Category Banner" />
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 col-lg-offset-0">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_3.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-right pos-bottom">
+                <span class="title"><strong>Tupperware</strong><br />Handpicked collection</span>
+                <p class="text">limited</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="indent-30 white-space">
+
+{{widget type="Meigee\ProductWidget\Block\Product\ProductsList" title="Handpicked Products" widget_type="featuredcategory" featured_category="329" collection_sort_by="name" collection_sort_order="asc" show_pager="0" products_count="10" template="Meigee_ProductWidget::product/widget/content/slider.phtml" visible_products="4" visible_products_tablet="4" visible_products_mobile="2" navigation="1" navigation_position="top_right" pagination="0" autoplay="0" slider_rtl_layout="0" product_name="true" product_price="true" stock_status_slider="false" desc_slider="false" timer_slider="true" add_to_cart="true" wishlist="true" compare="true" rating_stars_slider="true" widget_id="2289" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]" type_name="Meigee - Product Widget"}}
+<hr class="indent-0 xs-indent-30 sm-indent-30 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 first-sm">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_4.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left pos-top">
+                <span class="title">Black Plastic<br /><strong>Box Set</strong></span>
+                <p class="text">order now</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_5.png'}}" class="lazyload" alt="Category Banner" />
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 first-sm">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_6.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-right pos-top">
+                <span class="title"><strong>BEK - Quality</strong><br />of Washing</span>
+                <p class="text">limited</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 last-sm">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_7.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-left pos-bottom">
+                <span class="title">Huge Sale<br /><strong>Aurora Toster</strong></span>
+                <p class="text">-20% off</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_8.png'}}" class="lazyload" alt="Category Banner" />
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 last-sm">
+        <a href="javascript:void(0);" class="banner with-text kitchen">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_9.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-right pos-bottom">
+                <span class="title"><strong>Cuisinart</strong><br />Handpicked<br />collection</span>
+                <p class="text">new</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="indent-20 xs-indent-10 sm-indent-10 white-space">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="subscribe-block type-3">
+            <div class="newsletter-form-wrapper">
+                {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+            </div>
+        </div>
+    </div>
+    <div class="single-banner col-xs-12 col-sm-12 col-md-6">
+        <a href="javascript:void(0);" class="banner kitchen with-text type-2">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url='wysiwyg/sirena/kitchen_banner_10.png'}}" class="lazyload" alt="Category Banner" />
+            <div class="banner-content pos-right">
+                <strong class="title"><span class="badge"><small>huge</small> Sale</span>SMEG Fridges</strong>
+                <p class="subtitle">Order now and get discount</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="indent-20 xs-indent-10 sm-indent-10 white-space">

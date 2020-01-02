@@ -1,0 +1,55 @@
+<div class="content-slider-wrapper">
+    <span class="slider-loader"></span>
+    <div class="content-slider swiper-container type-2">
+        <div class="swiper-wrapper">
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url="wysiwyg/sirena/slide4_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url="wysiwyg/sirena/slide7.jpg"}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation pos-right slide-from-left">
+            <div class="title">Round neck coat with long <br />sleeves. Featuring front <br />flap pockets and <br />a zip-up front.</div>
+                    <div class="subtitle hidden-xs hidden-sm hidden-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</div>
+            <div class="btn btn-default hidden-xs">Shop Now</div>
+            </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url="wysiwyg/sirena/slide5_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url="wysiwyg/sirena/slide8.jpg"}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container pos-right with-animation fade-with-scale">
+                    <div class="title">Round neck coat with long <br />sleeves. Featuring front <br />flap pockets and <br />a zip-up front.</div>
+                    <div class="subtitle hidden-xs hidden-sm hidden-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</div>
+                    <div class="btn btn-default hidden-xs">Shop Now</div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source data-srcset="{{media url="wysiwyg/sirena/slide6_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img class="lazyload" src="#" data-src="{{media url="wysiwyg/sirena/slide9.jpg"}}" alt="Slide Image" />
+                </picture>
+                <div class="slide-container with-animation pos-right slide-from-right">
+                    <div class="title">Round neck coat with long <br />sleeves. Featuring front <br />flap pockets and <br />a zip-up front.</div>
+                    <div class="subtitle hidden-xs hidden-sm hidden-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim</div>
+                    <div class="btn btn-default hidden-xs">Shop Now</div>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".content-slider": {
+            "Meigee_Sirena/js/theme_carousel":{
+                "loop":true,
+                "navigation":true,
+                "pagination":true,
+                "autoplay":true
+            }
+        }
+    }
+</script>

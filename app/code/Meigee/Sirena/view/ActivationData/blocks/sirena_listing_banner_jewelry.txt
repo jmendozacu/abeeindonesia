@@ -1,0 +1,3 @@
+<div class="listing-banner">
+        <img src="{{media url="wysiwyg/sirena/jewelry_listing_banner.jpg"}}" alt="Listing Banner Image" />
+</div>

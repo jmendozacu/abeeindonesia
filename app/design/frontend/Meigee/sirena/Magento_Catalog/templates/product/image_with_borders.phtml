@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
+
+
+        <img class="<?= $block->escapeHtmlAttr($block->getClass()) ?> lazyload"
+            <?= $block->escapeHtmlAttr($block->getCustomAttributes()) ?>
+             src="#"
+             data-src="<?= $block->escapeUrl($block->getImageUrl()) ?>"
+             width="<?= $block->escapeHtmlAttr($block->getWidth()) ?>"
+             height="<?= $block->escapeHtmlAttr($block->getHeight()) ?>"
+             alt="<?= /* @noEscape */ $block->stripTags($block->getLabel(), null, true) ?>"/>
+

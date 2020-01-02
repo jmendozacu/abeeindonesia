@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Meigee_BackgroundSlider::meigee_background_slider"
+                title="Background Slider"
+                module="Meigee_BackgroundSlider"
+                sortOrder="1"
+                resource="Meigee_BackgroundSlider::system"
+                parent="Meigee_Core::extensions"
+                action="adminhtml/system_config/edit/section/background_slider"
+        />
+    </menu>
+</config>

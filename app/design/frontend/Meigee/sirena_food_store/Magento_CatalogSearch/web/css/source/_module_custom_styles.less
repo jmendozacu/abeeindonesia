@@ -1,0 +1,43 @@
+//
+//  Desktop (>998px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header .block-search.type-2 {
+    width: 100%;
+    max-width: 300px;
+    input {
+      max-width: 100%;
+      width: 300px;
+      line-height: 42px;
+      height: 42px;
+      position: relative;
+      padding: 0 52px 0 20px;
+    }
+    .minisearch.active {
+      input {
+        width: 300px;
+        position: relative;
+        padding: 0 52px 0 20px;
+      }
+    }
+  }
+}
+
+//
+//  Large Screens (>1370px)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .page-header .block-search.type-2 {
+    max-width: 580px;
+    input {
+      width: 580px;
+    }
+    .minisearch.active {
+      input {
+        width: 580px;
+      }
+    }
+  }
+}

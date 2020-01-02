@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+        <background_slider>
+            <slider_options>
+                <slider_status>0</slider_status>
+                <slider_fade>22</slider_fade>
+                <slider_homepage_only>0</slider_homepage_only>
+                <slider_duration>1</slider_duration>
+                <slider_slides_src></slider_slides_src>
+            </slider_options>
+        </background_slider>
+    </default>
+</config>

@@ -1,0 +1,46 @@
+<div class="full-width">
+<div class="main-slider-wrapper">
+    <span class="slider-loader"></span>
+    <div class="main-slider swiper-container">
+        <div class="swiper-wrapper">
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source srcset="{{media url="wysiwyg/sirena/jewelry_slide_1_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img src="#" data-src="{{media url="wysiwyg/sirena/jewelry_slide_1.jpg"}}" alt="Slide Image" class="lazyload" width="1920" height="640" />
+                </picture>
+                <div class="slide-container with-animation align-center pos-center fade-with-scale">
+                    <div class="title"><span class="badge">Limited summer edition</span>Tiffany Awesome Rings</div>
+                    <div class="subtitle hidden-xs">Extra quality for everyone</div>
+                    <div class="btn-wrapper hidden-xs"><span class="btn btn-default" href="javascript:void(0);">Shop Now</span></div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="swiper-slide">
+                <picture>
+                    <source srcset="{{media url="wysiwyg/sirena/jewelry_slide_2_mobile.jpg"}}" media="(max-width: 767px)">
+                    <img src="#" data-src="{{media url="wysiwyg/sirena/jewelry_slide_2.jpg"}}" alt="Slide Image" class="lazyload" width="1920" height="640" />
+                </picture>
+                <div class="slide-container align-center pos-center with-animation fade-with-scale">
+                    <div class="title"><span class="badge">Tiffany and friends</span>Tiffany Precious Keys</div>
+                    <div class="subtitle hidden-xs">Unlock your happiness</div>
+                    <div class="btn-wrapper hidden-xs"><span class="btn btn-default" href="javascript:void(0);">Shop Now</span></div>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".main-slider": {
+            "Meigee_Sirena/js/theme_carousel":{
+                "loop":false,
+                "navigation":true,
+                "pagination":true,
+                "autoplay":true
+            }
+        }
+    }
+</script>

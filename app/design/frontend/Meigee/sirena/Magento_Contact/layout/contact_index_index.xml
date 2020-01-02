@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Contact Us</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Contact Us</item>
+                    <item name="label" xsi:type="string">Contact Us</item>
+                </argument>
+            </action>
+        </referenceBlock>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" as="meigee.contact.map" template="Meigee_Sirena::blockmap.phtml" before="-">
+                <arguments>
+                    <argument name="theme_config_php" xsi:type="object">Meigee\Sirena\ViewModel\ThemeConfigPhp</argument>
+                </arguments>
+            </block>
+            <container name="meigee.contact.page.wrapper" htmlTag="div" htmlClass="contact-page-wrapper">
+                <block class="Magento\Cms\Block\Block" name="sirena_contact_page_info">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">sirena_contact_page_info</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <move element="contactForm" destination="meigee.contact.page.wrapper" after="sirena_contact_page_info" />
+        <move element="page.main.title" destination="meigee.contact.page.wrapper" before="-"/>
+    </body>
+</page>

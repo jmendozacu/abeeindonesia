@@ -1,0 +1,81 @@
+//  Skin: Kitchen custom styles
+
+& when (@media-common = true) {
+  .nav-toggle:hover:before {
+    color: inherit;
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body .page-header::after {
+    display: none;
+  }
+  body.checkout-cart-index .page-header-inner {
+    grid-template-columns: auto 1fr auto;
+    -ms-grid-columns: auto 1fr auto;
+  }
+  .header-wide {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+      .page-header-inner.container {
+        padding-left: @layout-indent__width;
+        padding-right: @layout-indent__width;
+      }
+    }
+  }
+  .header-boxed-content {
+    .page-header {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-pagination,
+  .page-wrapper .swiper-container.type-2 .swiper-button-next,
+  .page-wrapper .swiper-container.type-2 .swiper-button-prev {
+    left: 2.5%;
+  }
+  .page-wrapper .swiper-container.type-2 .swiper-button-next {
+    left: ~"calc(2.5% + 45px)";
+  }
+  .page-wrapper .swiper-container.type-2 .slide-container .title::before {
+    display: none;
+  }
+  body.checkout-cart-index .page-header .page-header-inner {
+    -ms-grid-columns: minmax(100px, 150px) 1fr  minmax(auto, 500px);
+    grid-template-columns: minmax(100px, 150px) 1fr  minmax(auto, 500px);
+  }
+}
+
+//
+//  Large Screens
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .footer-boxed-content .page-footer {
+    margin: 0;
+  }
+  .full-width,
+  .page-main .full-width {
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  body.has-scrollbar .full-width {
+    width: calc(~"100vw - @{scroll-bar}");
+    left: auto;
+    right: auto;
+    margin: 0 calc(~"-50vw + 50% + (@{scroll-bar} / 2)");
+  }
+  .header-boxed-content {
+    .page-header {
+      .menu-wrapper .toggle-nav {
+        padding-left: @layout-indent__width;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<?php
+/**
+ * Copyright © 2016 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog recent posts widget
+ *
+ * @var $block \Magefan\Blog\Block\Widget\Recent
+ */
+?>
+
+<?php
+    $_postCollection = $block->getPostCollection();
+    $title = $block->getData("title");
+    $imageHelper = $this->helper(\Magefan\Blog\Helper\Image::class);
+?>
+<?php if ($_postCollection->count()) { ?>
+<div class="post-list-wrapper blog-widget-recent blog-widget-recent-masonry">
+    <?php if ($title && $title!='') { ?>
+        <h3 class="title"><?php echo $block->escapeHtml($title) ?></h3>
+    <?php } ?>
+    <ul class="post-list masonry">
+        <?php foreach ($_postCollection as $_post) { ?>
+            <?php
+                $_postUrl = $_post->getPostUrl();
+                $_postName = $block->escapeHtml($_post->getTitle(), null, true);
+            ?>
+            <li class="post-holder post-holder-<?php echo $_post->getId() ?>">
+
+                <div class="inner-wrapper">
+                    <?php if ($featuredImage = $_post->getFeaturedImage()) { ?>
+                        <div class="post-ftimg-hld">
+                            <img src="#" data-src="<?php echo $imageHelper->init($_post->getFeaturedImg())->resize(405, 230); ?>"
+                                 alt="<?php echo $_postName ?>"
+                                 class="post-featured-img lazyload"
+                            />
+                            <div class="actions">
+                                <a class="btn btn-primary primary" href="<?php echo $_postUrl ?>" title="<?php echo $_postName ?>"><?php echo __('View Post') ?></a>
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                    <div class="post-content">
+                        <div class="post-info">
+                            <div class="post-categories">
+                                <?php if ($_categoriesCount = $_post->getCategoriesCount()) { ?>
+                                    <?php echo '<span class="label">' . __('Categories: ') . '</span>'; ?>
+                                    <?php $n = 0; foreach($_post->getParentCategories() as $ct) { $n++; ?>
+                                        <a title="<?php echo $block->escapeHtml($ct->getTitle()) ?>" href="<?php echo $ct->getCategoryUrl() ?>">
+                                            <?php echo $block->escapeHtml($ct->getTitle()) ?>
+                                        </a>
+                                        <?php if ($n != $_categoriesCount) { echo '<span class="sep">,</span>'; } ?>
+                                    <?php } ?>
+                                <?php } ?>
+                            </div>
+                        </div>
+
+                        <div class="post-title-holder">
+                            <div class="post-title">
+                                <a class="post-item-link" href="<?php echo $_postUrl ?>"> <?php echo $_postName; ?> </a>
+                            </div>
+                        </div>
+
+                        <?php if ($content = $block->getShorContent($_post)) { ?>
+                            <div class="post-text-hld">
+                                <?php echo $content ?>
+                            </div>
+                        <?php } ?>
+
+                        <div class="post-info-bottom">
+                            <div class="post-date">
+                                <span class="label"><?php echo __('Posted: ') ?></span>
+                                <span><?php echo $_post->getPublishDate('F d, Y') ?></span>
+                            </div>
+                            <div class="comments">
+                                <a title="<?php echo $block->escapeHtml($_post->getTitle()) ?>" href="<?php echo $_postUrl ?>#post-comments"><?php echo $block->escapeHtml($_post->getCommentsCount()) ?></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+        <?php } ?>
+    </ul>
+</div>
+
+<script>requirejs(["require","jquery","Magefan_Blog/js/lib/masonry.pkgd.min"],function(e,r,o){e(["jquery-bridget/jquery-bridget"],function(e){e("masonry",o,r),r(".post-list.masonry").masonry({itemSelector:".post-holder",percentPosition:!0})})});</script>
+
+<?php } ?>

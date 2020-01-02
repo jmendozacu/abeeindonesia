@@ -1,0 +1,5 @@
+<div class="top-cart-banner">
+<a href="javascript:void(0);">
+<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/top_cart_banner.jpg"}}" alt="Top Cart Banner" />
+</a>
+</div>

@@ -1,0 +1,9 @@
+<div class="popup-content-wrapper" data-bgimg="{{media url="wysiwyg/sirena/newsletter_popup_bg.jpg"}}" data-content-color="#fff">
+    <div class="promo-wrapper">
+        <div class="promo-text">
+            <span class="subtitle">Special Offer</span>
+            <strong class="title">Only This Weekend 25% OFF on all Knitwear.</strong>
+        </div>
+    </div>
+    {{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml"}}
+</div>

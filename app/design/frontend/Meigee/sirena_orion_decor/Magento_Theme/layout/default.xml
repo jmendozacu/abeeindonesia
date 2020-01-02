@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="meigee.header">
+            <referenceBlock name="logo">
+                <arguments>
+                    <argument name="logo_file" xsi:type="string">images/logo_white.png</argument>                    
+                </arguments>
+            </referenceBlock>
+        </referenceBlock>
+
+        <referenceBlock name="sirena.header.social.links" remove="true" />
+
+        <move element="wish-list-link" destination="meigee.header"/>
+        <move element="catalog.compare.link" destination="meigee.header"/>
+
+    </body>
+</page>

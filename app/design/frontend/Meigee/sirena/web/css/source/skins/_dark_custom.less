@@ -1,0 +1,321 @@
+//  Skin: Sirena Dark custom styles
+body {
+  .page-wrapper .swiper-container:hover .swiper-button-next,
+  .page-wrapper .swiper-container:hover .swiper-button-prev {
+    color: rgba(0,0,0,0.8);
+  }
+  .page-wrapper .swiper-pagination-bullet::before {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .page-header.sticky-header {
+    background-color: @bg-color-navigation-wrapper;
+  }
+  .header-wrapper .navigation .megamenu li .megamenu-wrapper,
+  .header-wrapper .navigation .megamenu li .megamenu-wrapper.tabs-menu ul.level0 li.level1 > .megamenu-inner {
+    background-color: #ccc;
+  }
+  .secondary-actions-wrapper a:hover,
+  .secondary-actions-wrapper a:focus,
+  .secondary-actions-wrapper a:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .product-items .product-item-info .wishlist-button-wrapper .action:hover,
+  &.page-products .product-items .product-item-info .wishlist-button-wrapper .action:hover,
+  .product-items .product-item-info .wishlist-button-wrapper .action:focus,
+  &.page-products .product-items .product-item-info .wishlist-button-wrapper .action:focus,
+  .product-items .product-item-info .wishlist-button-wrapper .action:active,
+  &.page-products .product-items .product-item-info .wishlist-button-wrapper .action:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: @color-title;
+  }
+  .page-wrapper .swiper-container.products-grid:hover .swiper-navigation .swiper-button-next:hover,
+  .page-wrapper .swiper-container.products-list:hover .swiper-navigation .swiper-button-next:hover,
+  .page-wrapper .swiper-container.products-grid:hover .swiper-navigation .swiper-button-prev:hover,
+  .page-wrapper .swiper-container.products-list:hover .swiper-navigation .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .post-list-wrapper[class*="blog-widget"] .post-list li.post-holder .post-content .post-info-bottom .post-date,
+  .post-list-wrapper[class*="blog-widget"] .post-list li.post-holder .post-content .post-info-bottom .comments {
+    color: rgba(255,255,255,0.4);
+  }
+  .post-list-wrapper[class*="blog-widget"] .post-list li.post-holder .post-content .post-info .post-categories a {
+    color: rgba(255,255,255,0.4);
+    &:hover,
+    &:focus,
+    &:active {
+      color: @theme__color__primary;
+    }
+  }
+  .category-banners.type-2 .single-banner {
+    .title {
+      color: rgba(255,255,255,0.6);
+      .transition(color .3s ease-out);
+    }
+    &:hover {
+      .title {
+        color: rgba(255,255,255,1);
+      }
+    }
+  }
+  .swatch-attribute .swatch-option.text {
+    background-color: rgba(255,255,255,0.6);
+    &:hover,
+    &.selected {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      outline: 1px solid rgba(255,255,255,0.5);
+    }
+  }
+  .swatch-attribute.color .swatch-option:not(.disabled):hover,
+  .swatch-attribute.image .swatch-option:not(.disabled):hover,
+  .swatch-attribute.color .swatch-option:hover,
+  .swatch-attribute.image .swatch-option:hover,
+  .swatch-attribute.color .swatch-option.selected,
+  .swatch-attribute.image .swatch-option.selected {
+    border: 1px solid #fff;
+    outline: 1px solid rgba(255,255,255,0.5);
+  }
+  .products-grid .product-item-info.sold-out .price-box .price-container .price,
+  .products-list .product-item-info.sold-out .price-box .price-container .price,
+  .products-grid .product-item-info.sold-out .product-item-name a,
+  .products-list .product-item-info.sold-out .product-item-name a {
+    color: rgba(255,255,255,0.3);
+  }
+  .toolbar .modes {
+    .modes-mode,
+    a.modes-mode {
+      color: @color-title;
+      &::before {
+        color: @color-title;
+      }
+      &:hover {
+        background-color: rgba(255,255,255,0.1);
+        &::before {
+          color: @color-title;
+        }
+      }
+      &.active {
+        color: @color-title;
+      }
+    }
+  }
+  .toolbar .sorter {
+    .sorter-action {
+      color: @color-title;
+      &::before {
+        color: @color-title;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: rgba(255,255,255,0.1);
+        color: @color-title;
+        &::before {
+          color: @color-title;
+        }
+      }
+    }
+  }
+  #layered-filter-block-current .filter-current .items li,
+  #layered-filter-block .filter-current .items li {
+    background-color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    a.remove:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+  #layered-filter-block-current .filter-actions .btn.btn-default.filter-clear:hover,
+  #layered-filter-block .filter-actions .btn.btn-default.filter-clear:hover,
+  #layered-filter-block-current .filter-actions .action.clear.filter-clear:hover,
+  #layered-filter-block .filter-actions .action.clear.filter-clear:hover,
+  #layered-filter-block-current .filter-actions .btn.btn-default.filter-clear:active,
+  #layered-filter-block .filter-actions .btn.btn-default.filter-clear:active,
+  #layered-filter-block-current .filter-actions .action.clear.filter-clear:active,
+  #layered-filter-block .filter-actions .action.clear.filter-clear:active,
+  #layered-filter-block-current .filter-actions .btn.btn-default.filter-clear:focus,
+  #layered-filter-block .filter-actions .btn.btn-default.filter-clear:focus,
+  #layered-filter-block-current .filter-actions .action.clear.filter-clear:focus,
+  #layered-filter-block .filter-actions .action.clear.filter-clear:focus {
+    background-color: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.1);
+  }
+  .field.qty .control div.quantity-decrease:hover,
+  .field.qty .control div.quantity-increase:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
+  .product-info-main .product-social-links a.mailto.friend:hover,
+  .product-add-form .product-social-links a.mailto.friend:hover,
+  .product-info-main .product-social-links a.action:hover,
+  .product-add-form .product-social-links a.action:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: @color-title;
+  }
+  .page-wrapper {
+    .breadcrumbs {
+      a,
+      strong {
+        color: rgba(255,255,255,0.4);
+        &:visited {
+          color: rgba(255,255,255,0.4);
+        }
+      }
+      strong {
+        color: rgba(255,255,255,0.6);
+      }
+      a:hover {
+        color: @theme__color__primary;
+      }
+      .item:not(:last-child) {
+        &:after {
+          background-color: rgba(255,255,255,0.2);
+        }
+      }
+    }
+  }
+  &.catalog-product-view .product.info.detailed .product.data.items > .item.title a.switch {
+    color: @color-body;
+    .transition(~"background-color .3s ease-out, color .3s ease-out");
+  }
+  &.catalog-product-view .product.info.detailed .product.data.items > .item.title.active a.switch {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  &.catalog-product-view .product.info.detailed .product.data.items > .item.title a.switch:hover {
+    color: #fff;
+  }
+  &.catalog-product-view .product.info.detailed .product.data.items > .item.content {
+    color: @color-body;
+  }
+  .swatch-option.text.selected {
+    background-color: transparent !important;
+  }
+  .cart-container .cart-summary #block-shipping {
+    background-color: rgba(255,255,255,0.1);
+  }
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table thead tr th.col {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-edit:hover,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-delete:hover,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-towishlist:hover,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-edit:focus,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-delete:focus,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-towishlist:focus,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-edit:active,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-delete:active,
+  .cart-container .form-cart .cart.table-wrapper #shopping-cart-table .item-actions .actions-toolbar .action-towishlist:active {
+    background-color: rgba(255,255,255,0.1);
+  }
+  .options-wrapper .options-dropdown .dropdown-item.language .switcher .switcher-options .switcher-dropdown ul li a:hover,
+  .options-wrapper .options-dropdown .dropdown-item.currency .switcher .switcher-options .switcher-dropdown ul li a:hover,
+  .options-wrapper .options-dropdown .dropdown-item.language .switcher .switcher-options .switcher-dropdown li a:hover,
+  .options-wrapper .options-dropdown .dropdown-item.currency .switcher .switcher-options .switcher-dropdown li a:hover {
+    background-color: rgba(255,255,255,0.06);
+  }
+  .page-header .minicart-wrapper .block-minicart .minicart-items-wrapper .product-item .product-item-details .details-qty .label,
+  .minicart-items .product .toggle,
+  .minicart-items .product dl.product.options,
+  .page-header .minicart-wrapper .block-minicart .minicart-items-wrapper .product-item .product-item-details .product.actions .action {
+    color: rgba(255,255,255,0.4);
+  }
+  .page-header .minicart-wrapper .block-minicart .minicart-items-wrapper .product-item .product-item-details .product.actions .action:hover {
+    color: rgba(255,255,255,1);
+  }
+  &.checkout-index-index .page-wrapper {
+    background-color: @bg-color-site;
+  }
+  &.checkout-index-index .checkout-container {
+    background-color: rgba(255,255,255,0.1);
+  }
+  &.checkout-index-index .checkout-container .opc-sidebar .opc-block-summary,
+  &.checkout-index-index .checkout-container .opc-sidebar .opc-block-shipping-information {
+    background-color: rgba(0,0,0,0.6);
+  }
+  .field-tooltip._active .field-tooltip-content {
+    color: #222;
+    background-color: #ccc;
+  }
+  .field-tooltip .field-tooltip-content:after {
+    border-right-color: #ccc;
+  }
+  .checkout-index-index .modal-popup .field-tooltip .field-tooltip-content:after,
+  .shipping-policy-block.field-tooltip .field-tooltip-content:after {
+    border-bottom-color: #ccc;
+  }
+  .modal-custom .action-close:hover:before,
+  .modal-popup .action-close:hover:before,
+  .modal-slide .action-close:hover:before {
+    color: #fff;
+  }
+  .abs-remove-button-for-blocks:hover:before, 
+  .sidebar .product-items .action.delete:hover:before, 
+  .table-comparison .cell.remove .action.delete:hover:before, 
+  .block-compare .action.delete:hover:before, 
+  .filter-current .action.remove:hover:before {
+    color: #fff;
+  }
+}
+@media @sm-and-down {
+  body {
+    .sidebars-wrapper {
+      background-color: #111;
+    }
+    .mobile-sidebar-toggler {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+.page-footer {
+  .form.subscribe input {
+    background-color: @form-element-input__background;
+    border-color: @form-element-input__border-color;
+    color: @form-element-input__color;
+    &:focus {
+      background-color: @form-element-input__focus__background;
+      border-color: @form-element-input__focus__border;
+      color: @form-element-input__focus__color;
+    }
+  }
+  .form.subscribe .action.subscribe {
+    background-color: @button-primary__background;
+    border-color: @button-primary__border;
+    color: @button-primary__color;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @button-primary__hover__background;
+      border-color: @button-primary__hover__border;
+      color: @button-primary__hover__color;
+    }
+  }
+}
+@media @md-and-up {
+  body {
+    .page-header::after {
+      display: none;
+    }
+    .products-grid .product-items .product-item::before {
+      background-color: @bg-color-content;
+    }
+    .products-grid .product-items .product-item:hover::before {
+      .box-shadow(0 0px 0px 2px rgba(255, 255, 255, 0.15));
+      background-color: @bg-color-content;
+    }
+    .secondary-actions-wrapper {
+      background-color: @bg-color-content;
+    }
+    &.page-layout-1column #layered-filter-block .filter-options-title,
+    &.page-layout-empty #layered-filter-block .filter-options-title {
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+}
+@media @lg-and-up {
+  .swiper-container .swiper-slide .slide-container {
+    left: 15.8%;
+  }
+  .swiper-container .swiper-slide .slide-container.pos-right {
+    right: 15.8%;
+  }
+}

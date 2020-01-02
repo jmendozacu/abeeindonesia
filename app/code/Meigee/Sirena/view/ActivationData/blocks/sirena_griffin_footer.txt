@@ -1,0 +1,59 @@
+<div class="footer-top">
+    <div class="container">
+    <hr class="indent-70 white-space hidden-sm hidden-xs">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">About</h6>
+            <div class="accordion-content">
+                <div class="footer-logo">
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/logo.png"}}" alt="Logo">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">Payments</h6>
+            <div class="accordion-content">
+                <p style="margin-bottom: 29px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit<br />
+                    eiusmod tempor incididunt.</p>
+                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{media url="wysiwyg/sirena/payment_icons.png"}}" alt="Payments" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item">
+            <h6 class="footer-block-title accordion-title visible-xs visible-sm">Working Hours</h6>
+            <div class="accordion-content">
+                <p>Monday - Friday:<br />8:00 - 20:00<br />Weekend: <br />9:00 - 19:00<br /></p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 accordion-item">
+            <h5 class="footer-block-title accordion-title visible-xs visible-sm">Address</h5>
+            <div class="accordion-content">
+                <p>No. 315, Jersey City, NJ 07305, New York, USA<br />
+                    <a href="tel:555-723-649-4920">Call Us : (555) 723-649-4920</a><br />
+                    <a href="mailto:name@email.com">info@sirena.com</a></p>
+            </div>
+        </div>
+    </div>
+    <hr class="indent-40 white-space hidden-sm hidden-xs">
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+    <hr class="indent-20 white-space">
+    <div class="row middle-xs middle-md">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 copyright-wrapper last-xs first-md first-lg">
+            <span class="copyright">&copy; 2019 Meigee Team.</span>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6 first-xs first-sm">
+            <ul class="horizontal-links">
+                <li><a href={{store url='about-us'}}>About us</a></li>
+                <li><a href="{{store url='customer-service'}}">Customer Service</a></li>
+                <li><a href="{{store url='privacy-policy-cookie-restriction-mode'}}">Privacy Policy</a></li>
+                <li><a href="{{store url='catalogsearch/advanced/'}}">Advanced Search</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 last-sm store-switcher-wrapper">
+           {{block class="Magento\Store\Block\Switcher" name="store_switcher" template="switch/stores.phtml"}}
+        </div>
+    </div>
+    </div>
+</div>

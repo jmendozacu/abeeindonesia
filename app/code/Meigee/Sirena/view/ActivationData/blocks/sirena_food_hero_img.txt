@@ -1,0 +1,14 @@
+<div class="hero-img-wrapper lazyload" data-bg="{{media url=&quot;wysiwyg/sirena/hero_bg.jpg&quot;}}">
+    <div class="hero-inner pos-top">
+        <h3 class="title">Our Best Offers <span>Perfect Sushi Rolls</span> <span class="price">Only $5.99</span></h3>
+        <p class="about"><span>Additional options:</span> 2 rolls = $9.99, 3 rolls = $14.99</p>
+    </div>
+    <a href="#" class="btn scroll-to-content">Click or scroll down</a>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".hero-img-wrapper": {
+            "Meigee_Sirena/js/theme_hero_img":{}
+        }
+    }
+</script>
