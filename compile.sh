@@ -6,7 +6,7 @@ echo ".... please be patient ....................."
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 
-# php bin/magento setup:static-content:deploy -t Salt/lapak-kopi en_US -f
+# php bin/magento setup:static-content:deploy -t Sams/abeeIndo en_US id_ID -f
 php bin/magento setup:static-content:deploy en_US id_ID -f
 
 php bin/magento cache:clean

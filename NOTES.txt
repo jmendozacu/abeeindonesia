@@ -9,3 +9,6 @@ user : admin
 
 pass : AbeeIndo2019
 
+
+
+pos, tiki, jne, pcp, esl, rpx, pandu, wahana, jnt, pahala, cahaya, sap, jet, indah, dse, slis, first, ncs, dan star

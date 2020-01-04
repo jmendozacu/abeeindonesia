@@ -1,0 +1,55 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<select class="select" data-bind="attr: {
+        name: inputName,
+        id: uid,
+        disabled: disabled,
+        'aria-describedby': getDescriptionId(),
+        'aria-required': required,
+        'aria-invalid': error() ? true : 'false',
+        placeholder: placeholder
+    },
+    value: value,
+    optionsCaption: caption,
+    optionsValue: 'value',
+    optionsText: 'label'">
+    <option value="" data-bind="i18n: 'Please select a region, state or province.'"></option>
+    <option value="Bali" data-id="1">Bali</option>
+    <option value="Bangka Belitung" data-id="2">Bangka Belitung</option>
+    <option value="Banten" data-id="3">Banten</option>
+    <option value="Bengkulu" data-id="4">Bengkulu</option>
+    <option value="DI Yogyakarta" data-id="5">DI Yogyakarta</option>
+    <option value="DKI Jakarta" data-id="6">DKI Jakarta</option>
+    <option value="Gorontalo" data-id="7">Gorontalo</option>
+    <option value="Jambi" data-id="8">Jambi</option>
+    <option value="Jawa Barat" data-id="9">Jawa Barat</option>
+    <option value="Jawa Tengah" data-id="10">Jawa Tengah</option>
+    <option value="Jawa Timur" data-id="11">Jawa Timur</option>
+    <option value="Kalimantan Barat" data-id="12">Kalimantan Barat</option>
+    <option value="Kalimantan Selatan" data-id="13">Kalimantan Selatan</option>
+    <option value="Kalimantan Tengah" data-id="14">Kalimantan Tengah</option>
+    <option value="Kalimantan Timur" data-id="15">Kalimantan Timur</option>
+    <option value="Kalimantan Utara" data-id="16">Kalimantan Utara</option>
+    <option value="Kepulauan Riau" data-id="17">Kepulauan Riau</option>
+    <option value="Lampung" data-id="18">Lampung</option>
+    <option value="Maluku" data-id="19">Maluku</option>
+    <option value="Maluku Utara" data-id="20">Maluku Utara</option>
+    <option value="Nanggroe Aceh Darussalam (NAD)" data-id="21">Nanggroe Aceh Darussalam (NAD)</option>
+    <option value="Nusa Tenggara Barat (NTB)" data-id="22">Nusa Tenggara Barat (NTB)</option>
+    <option value="Nusa Tenggara Timur (NTT)" data-id="23">Nusa Tenggara Timur (NTT)</option>
+    <option value="Papua" data-id="24">Papua</option>
+    <option value="Papua Barat" data-id="25">Papua Barat</option>
+    <option value="Riau" data-id="26">Riau</option>
+    <option value="Sulawesi Barat" data-id="27">Sulawesi Barat</option>
+    <option value="Sulawesi Selatan" data-id="28">Sulawesi Selatan</option>
+    <option value="Sulawesi Tengah" data-id="29">Sulawesi Tengah</option>
+    <option value="Sulawesi Tenggara" data-id="30">Sulawesi Tenggara</option>
+    <option value="Sulawesi Utara" data-id="31">Sulawesi Utara</option>
+    <option value="Sumatera Barat" data-id="32">Sumatera Barat</option>
+    <option value="Sumatera Selatan" data-id="33">Sumatera Selatan</option>
+    <option value="Sumatera Utara" data-id="34">Sumatera Utara</option>
+</select>

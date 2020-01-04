@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <rajaongkirtiki>
+                <active>1</active>
+                <title>Custom Shipping Test Title</title>
+                <name>Custom Shipping Test Method Name</name>
+                <shipping_cost>9000</shipping_cost>
+                <sallowspecific>0</sallowspecific>
+                <sort_order>15</sort_order>
+                <model>Sams\RajaongkirTiki\Model\Carrier\Customshipping</model>
+            </rajaongkirtiki>
+        </carriers>
+    </default>
+</config>

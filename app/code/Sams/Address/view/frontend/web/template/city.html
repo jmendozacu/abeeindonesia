@@ -1,0 +1,522 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<select class="select" data-bind="attr: {
+        name: inputName,
+        id: uid,
+        disabled: disabled,
+        'aria-describedby': getDescriptionId(),
+        'aria-required': required,
+        'aria-invalid': error() ? true : 'false',
+        placeholder: placeholder
+    },
+    value: value,
+    optionsCaption: caption,
+    optionsValue: 'value',
+    optionsText: 'label'">
+    <option value="" data-bind="i18n: 'Please select a city.'"></option>
+        <option value="1-Aceh Barat" class="city province-21">Aceh Barat</option>
+        <option value="2-Aceh Barat Daya" class="city province-21">Aceh Barat Daya</option>
+        <option value="3-Aceh Besar" class="city province-21">Aceh Besar</option>
+        <option value="4-Aceh Jaya" class="city province-21">Aceh Jaya</option>
+        <option value="5-Aceh Selatan" class="city province-21">Aceh Selatan</option>
+        <option value="6-Aceh Singkil" class="city province-21">Aceh Singkil</option>
+        <option value="7-Aceh Tamiang" class="city province-21">Aceh Tamiang</option>
+        <option value="8-Aceh Tengah" class="city province-21">Aceh Tengah</option>
+        <option value="9-Aceh Tenggara" class="city province-21">Aceh Tenggara</option>
+        <option value="10-Aceh Timur" class="city province-21">Aceh Timur</option>
+        <option value="11-Aceh Utara" class="city province-21">Aceh Utara</option>
+        <option value="12-Agam" class="city province-32">Agam</option>
+        <option value="13-Alor" class="city province-23">Alor</option>
+        <option value="14-Ambon" class="city province-19">Ambon</option>
+        <option value="15-Asahan" class="city province-34">Asahan</option>
+        <option value="16-Asmat" class="city province-24">Asmat</option>
+        <option value="17-Badung" class="city province-1">Badung</option>
+        <option value="18-Balangan" class="city province-13">Balangan</option>
+        <option value="19-Balikpapan" class="city province-15">Balikpapan</option>
+        <option value="20-Banda Aceh" class="city province-21">Banda Aceh</option>
+        <option value="21-Bandar Lampung" class="city province-18">Bandar Lampung</option>
+        <option value="22-Bandung" class="city province-9">Bandung</option>
+        <option value="23-Bandung" class="city province-9">Bandung</option>
+        <option value="24-Bandung Barat" class="city province-9">Bandung Barat</option>
+        <option value="25-Banggai" class="city province-29">Banggai</option>
+        <option value="26-Banggai Kepulauan" class="city province-29">Banggai Kepulauan</option>
+        <option value="27-Bangka" class="city province-2">Bangka</option>
+        <option value="28-Bangka Barat" class="city province-2">Bangka Barat</option>
+        <option value="29-Bangka Selatan" class="city province-2">Bangka Selatan</option>
+        <option value="30-Bangka Tengah" class="city province-2">Bangka Tengah</option>
+        <option value="31-Bangkalan" class="city province-11">Bangkalan</option>
+        <option value="32-Bangli" class="city province-1">Bangli</option>
+        <option value="33-Banjar" class="city province-13">Banjar</option>
+        <option value="34-Banjar" class="city province-9">Banjar</option>
+        <option value="35-Banjarbaru" class="city province-13">Banjarbaru</option>
+        <option value="36-Banjarmasin" class="city province-13">Banjarmasin</option>
+        <option value="37-Banjarnegara" class="city province-10">Banjarnegara</option>
+        <option value="38-Bantaeng" class="city province-28">Bantaeng</option>
+        <option value="39-Bantul" class="city province-5">Bantul</option>
+        <option value="40-Banyuasin" class="city province-33">Banyuasin</option>
+        <option value="41-Banyumas" class="city province-10">Banyumas</option>
+        <option value="42-Banyuwangi" class="city province-11">Banyuwangi</option>
+        <option value="43-Barito Kuala" class="city province-13">Barito Kuala</option>
+        <option value="44-Barito Selatan" class="city province-14">Barito Selatan</option>
+        <option value="45-Barito Timur" class="city province-14">Barito Timur</option>
+        <option value="46-Barito Utara" class="city province-14">Barito Utara</option>
+        <option value="47-Barru" class="city province-28">Barru</option>
+        <option value="48-Batam" class="city province-17">Batam</option>
+        <option value="49-Batang" class="city province-10">Batang</option>
+        <option value="50-Batang Hari" class="city province-8">Batang Hari</option>
+        <option value="51-Batu" class="city province-11">Batu</option>
+        <option value="52-Batu Bara" class="city province-34">Batu Bara</option>
+        <option value="53-Bau-Bau" class="city province-30">Bau-Bau</option>
+        <option value="54-Bekasi" class="city province-9">Bekasi</option>
+        <option value="55-Bekasi" class="city province-9">Bekasi</option>
+        <option value="56-Belitung" class="city province-2">Belitung</option>
+        <option value="57-Belitung Timur" class="city province-2">Belitung Timur</option>
+        <option value="58-Belu" class="city province-23">Belu</option>
+        <option value="59-Bener Meriah" class="city province-21">Bener Meriah</option>
+        <option value="60-Bengkalis" class="city province-26">Bengkalis</option>
+        <option value="61-Bengkayang" class="city province-12">Bengkayang</option>
+        <option value="62-Bengkulu" class="city province-4">Bengkulu</option>
+        <option value="63-Bengkulu Selatan" class="city province-4">Bengkulu Selatan</option>
+        <option value="64-Bengkulu Tengah" class="city province-4">Bengkulu Tengah</option>
+        <option value="65-Bengkulu Utara" class="city province-4">Bengkulu Utara</option>
+        <option value="66-Berau" class="city province-15">Berau</option>
+        <option value="67-Biak Numfor" class="city province-24">Biak Numfor</option>
+        <option value="68-Bima" class="city province-22">Bima</option>
+        <option value="69-Bima" class="city province-22">Bima</option>
+        <option value="70-Binjai" class="city province-34">Binjai</option>
+        <option value="71-Bintan" class="city province-17">Bintan</option>
+        <option value="72-Bireuen" class="city province-21">Bireuen</option>
+        <option value="73-Bitung" class="city province-31">Bitung</option>
+        <option value="74-Blitar" class="city province-11">Blitar</option>
+        <option value="75-Blitar" class="city province-11">Blitar</option>
+        <option value="76-Blora" class="city province-10">Blora</option>
+        <option value="77-Boalemo" class="city province-7">Boalemo</option>
+        <option value="78-Bogor" class="city province-9">Bogor</option>
+        <option value="79-Bogor" class="city province-9">Bogor</option>
+        <option value="80-Bojonegoro" class="city province-11">Bojonegoro</option>
+        <option value="81-Bolaang Mongondow (Bolmong)" class="city province-31">Bolaang Mongondow (Bolmong)</option>
+        <option value="82-Bolaang Mongondow Selatan" class="city province-31">Bolaang Mongondow Selatan</option>
+        <option value="83-Bolaang Mongondow Timur" class="city province-31">Bolaang Mongondow Timur</option>
+        <option value="84-Bolaang Mongondow Utara" class="city province-31">Bolaang Mongondow Utara</option>
+        <option value="85-Bombana" class="city province-30">Bombana</option>
+        <option value="86-Bondowoso" class="city province-11">Bondowoso</option>
+        <option value="87-Bone" class="city province-28">Bone</option>
+        <option value="88-Bone Bolango" class="city province-7">Bone Bolango</option>
+        <option value="89-Bontang" class="city province-15">Bontang</option>
+        <option value="90-Boven Digoel" class="city province-24">Boven Digoel</option>
+        <option value="91-Boyolali" class="city province-10">Boyolali</option>
+        <option value="92-Brebes" class="city province-10">Brebes</option>
+        <option value="93-Bukittinggi" class="city province-32">Bukittinggi</option>
+        <option value="94-Buleleng" class="city province-1">Buleleng</option>
+        <option value="95-Bulukumba" class="city province-28">Bulukumba</option>
+        <option value="96-Bulungan (Bulongan)" class="city province-16">Bulungan (Bulongan)</option>
+        <option value="97-Bungo" class="city province-8">Bungo</option>
+        <option value="98-Buol" class="city province-29">Buol</option>
+        <option value="99-Buru" class="city province-19">Buru</option>
+        <option value="100-Buru Selatan" class="city province-19">Buru Selatan</option>
+        <option value="101-Buton" class="city province-30">Buton</option>
+        <option value="102-Buton Utara" class="city province-30">Buton Utara</option>
+        <option value="103-Ciamis" class="city province-9">Ciamis</option>
+        <option value="104-Cianjur" class="city province-9">Cianjur</option>
+        <option value="105-Cilacap" class="city province-10">Cilacap</option>
+        <option value="106-Cilegon" class="city province-3">Cilegon</option>
+        <option value="107-Cimahi" class="city province-9">Cimahi</option>
+        <option value="108-Cirebon" class="city province-9">Cirebon</option>
+        <option value="109-Cirebon" class="city province-9">Cirebon</option>
+        <option value="110-Dairi" class="city province-34">Dairi</option>
+        <option value="111-Deiyai (Deliyai)" class="city province-24">Deiyai (Deliyai)</option>
+        <option value="112-Deli Serdang" class="city province-34">Deli Serdang</option>
+        <option value="113-Demak" class="city province-10">Demak</option>
+        <option value="114-Denpasar" class="city province-1">Denpasar</option>
+        <option value="115-Depok" class="city province-9">Depok</option>
+        <option value="116-Dharmasraya" class="city province-32">Dharmasraya</option>
+        <option value="117-Dogiyai" class="city province-24">Dogiyai</option>
+        <option value="118-Dompu" class="city province-22">Dompu</option>
+        <option value="119-Donggala" class="city province-29">Donggala</option>
+        <option value="120-Dumai" class="city province-26">Dumai</option>
+        <option value="121-Empat Lawang" class="city province-33">Empat Lawang</option>
+        <option value="122-Ende" class="city province-23">Ende</option>
+        <option value="123-Enrekang" class="city province-28">Enrekang</option>
+        <option value="124-Fakfak" class="city province-25">Fakfak</option>
+        <option value="125-Flores Timur" class="city province-23">Flores Timur</option>
+        <option value="126-Garut" class="city province-9">Garut</option>
+        <option value="127-Gayo Lues" class="city province-21">Gayo Lues</option>
+        <option value="128-Gianyar" class="city province-1">Gianyar</option>
+        <option value="129-Gorontalo" class="city province-7">Gorontalo</option>
+        <option value="130-Gorontalo" class="city province-7">Gorontalo</option>
+        <option value="131-Gorontalo Utara" class="city province-7">Gorontalo Utara</option>
+        <option value="132-Gowa" class="city province-28">Gowa</option>
+        <option value="133-Gresik" class="city province-11">Gresik</option>
+        <option value="134-Grobogan" class="city province-10">Grobogan</option>
+        <option value="135-Gunung Kidul" class="city province-5">Gunung Kidul</option>
+        <option value="136-Gunung Mas" class="city province-14">Gunung Mas</option>
+        <option value="137-Gunungsitoli" class="city province-34">Gunungsitoli</option>
+        <option value="138-Halmahera Barat" class="city province-20">Halmahera Barat</option>
+        <option value="139-Halmahera Selatan" class="city province-20">Halmahera Selatan</option>
+        <option value="140-Halmahera Tengah" class="city province-20">Halmahera Tengah</option>
+        <option value="141-Halmahera Timur" class="city province-20">Halmahera Timur</option>
+        <option value="142-Halmahera Utara" class="city province-20">Halmahera Utara</option>
+        <option value="143-Hulu Sungai Selatan" class="city province-13">Hulu Sungai Selatan</option>
+        <option value="144-Hulu Sungai Tengah" class="city province-13">Hulu Sungai Tengah</option>
+        <option value="145-Hulu Sungai Utara" class="city province-13">Hulu Sungai Utara</option>
+        <option value="146-Humbang Hasundutan" class="city province-34">Humbang Hasundutan</option>
+        <option value="147-Indragiri Hilir" class="city province-26">Indragiri Hilir</option>
+        <option value="148-Indragiri Hulu" class="city province-26">Indragiri Hulu</option>
+        <option value="149-Indramayu" class="city province-9">Indramayu</option>
+        <option value="150-Intan Jaya" class="city province-24">Intan Jaya</option>
+        <option value="151-Jakarta Barat" class="city province-6">Jakarta Barat</option>
+        <option value="152-Jakarta Pusat" class="city province-6">Jakarta Pusat</option>
+        <option value="153-Jakarta Selatan" class="city province-6">Jakarta Selatan</option>
+        <option value="154-Jakarta Timur" class="city province-6">Jakarta Timur</option>
+        <option value="155-Jakarta Utara" class="city province-6">Jakarta Utara</option>
+        <option value="156-Jambi" class="city province-8">Jambi</option>
+        <option value="157-Jayapura" class="city province-24">Jayapura</option>
+        <option value="158-Jayapura" class="city province-24">Jayapura</option>
+        <option value="159-Jayawijaya" class="city province-24">Jayawijaya</option>
+        <option value="160-Jember" class="city province-11">Jember</option>
+        <option value="161-Jembrana" class="city province-1">Jembrana</option>
+        <option value="162-Jeneponto" class="city province-28">Jeneponto</option>
+        <option value="163-Jepara" class="city province-10">Jepara</option>
+        <option value="164-Jombang" class="city province-11">Jombang</option>
+        <option value="165-Kaimana" class="city province-25">Kaimana</option>
+        <option value="166-Kampar" class="city province-26">Kampar</option>
+        <option value="167-Kapuas" class="city province-14">Kapuas</option>
+        <option value="168-Kapuas Hulu" class="city province-12">Kapuas Hulu</option>
+        <option value="169-Karanganyar" class="city province-10">Karanganyar</option>
+        <option value="170-Karangasem" class="city province-1">Karangasem</option>
+        <option value="171-Karawang" class="city province-9">Karawang</option>
+        <option value="172-Karimun" class="city province-17">Karimun</option>
+        <option value="173-Karo" class="city province-34">Karo</option>
+        <option value="174-Katingan" class="city province-14">Katingan</option>
+        <option value="175-Kaur" class="city province-4">Kaur</option>
+        <option value="176-Kayong Utara" class="city province-12">Kayong Utara</option>
+        <option value="177-Kebumen" class="city province-10">Kebumen</option>
+        <option value="178-Kediri" class="city province-11">Kediri</option>
+        <option value="179-Kediri" class="city province-11">Kediri</option>
+        <option value="180-Keerom" class="city province-24">Keerom</option>
+        <option value="181-Kendal" class="city province-10">Kendal</option>
+        <option value="182-Kendari" class="city province-30">Kendari</option>
+        <option value="183-Kepahiang" class="city province-4">Kepahiang</option>
+        <option value="184-Kepulauan Anambas" class="city province-17">Kepulauan Anambas</option>
+        <option value="185-Kepulauan Aru" class="city province-19">Kepulauan Aru</option>
+        <option value="186-Kepulauan Mentawai" class="city province-32">Kepulauan Mentawai</option>
+        <option value="187-Kepulauan Meranti" class="city province-26">Kepulauan Meranti</option>
+        <option value="188-Kepulauan Sangihe" class="city province-31">Kepulauan Sangihe</option>
+        <option value="189-Kepulauan Seribu" class="city province-6">Kepulauan Seribu</option>
+        <option value="190-Kepulauan Siau Tagulandang Biaro (Sitaro)" class="city province-31">Kepulauan Siau Tagulandang Biaro (Sitaro)</option>
+        <option value="191-Kepulauan Sula" class="city province-20">Kepulauan Sula</option>
+        <option value="192-Kepulauan Talaud" class="city province-31">Kepulauan Talaud</option>
+        <option value="193-Kepulauan Yapen (Yapen Waropen)" class="city province-24">Kepulauan Yapen (Yapen Waropen)</option>
+        <option value="194-Kerinci" class="city province-8">Kerinci</option>
+        <option value="195-Ketapang" class="city province-12">Ketapang</option>
+        <option value="196-Klaten" class="city province-10">Klaten</option>
+        <option value="197-Klungkung" class="city province-1">Klungkung</option>
+        <option value="198-Kolaka" class="city province-30">Kolaka</option>
+        <option value="199-Kolaka Utara" class="city province-30">Kolaka Utara</option>
+        <option value="200-Konawe" class="city province-30">Konawe</option>
+        <option value="201-Konawe Selatan" class="city province-30">Konawe Selatan</option>
+        <option value="202-Konawe Utara" class="city province-30">Konawe Utara</option>
+        <option value="203-Kotabaru" class="city province-13">Kotabaru</option>
+        <option value="204-Kotamobagu" class="city province-31">Kotamobagu</option>
+        <option value="205-Kotawaringin Barat" class="city province-14">Kotawaringin Barat</option>
+        <option value="206-Kotawaringin Timur" class="city province-14">Kotawaringin Timur</option>
+        <option value="207-Kuantan Singingi" class="city province-26">Kuantan Singingi</option>
+        <option value="208-Kubu Raya" class="city province-12">Kubu Raya</option>
+        <option value="209-Kudus" class="city province-10">Kudus</option>
+        <option value="210-Kulon Progo" class="city province-5">Kulon Progo</option>
+        <option value="211-Kuningan" class="city province-9">Kuningan</option>
+        <option value="212-Kupang" class="city province-23">Kupang</option>
+        <option value="213-Kupang" class="city province-23">Kupang</option>
+        <option value="214-Kutai Barat" class="city province-15">Kutai Barat</option>
+        <option value="215-Kutai Kartanegara" class="city province-15">Kutai Kartanegara</option>
+        <option value="216-Kutai Timur" class="city province-15">Kutai Timur</option>
+        <option value="217-Labuhan Batu" class="city province-34">Labuhan Batu</option>
+        <option value="218-Labuhan Batu Selatan" class="city province-34">Labuhan Batu Selatan</option>
+        <option value="219-Labuhan Batu Utara" class="city province-34">Labuhan Batu Utara</option>
+        <option value="220-Lahat" class="city province-33">Lahat</option>
+        <option value="221-Lamandau" class="city province-14">Lamandau</option>
+        <option value="222-Lamongan" class="city province-11">Lamongan</option>
+        <option value="223-Lampung Barat" class="city province-18">Lampung Barat</option>
+        <option value="224-Lampung Selatan" class="city province-18">Lampung Selatan</option>
+        <option value="225-Lampung Tengah" class="city province-18">Lampung Tengah</option>
+        <option value="226-Lampung Timur" class="city province-18">Lampung Timur</option>
+        <option value="227-Lampung Utara" class="city province-18">Lampung Utara</option>
+        <option value="228-Landak" class="city province-12">Landak</option>
+        <option value="229-Langkat" class="city province-34">Langkat</option>
+        <option value="230-Langsa" class="city province-21">Langsa</option>
+        <option value="231-Lanny Jaya" class="city province-24">Lanny Jaya</option>
+        <option value="232-Lebak" class="city province-3">Lebak</option>
+        <option value="233-Lebong" class="city province-4">Lebong</option>
+        <option value="234-Lembata" class="city province-23">Lembata</option>
+        <option value="235-Lhokseumawe" class="city province-21">Lhokseumawe</option>
+        <option value="236-Lima Puluh Koto/Kota" class="city province-32">Lima Puluh Koto/Kota</option>
+        <option value="237-Lingga" class="city province-17">Lingga</option>
+        <option value="238-Lombok Barat" class="city province-22">Lombok Barat</option>
+        <option value="239-Lombok Tengah" class="city province-22">Lombok Tengah</option>
+        <option value="240-Lombok Timur" class="city province-22">Lombok Timur</option>
+        <option value="241-Lombok Utara" class="city province-22">Lombok Utara</option>
+        <option value="242-Lubuk Linggau" class="city province-33">Lubuk Linggau</option>
+        <option value="243-Lumajang" class="city province-11">Lumajang</option>
+        <option value="244-Luwu" class="city province-28">Luwu</option>
+        <option value="245-Luwu Timur" class="city province-28">Luwu Timur</option>
+        <option value="246-Luwu Utara" class="city province-28">Luwu Utara</option>
+        <option value="247-Madiun" class="city province-11">Madiun</option>
+        <option value="248-Madiun" class="city province-11">Madiun</option>
+        <option value="249-Magelang" class="city province-10">Magelang</option>
+        <option value="250-Magelang" class="city province-10">Magelang</option>
+        <option value="251-Magetan" class="city province-11">Magetan</option>
+        <option value="252-Majalengka" class="city province-9">Majalengka</option>
+        <option value="253-Majene" class="city province-27">Majene</option>
+        <option value="254-Makassar" class="city province-28">Makassar</option>
+        <option value="255-Malang" class="city province-11">Malang</option>
+        <option value="256-Malang" class="city province-11">Malang</option>
+        <option value="257-Malinau" class="city province-16">Malinau</option>
+        <option value="258-Maluku Barat Daya" class="city province-19">Maluku Barat Daya</option>
+        <option value="259-Maluku Tengah" class="city province-19">Maluku Tengah</option>
+        <option value="260-Maluku Tenggara" class="city province-19">Maluku Tenggara</option>
+        <option value="261-Maluku Tenggara Barat" class="city province-19">Maluku Tenggara Barat</option>
+        <option value="262-Mamasa" class="city province-27">Mamasa</option>
+        <option value="263-Mamberamo Raya" class="city province-24">Mamberamo Raya</option>
+        <option value="264-Mamberamo Tengah" class="city province-24">Mamberamo Tengah</option>
+        <option value="265-Mamuju" class="city province-27">Mamuju</option>
+        <option value="266-Mamuju Utara" class="city province-27">Mamuju Utara</option>
+        <option value="267-Manado" class="city province-31">Manado</option>
+        <option value="268-Mandailing Natal" class="city province-34">Mandailing Natal</option>
+        <option value="269-Manggarai" class="city province-23">Manggarai</option>
+        <option value="270-Manggarai Barat" class="city province-23">Manggarai Barat</option>
+        <option value="271-Manggarai Timur" class="city province-23">Manggarai Timur</option>
+        <option value="272-Manokwari" class="city province-25">Manokwari</option>
+        <option value="273-Manokwari Selatan" class="city province-25">Manokwari Selatan</option>
+        <option value="274-Mappi" class="city province-24">Mappi</option>
+        <option value="275-Maros" class="city province-28">Maros</option>
+        <option value="276-Mataram" class="city province-22">Mataram</option>
+        <option value="277-Maybrat" class="city province-25">Maybrat</option>
+        <option value="278-Medan" class="city province-34">Medan</option>
+        <option value="279-Melawi" class="city province-12">Melawi</option>
+        <option value="280-Merangin" class="city province-8">Merangin</option>
+        <option value="281-Merauke" class="city province-24">Merauke</option>
+        <option value="282-Mesuji" class="city province-18">Mesuji</option>
+        <option value="283-Metro" class="city province-18">Metro</option>
+        <option value="284-Mimika" class="city province-24">Mimika</option>
+        <option value="285-Minahasa" class="city province-31">Minahasa</option>
+        <option value="286-Minahasa Selatan" class="city province-31">Minahasa Selatan</option>
+        <option value="287-Minahasa Tenggara" class="city province-31">Minahasa Tenggara</option>
+        <option value="288-Minahasa Utara" class="city province-31">Minahasa Utara</option>
+        <option value="289-Mojokerto" class="city province-11">Mojokerto</option>
+        <option value="290-Mojokerto" class="city province-11">Mojokerto</option>
+        <option value="291-Morowali" class="city province-29">Morowali</option>
+        <option value="292-Muara Enim" class="city province-33">Muara Enim</option>
+        <option value="293-Muaro Jambi" class="city province-8">Muaro Jambi</option>
+        <option value="294-Muko Muko" class="city province-4">Muko Muko</option>
+        <option value="295-Muna" class="city province-30">Muna</option>
+        <option value="296-Murung Raya" class="city province-14">Murung Raya</option>
+        <option value="297-Musi Banyuasin" class="city province-33">Musi Banyuasin</option>
+        <option value="298-Musi Rawas" class="city province-33">Musi Rawas</option>
+        <option value="299-Nabire" class="city province-24">Nabire</option>
+        <option value="300-Nagan Raya" class="city province-21">Nagan Raya</option>
+        <option value="301-Nagekeo" class="city province-23">Nagekeo</option>
+        <option value="302-Natuna" class="city province-17">Natuna</option>
+        <option value="303-Nduga" class="city province-24">Nduga</option>
+        <option value="304-Ngada" class="city province-23">Ngada</option>
+        <option value="305-Nganjuk" class="city province-11">Nganjuk</option>
+        <option value="306-Ngawi" class="city province-11">Ngawi</option>
+        <option value="307-Nias" class="city province-34">Nias</option>
+        <option value="308-Nias Barat" class="city province-34">Nias Barat</option>
+        <option value="309-Nias Selatan" class="city province-34">Nias Selatan</option>
+        <option value="310-Nias Utara" class="city province-34">Nias Utara</option>
+        <option value="311-Nunukan" class="city province-16">Nunukan</option>
+        <option value="312-Ogan Ilir" class="city province-33">Ogan Ilir</option>
+        <option value="313-Ogan Komering Ilir" class="city province-33">Ogan Komering Ilir</option>
+        <option value="314-Ogan Komering Ulu" class="city province-33">Ogan Komering Ulu</option>
+        <option value="315-Ogan Komering Ulu Selatan" class="city province-33">Ogan Komering Ulu Selatan</option>
+        <option value="316-Ogan Komering Ulu Timur" class="city province-33">Ogan Komering Ulu Timur</option>
+        <option value="317-Pacitan" class="city province-11">Pacitan</option>
+        <option value="318-Padang" class="city province-32">Padang</option>
+        <option value="319-Padang Lawas" class="city province-34">Padang Lawas</option>
+        <option value="320-Padang Lawas Utara" class="city province-34">Padang Lawas Utara</option>
+        <option value="321-Padang Panjang" class="city province-32">Padang Panjang</option>
+        <option value="322-Padang Pariaman" class="city province-32">Padang Pariaman</option>
+        <option value="323-Padang Sidempuan" class="city province-34">Padang Sidempuan</option>
+        <option value="324-Pagar Alam" class="city province-33">Pagar Alam</option>
+        <option value="325-Pakpak Bharat" class="city province-34">Pakpak Bharat</option>
+        <option value="326-Palangka Raya" class="city province-14">Palangka Raya</option>
+        <option value="327-Palembang" class="city province-33">Palembang</option>
+        <option value="328-Palopo" class="city province-28">Palopo</option>
+        <option value="329-Palu" class="city province-29">Palu</option>
+        <option value="330-Pamekasan" class="city province-11">Pamekasan</option>
+        <option value="331-Pandeglang" class="city province-3">Pandeglang</option>
+        <option value="332-Pangandaran" class="city province-9">Pangandaran</option>
+        <option value="333-Pangkajene Kepulauan" class="city province-28">Pangkajene Kepulauan</option>
+        <option value="334-Pangkal Pinang" class="city province-2">Pangkal Pinang</option>
+        <option value="335-Paniai" class="city province-24">Paniai</option>
+        <option value="336-Parepare" class="city province-28">Parepare</option>
+        <option value="337-Pariaman" class="city province-32">Pariaman</option>
+        <option value="338-Parigi Moutong" class="city province-29">Parigi Moutong</option>
+        <option value="339-Pasaman" class="city province-32">Pasaman</option>
+        <option value="340-Pasaman Barat" class="city province-32">Pasaman Barat</option>
+        <option value="341-Paser" class="city province-15">Paser</option>
+        <option value="342-Pasuruan" class="city province-11">Pasuruan</option>
+        <option value="343-Pasuruan" class="city province-11">Pasuruan</option>
+        <option value="344-Pati" class="city province-10">Pati</option>
+        <option value="345-Payakumbuh" class="city province-32">Payakumbuh</option>
+        <option value="346-Pegunungan Arfak" class="city province-25">Pegunungan Arfak</option>
+        <option value="347-Pegunungan Bintang" class="city province-24">Pegunungan Bintang</option>
+        <option value="348-Pekalongan" class="city province-10">Pekalongan</option>
+        <option value="349-Pekalongan" class="city province-10">Pekalongan</option>
+        <option value="350-Pekanbaru" class="city province-26">Pekanbaru</option>
+        <option value="351-Pelalawan" class="city province-26">Pelalawan</option>
+        <option value="352-Pemalang" class="city province-10">Pemalang</option>
+        <option value="353-Pematang Siantar" class="city province-34">Pematang Siantar</option>
+        <option value="354-Penajam Paser Utara" class="city province-15">Penajam Paser Utara</option>
+        <option value="355-Pesawaran" class="city province-18">Pesawaran</option>
+        <option value="356-Pesisir Barat" class="city province-18">Pesisir Barat</option>
+        <option value="357-Pesisir Selatan" class="city province-32">Pesisir Selatan</option>
+        <option value="358-Pidie" class="city province-21">Pidie</option>
+        <option value="359-Pidie Jaya" class="city province-21">Pidie Jaya</option>
+        <option value="360-Pinrang" class="city province-28">Pinrang</option>
+        <option value="361-Pohuwato" class="city province-7">Pohuwato</option>
+        <option value="362-Polewali Mandar" class="city province-27">Polewali Mandar</option>
+        <option value="363-Ponorogo" class="city province-11">Ponorogo</option>
+        <option value="364-Pontianak" class="city province-12">Pontianak</option>
+        <option value="365-Pontianak" class="city province-12">Pontianak</option>
+        <option value="366-Poso" class="city province-29">Poso</option>
+        <option value="367-Prabumulih" class="city province-33">Prabumulih</option>
+        <option value="368-Pringsewu" class="city province-18">Pringsewu</option>
+        <option value="369-Probolinggo" class="city province-11">Probolinggo</option>
+        <option value="370-Probolinggo" class="city province-11">Probolinggo</option>
+        <option value="371-Pulang Pisau" class="city province-14">Pulang Pisau</option>
+        <option value="372-Pulau Morotai" class="city province-20">Pulau Morotai</option>
+        <option value="373-Puncak" class="city province-24">Puncak</option>
+        <option value="374-Puncak Jaya" class="city province-24">Puncak Jaya</option>
+        <option value="375-Purbalingga" class="city province-10">Purbalingga</option>
+        <option value="376-Purwakarta" class="city province-9">Purwakarta</option>
+        <option value="377-Purworejo" class="city province-10">Purworejo</option>
+        <option value="378-Raja Ampat" class="city province-25">Raja Ampat</option>
+        <option value="379-Rejang Lebong" class="city province-4">Rejang Lebong</option>
+        <option value="380-Rembang" class="city province-10">Rembang</option>
+        <option value="381-Rokan Hilir" class="city province-26">Rokan Hilir</option>
+        <option value="382-Rokan Hulu" class="city province-26">Rokan Hulu</option>
+        <option value="383-Rote Ndao" class="city province-23">Rote Ndao</option>
+        <option value="384-Sabang" class="city province-21">Sabang</option>
+        <option value="385-Sabu Raijua" class="city province-23">Sabu Raijua</option>
+        <option value="386-Salatiga" class="city province-10">Salatiga</option>
+        <option value="387-Samarinda" class="city province-15">Samarinda</option>
+        <option value="388-Sambas" class="city province-12">Sambas</option>
+        <option value="389-Samosir" class="city province-34">Samosir</option>
+        <option value="390-Sampang" class="city province-11">Sampang</option>
+        <option value="391-Sanggau" class="city province-12">Sanggau</option>
+        <option value="392-Sarmi" class="city province-24">Sarmi</option>
+        <option value="393-Sarolangun" class="city province-8">Sarolangun</option>
+        <option value="394-Sawah Lunto" class="city province-32">Sawah Lunto</option>
+        <option value="395-Sekadau" class="city province-12">Sekadau</option>
+        <option value="396-Selayar (Kepulauan Selayar)" class="city province-28">Selayar (Kepulauan Selayar)</option>
+        <option value="397-Seluma" class="city province-4">Seluma</option>
+        <option value="398-Semarang" class="city province-10">Semarang</option>
+        <option value="399-Semarang" class="city province-10">Semarang</option>
+        <option value="400-Seram Bagian Barat" class="city province-19">Seram Bagian Barat</option>
+        <option value="401-Seram Bagian Timur" class="city province-19">Seram Bagian Timur</option>
+        <option value="402-Serang" class="city province-3">Serang</option>
+        <option value="403-Serang" class="city province-3">Serang</option>
+        <option value="404-Serdang Bedagai" class="city province-34">Serdang Bedagai</option>
+        <option value="405-Seruyan" class="city province-14">Seruyan</option>
+        <option value="406-Siak" class="city province-26">Siak</option>
+        <option value="407-Sibolga" class="city province-34">Sibolga</option>
+        <option value="408-Sidenreng Rappang/Rapang" class="city province-28">Sidenreng Rappang/Rapang</option>
+        <option value="409-Sidoarjo" class="city province-11">Sidoarjo</option>
+        <option value="410-Sigi" class="city province-29">Sigi</option>
+        <option value="411-Sijunjung (Sawah Lunto Sijunjung)" class="city province-32">Sijunjung (Sawah Lunto Sijunjung)</option>
+        <option value="412-Sikka" class="city province-23">Sikka</option>
+        <option value="413-Simalungun" class="city province-34">Simalungun</option>
+        <option value="414-Simeulue" class="city province-21">Simeulue</option>
+        <option value="415-Singkawang" class="city province-12">Singkawang</option>
+        <option value="416-Sinjai" class="city province-28">Sinjai</option>
+        <option value="417-Sintang" class="city province-12">Sintang</option>
+        <option value="418-Situbondo" class="city province-11">Situbondo</option>
+        <option value="419-Sleman" class="city province-5">Sleman</option>
+        <option value="420-Solok" class="city province-32">Solok</option>
+        <option value="421-Solok" class="city province-32">Solok</option>
+        <option value="422-Solok Selatan" class="city province-32">Solok Selatan</option>
+        <option value="423-Soppeng" class="city province-28">Soppeng</option>
+        <option value="424-Sorong" class="city province-25">Sorong</option>
+        <option value="425-Sorong" class="city province-25">Sorong</option>
+        <option value="426-Sorong Selatan" class="city province-25">Sorong Selatan</option>
+        <option value="427-Sragen" class="city province-10">Sragen</option>
+        <option value="428-Subang" class="city province-9">Subang</option>
+        <option value="429-Subulussalam" class="city province-21">Subulussalam</option>
+        <option value="430-Sukabumi" class="city province-9">Sukabumi</option>
+        <option value="431-Sukabumi" class="city province-9">Sukabumi</option>
+        <option value="432-Sukamara" class="city province-14">Sukamara</option>
+        <option value="433-Sukoharjo" class="city province-10">Sukoharjo</option>
+        <option value="434-Sumba Barat" class="city province-23">Sumba Barat</option>
+        <option value="435-Sumba Barat Daya" class="city province-23">Sumba Barat Daya</option>
+        <option value="436-Sumba Tengah" class="city province-23">Sumba Tengah</option>
+        <option value="437-Sumba Timur" class="city province-23">Sumba Timur</option>
+        <option value="438-Sumbawa" class="city province-22">Sumbawa</option>
+        <option value="439-Sumbawa Barat" class="city province-22">Sumbawa Barat</option>
+        <option value="440-Sumedang" class="city province-9">Sumedang</option>
+        <option value="441-Sumenep" class="city province-11">Sumenep</option>
+        <option value="442-Sungaipenuh" class="city province-8">Sungaipenuh</option>
+        <option value="443-Supiori" class="city province-24">Supiori</option>
+        <option value="444-Surabaya" class="city province-11">Surabaya</option>
+        <option value="445-Surakarta (Solo)" class="city province-10">Surakarta (Solo)</option>
+        <option value="446-Tabalong" class="city province-13">Tabalong</option>
+        <option value="447-Tabanan" class="city province-1">Tabanan</option>
+        <option value="448-Takalar" class="city province-28">Takalar</option>
+        <option value="449-Tambrauw" class="city province-25">Tambrauw</option>
+        <option value="450-Tana Tidung" class="city province-16">Tana Tidung</option>
+        <option value="451-Tana Toraja" class="city province-28">Tana Toraja</option>
+        <option value="452-Tanah Bumbu" class="city province-13">Tanah Bumbu</option>
+        <option value="453-Tanah Datar" class="city province-32">Tanah Datar</option>
+        <option value="454-Tanah Laut" class="city province-13">Tanah Laut</option>
+        <option value="455-Tangerang" class="city province-3">Tangerang</option>
+        <option value="456-Tangerang" class="city province-3">Tangerang</option>
+        <option value="457-Tangerang Selatan" class="city province-3">Tangerang Selatan</option>
+        <option value="458-Tanggamus" class="city province-18">Tanggamus</option>
+        <option value="459-Tanjung Balai" class="city province-34">Tanjung Balai</option>
+        <option value="460-Tanjung Jabung Barat" class="city province-8">Tanjung Jabung Barat</option>
+        <option value="461-Tanjung Jabung Timur" class="city province-8">Tanjung Jabung Timur</option>
+        <option value="462-Tanjung Pinang" class="city province-17">Tanjung Pinang</option>
+        <option value="463-Tapanuli Selatan" class="city province-34">Tapanuli Selatan</option>
+        <option value="464-Tapanuli Tengah" class="city province-34">Tapanuli Tengah</option>
+        <option value="465-Tapanuli Utara" class="city province-34">Tapanuli Utara</option>
+        <option value="466-Tapin" class="city province-13">Tapin</option>
+        <option value="467-Tarakan" class="city province-16">Tarakan</option>
+        <option value="468-Tasikmalaya" class="city province-9">Tasikmalaya</option>
+        <option value="469-Tasikmalaya" class="city province-9">Tasikmalaya</option>
+        <option value="470-Tebing Tinggi" class="city province-34">Tebing Tinggi</option>
+        <option value="471-Tebo" class="city province-8">Tebo</option>
+        <option value="472-Tegal" class="city province-10">Tegal</option>
+        <option value="473-Tegal" class="city province-10">Tegal</option>
+        <option value="474-Teluk Bintuni" class="city province-25">Teluk Bintuni</option>
+        <option value="475-Teluk Wondama" class="city province-25">Teluk Wondama</option>
+        <option value="476-Temanggung" class="city province-10">Temanggung</option>
+        <option value="477-Ternate" class="city province-20">Ternate</option>
+        <option value="478-Tidore Kepulauan" class="city province-20">Tidore Kepulauan</option>
+        <option value="479-Timor Tengah Selatan" class="city province-23">Timor Tengah Selatan</option>
+        <option value="480-Timor Tengah Utara" class="city province-23">Timor Tengah Utara</option>
+        <option value="481-Toba Samosir" class="city province-34">Toba Samosir</option>
+        <option value="482-Tojo Una-Una" class="city province-29">Tojo Una-Una</option>
+        <option value="483-Toli-Toli" class="city province-29">Toli-Toli</option>
+        <option value="484-Tolikara" class="city province-24">Tolikara</option>
+        <option value="485-Tomohon" class="city province-31">Tomohon</option>
+        <option value="486-Toraja Utara" class="city province-28">Toraja Utara</option>
+        <option value="487-Trenggalek" class="city province-11">Trenggalek</option>
+        <option value="488-Tual" class="city province-19">Tual</option>
+        <option value="489-Tuban" class="city province-11">Tuban</option>
+        <option value="490-Tulang Bawang" class="city province-18">Tulang Bawang</option>
+        <option value="491-Tulang Bawang Barat" class="city province-18">Tulang Bawang Barat</option>
+        <option value="492-Tulungagung" class="city province-11">Tulungagung</option>
+        <option value="493-Wajo" class="city province-28">Wajo</option>
+        <option value="494-Wakatobi" class="city province-30">Wakatobi</option>
+        <option value="495-Waropen" class="city province-24">Waropen</option>
+        <option value="496-Way Kanan" class="city province-18">Way Kanan</option>
+        <option value="497-Wonogiri" class="city province-10">Wonogiri</option>
+        <option value="498-Wonosobo" class="city province-10">Wonosobo</option>
+        <option value="499-Yahukimo" class="city province-24">Yahukimo</option>
+        <option value="500-Yalimo" class="city province-24">Yalimo</option>
+        <option value="501-Yogyakarta" class="city province-5">Yogyakarta</option>
+</select>

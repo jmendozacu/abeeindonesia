@@ -1,0 +1,71 @@
+<?php
+// $om =   \Magento\Framework\App\ObjectManager::getInstance();
+// $cartData = $om->create('Magento\Checkout\Model\Cart')->getQuote();
+// error_log(print_r($cartData, true), 3, 'my.log');
+// var_dump(get_class_methods($cartData));
+// var_dump($cartData->getId());
+// die;
+
+// $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+// $session = $objectManager->get('\Magento\Checkout\Model\Session');
+// var_dump(get_class_methods($session));
+// var_dump($session->getData());
+// die;
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<div id="checkout" data-bind="scope:'checkout'" class="checkout-container developerr-samuel">
+    <div id="checkout-loader" data-role="checkout-loader" class="loading-mask" data-mage-init='{"checkoutLoader": {}}'>
+        <div class="loader">
+            <img src="<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/loader-1.gif') ?>"
+                 alt="<?= /* @escapeNotVerified */ __('Loading...') ?>"
+                 style="position: absolute;">
+        </div>
+    </div>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#checkout": {
+                "Magento_Ui/js/core/app": <?= /* @escapeNotVerified */ $block->getJsLayout() ?>
+            }
+        }
+    </script>
+    <script>
+        window.checkoutConfig = <?= /* @escapeNotVerified */ $block->getSerializedCheckoutConfig() ?>;
+        // Create aliases for customer.js model from customer module
+        window.isCustomerLoggedIn = window.checkoutConfig.isCustomerLoggedIn;
+        window.customerData = window.checkoutConfig.customerData;
+    </script>
+    <script>
+        require([
+            'mage/url',
+            'Magento_Ui/js/block-loader'
+        ], function(url, blockLoader) {
+            blockLoader("<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/loader-1.gif') ?>");
+            return url.setBaseUrl('<?= /* @escapeNotVerified */ $block->getBaseUrl() ?>');
+        })
+    </script>
+    <script type="text/javascript">
+    </script>
+    <script>
+        require(['jquery','domReady!'], function($) {
+            $(document).on("change", 'select[name="region"]', function(){
+                // console.log("change-region");
+                if ($(this).val() != '') {
+                    let province_id = $('option:selected', this).data('id');
+                    $('.field.city').show();
+                    $('option.city').hide();
+                    $('option.province-' + province_id).show();
+                    $('select[name="city"]').val('');
+                } else {
+                    $('.field.city').hide();
+                    $('option.city').hide();
+                }
+            });
+        });
+    </script>
+</div>
