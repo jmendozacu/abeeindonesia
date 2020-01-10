@@ -75,7 +75,9 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
         if (!$this->getConfigFlag('active')) {
             return false;
         }
-
+        var_dump($this->getConfigData("specificcountry"));
+        var_dump($request->getDestCountryId());
+        die;
         $destCity = explode("-", $request->getDestCity());
         $destCityId = $destCity[0];
         $weight = $request->getPackageWeight() * 1000;
