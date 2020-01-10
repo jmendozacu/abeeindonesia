@@ -37,16 +37,33 @@ class Api
     public function getOngkir($origin, $destination, $weight, $courier)
     {
         $params = [
-            'origin' => '331',
+            'origin' => $origin,
             'originType' => 'city',
-            'destination' => '331',
+            'destination' => $destination,
             'destinationType' => 'city',
-            'weight' => 100,
-            'courier' => 'jne'
+            'weight' => $weight,
+            'courier' => strtolower($courier),
         ];
 
-
         $ongkir = $this->apiCaller('https://pro.rajaongkir.com/api/cost', \Zend_Http_Client::POST, $params, $this->key);
+
+        if ($ongkir->getStatus() == 200) {
+            return json_decode($ongkir->getBody());
+        } else {
+            return 0;
+        }
+    }
+
+    public function getInternationalCost($cityOrigin, $destination, $weight, $courier)
+    {
+        $params = [
+            'origin' => $cityOrigin,
+            'destination' => $destination,
+            'weight' => $weight,
+            'courier' => strtolower($courier),
+        ];
+
+        $ongkir = $this->apiCaller('https://pro.rajaongkir.com/api/v2/internationalCost', \Zend_Http_Client::POST, $params, $this->key);
 
         if ($ongkir->getStatus() == 200) {
             return json_decode($ongkir->getBody());
