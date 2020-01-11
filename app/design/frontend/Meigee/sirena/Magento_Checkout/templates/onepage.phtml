@@ -66,6 +66,17 @@
                     $('option.city').hide();
                 }
             });
+            $(document).on("change", 'select[name="city"]', function(){
+                if ($(this).val() != '') {
+                    let city = $(this).val();
+                    let citySplit = city.split("-");
+                    $('option.subdistrict-option').hide();
+                    $('option.city-' + citySplit[0]).show();
+                    $('.subdistrict').val('');
+                } else {
+                    $('option.subdistrict').hide();
+                }
+            });
         });
     </script>
 </div>
