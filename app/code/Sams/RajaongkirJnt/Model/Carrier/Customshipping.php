@@ -76,29 +76,41 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
             return false;
         }
 
-        $destCity = explode("-", $request->getDestCity());
-        $destCityId = $destCity[0];
-        $weight = $request->getPackageWeight() * 1000;
-
         $storeConfig = $this->_scopeConfig->getValue(
-                            'general/store_information/city',
-                            ScopeInterface::SCOPE_STORE
-                        );
-        // var_dump($storeConfig);die;
+            'general/store_information/city',
+            ScopeInterface::SCOPE_STORE
+        );
 
+        $weight = $request->getPackageWeight() * 1000;
         /** @var \Magento\Shipping\Model\Rate\Result $result */
         $result = $this->_rateResultFactory->create();
-        $response = $this->_apiData->getOngkir($storeConfig, $destCityId, $weight, $this->_courier);
-        // var_dump($response);
-        // die;
-        // var_dump($storeConfig);
-        // var_dump($destCityId);die;
-        if (!empty($response->rajaongkir->results[0]->costs)) {
-            foreach ($response->rajaongkir->results[0]->costs as $cost) {
-                $method = $this->generateMethods($cost->service, $cost->cost[0]->value, $this->_courier);
-                $result->append($method);
+
+        $allowedCountry = explode(",",$this->getConfigData("specificcountry"));
+        if ($request->getDestCountryId() != "ID"){
+            $countryIdRajaongkir = $this->_apiData->getCountryDestinationByCode($request->getDestCountryId());
+        }
+
+        if (!empty($countryIdRajaongkir) && is_numeric($countryIdRajaongkir)){
+            $response = $this->_apiData->getInternationalCost($storeConfig,$countryIdRajaongkir, $weight, $this->_courier);
+            if (!empty($response->rajaongkir->results[0]->costs)) {
+                foreach ($response->rajaongkir->results[0]->costs as $cost) {
+                    $method = $this->generateMethods($cost->service, $cost->cost, $this->_courier);
+                    $result->append($method);
+                }
             }
         }
+        else{
+            $destCity = explode("-", $request->getDestCity());
+            $destCityId = $destCity[0];
+            $response = $this->_apiData->getOngkir($storeConfig, $destCityId, $weight, $this->_courier);
+            if (!empty($response->rajaongkir->results[0]->costs)) {
+                foreach ($response->rajaongkir->results[0]->costs as $cost) {
+                    $method = $this->generateMethods($cost->service, $cost->cost[0]->value, $this->_courier);
+                    $result->append($method);
+                }
+            }
+        }
+
         return $result;
 
     }

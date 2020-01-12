@@ -25,7 +25,7 @@ class SaveDeliveryDateToOrderObserver implements ObserverInterface
         $quoteRepository = $this->_objectManager->create('Magento\Quote\Model\QuoteRepository');
         /** @var \Magento\Quote\Model\Quote $quote */
         $quote = $quoteRepository->get($order->getQuoteId());
-        $order->setDeliveryDate( $quote->getDeliveryDate() );
+        $order->setSubdistrict( $quote->getSubdistrict() );
 
         return $this;
     }

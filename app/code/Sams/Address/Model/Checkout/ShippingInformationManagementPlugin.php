@@ -24,8 +24,8 @@ class ShippingInformationManagementPlugin
         \Magento\Checkout\Api\Data\ShippingInformationInterface $addressInformation
     ) {
         $extAttributes = $addressInformation->getExtensionAttributes();
-        $deliveryDate = $extAttributes->getDeliveryDate();                              
+        $custom = $extAttributes->getSubdistrict();                              
         $quote = $this->quoteRepository->getActive($cartId);
-        $quote->setDeliveryDate($deliveryDate);
+        $quote->setSubdistrict($custom);
     }
 }

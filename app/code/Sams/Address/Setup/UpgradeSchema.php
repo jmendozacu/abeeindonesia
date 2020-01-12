@@ -18,13 +18,13 @@ class UpgradeSchema implements UpgradeSchemaInterface
      */
     public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
-        if (version_compare($context->getVersion(), '0.4.0', '<')) {
+        if (version_compare($context->getVersion(), '0.7.0', '<')) {
             $installer = $setup;
             $installer->startSetup();
 
             $installer->getConnection()->addColumn(
                 $installer->getTable('quote'),
-                'delivery_date',
+                'subdistrict',
                 [
                     'type' => 'text',
                     'nullable' => false,
@@ -34,7 +34,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
 
             $installer->getConnection()->addColumn(
                 $installer->getTable('sales_order'),
-                'delivery_date',
+                'subdistrict',
                 [
                     'type' => 'text',
                     'nullable' => false,
@@ -44,7 +44,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
 
             $installer->getConnection()->addColumn(
                 $installer->getTable('sales_order_grid'),
-                'delivery_date',
+                'subdistrict',
                 [
                     'type' => 'text',
                     'nullable' => false,

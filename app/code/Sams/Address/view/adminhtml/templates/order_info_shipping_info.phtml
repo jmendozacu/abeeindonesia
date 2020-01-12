@@ -1,0 +1,12 @@
+<div id="delivery-date">
+    <strong><?php echo __('Subdistrict') ?></strong>
+    <span class="price"><?=$block->getSubdistrict() ?></span></div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#delivery-date').detach();
+            $('.order-shipping-method').append(element);
+        }
+    );
+</script>
